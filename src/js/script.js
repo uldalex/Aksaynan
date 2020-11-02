@@ -2982,7 +2982,7 @@ function parallaxTop(){
     $('.parallax7').css('margin-bottom', +(scrolled * 0.2) + 'px');
     $('.parallax7').css({transform: 'rotate(-' + (1000 * scrolled/maxScroll) + 'deg)'});
     $('.parallax8').css('margin-top', +(scrolled * 0.45) + 'px');
-    $('.parallax8').css({transform: 'rotate(-' + (1000 * scrolled/maxScroll) + 'deg)'});
+    $('.parallax8').css({transform: 'rotate(-' + (500 * scrolled/maxScroll) + 'deg)'});
 
   	
 }

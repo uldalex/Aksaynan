@@ -141,7 +141,7 @@ body {
   display: flex;           // Исправляем баг в IE для min-height and flexbox (flex-direction:column)
   flex-direction: column;  // и прижимаем footer в IE 10-11
   margin: 0;
-  min-height: 2000vh;
+  min-height: 100%;
   word-break: break-word;
   font-family: "Open Sans";
   font-size: $font-size;
@@ -772,6 +772,21 @@ pre {
     cursor: pointer;
     text-decoration: none;
   }
+  
+}
+.green-btn{
+  background-color: #90C333;
+  color:#ffffff;
+  border:1px solid #90C333;
+  transition: all .5s linear;
+
+  &:hover, &:active, &:focus {
+    background-color: darken( #90C333, 5%);
+    border:1px solid #81af2e;
+    color:#ffffff;
+    box-shadow:none;
+
+  }
 }
 
 .about {
@@ -827,15 +842,23 @@ pre {
     padding: 68px 0 0 0;
     text-align: center;
     font-size: 40px;
-}
+  }
 
   &__subtitle {
     font-size:15px;
     text-align:center;
   }
- & .parallax8 {
-  position: absolute;
-  left: 60%;
-  top:-1000px;
- }
+  & .parallax8 {
+    position: absolute;
+    left: 60%;
+    top:-980px;
+    z-index:5;
+   }
+
+   &__zakaz {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:4rem;
+   }
 }
