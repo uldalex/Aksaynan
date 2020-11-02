@@ -1,0 +1,23 @@
+// В этом файле должны быть стили для БЭМ-блока language, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.language {
+
+  $block-name:                &; // #{$block-name}__element
+  @include col(xl, 2);
+  font-size: 15px;
+  padding: 1.3rem;
+  display: flex;
+  justify-content: center;
+  color: $red;
+
+  &__link {
+    color: $red;
+  }
+
+  & span {
+    padding: 0 10px;
+  }
+}
+

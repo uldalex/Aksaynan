@@ -1,0 +1,627 @@
+//- Все примеси в этом файле должны начинаться c имени блока (tort-zakaz)
+
+mixin tort-zakaz(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +tort-zakaz('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' tort-zakaz--' + modsList[i].trim();
+      }
+    }
+
+  .tort-zakaz(class=allMods)&attributes(attributes)
+    img.parallax.parallax7(src="img/parallax7.png") 
+    .tort-zakaz__inner
+      h3 Торты на заказ
+      ul.tort-zakaz__sort
+        li.tort-zakaz-cat.alt-btn.active(data-cat=".cat1") Праздничные
+        li.tort-zakaz-cat.alt-btn(data-cat=".cat2") Свадебные
+        li.tort-zakaz-cat.alt-btn(data-cat=".cat3") Детские
+        li.tort-zakaz-cat.alt-btn(data-cat=".cat4") На день рождения
+        li.tort-zakaz-cat.alt-btn(data-cat=".cat5") Корпоративные
+        li.tort-zakaz-cat.alt-btn(data-cat=".cat6") Эксклюзивные
+      .tort-zakaz__filter
+        .product-card.cat.cat1.cat5.active
+                  .product-card__img
+                    img(src="img/tort9.png")
+                  .product-card__content
+                    h3.product-card__title Алматинский
+                    ul.product-card__tabs
+                      li.deckription-link.deckription-link--active Состав
+                      li.edit-link Изменить торт
+                    ul.product-card__tab
+                      li.deckription-tab.deckription-tab--open Сахар, масло сливочное, молоко сгущенное уваренное, белок яичный, пудра сахарная, гель шоколадный...
+                      li.edit-tab
+                        .product-card__ves
+                          ul.product-card__ves-list
+                            li.product-card__ves-item.product-card__ves-item--active 1.2кг
+                            li.product-card__ves-item 1.8кг
+                            li.product-card__ves-item 2.5кг
+                            li.product-card__ves-item свой вес
+                            input(type="hidden" value="" id="product-card-ves1")
+                        .product-card__kol
+                          ul.product-card__kol-list
+                            li.product-card__kol-item
+                              .quantity
+                                .quantity-plus +
+                                .quantity-val
+                                  input(type="number" value="1" step="1" min="1" max="")
+                                .quantity-minus -
+                            li.product-card__kol-item
+                              .product-card__atribute.attribute
+                                span Молочный
+                                .attribute-arrow
+                                  svg(width="11" height="10" viewBox="0 0 11 10" fill="none")
+                                    path(d="M9.91061 4.51778L5.39282 9.03557L0.875038 4.51778" fill="none" stroke="black")
+                                ul.attribute__list
+                                  li.attribute__item Медовый
+                                  li.attribute__item Песочный
+                                  li.attribute__item Бисквитный
+                                  li.attribute__item Йогуртовый
+                                  li.attribute__item Фруктовый
+                                input(type="hidden" value="" id="product-card-attr1")
+                  .product-card__footer
+                    a(href="#").btn.product-card__btn В корзину
+                    .price 1890 ₸
+        .product-card.cat.cat1.cat5.active
+                  .product-card__img
+                    img(src="img/tort10.png")
+                  .product-card__content
+                    h3.product-card__title Белый танец
+                    ul.product-card__tabs
+                      li.deckription-link.deckription-link--active Состав
+                      li.edit-link Изменить торт
+                    ul.product-card__tab
+                      li.deckription-tab.deckription-tab--open Сахар, масло сливочное, молоко сгущенное уваренное, белок яичный, пудра сахарная, гель шоколадный...
+                      li.edit-tab
+                        .product-card__ves
+                          ul.product-card__ves-list
+                            li.product-card__ves-item.product-card__ves-item--active 1.2кг
+                            li.product-card__ves-item 1.8кг
+                            li.product-card__ves-item 2.5кг
+                            li.product-card__ves-item свой вес
+                            input(type="hidden" value="" id="product-card-ves1")
+                        .product-card__kol
+                          ul.product-card__kol-list
+                            li.product-card__kol-item
+                              .quantity
+                                .quantity-plus +
+                                .quantity-val
+                                  input(type="number" value="1" step="1" min="1" max="")
+                                .quantity-minus -
+                            li.product-card__kol-item
+                              .product-card__atribute.attribute
+                                span Молочный
+                                .attribute-arrow
+                                  svg(width="11" height="10" viewBox="0 0 11 10" fill="none")
+                                    path(d="M9.91061 4.51778L5.39282 9.03557L0.875038 4.51778" fill="none" stroke="black")
+                                ul.attribute__list
+                                  li.attribute__item Медовый
+                                  li.attribute__item Песочный
+                                  li.attribute__item Бисквитный
+                                  li.attribute__item Йогуртовый
+                                  li.attribute__item Фруктовый
+                                input(type="hidden" value="" id="product-card-attr1")
+                  .product-card__footer
+                    a(href="#").btn.product-card__btn В корзину
+                    .price 1890 ₸
+        .product-card.cat.cat1.cat6.active
+                  .product-card__img
+                    img(src="img/tort11.png")
+                  .product-card__content
+                    h3.product-card__title Фруктовый
+                    ul.product-card__tabs
+                      li.deckription-link.deckription-link--active Состав
+                      li.edit-link Изменить торт
+                    ul.product-card__tab
+                      li.deckription-tab.deckription-tab--open Сахар, масло сливочное, молоко сгущенное уваренное, белок яичный, пудра сахарная, гель шоколадный...
+                      li.edit-tab
+                        .product-card__ves
+                          ul.product-card__ves-list
+                            li.product-card__ves-item.product-card__ves-item--active 1.2кг
+                            li.product-card__ves-item 1.8кг
+                            li.product-card__ves-item 2.5кг
+                            li.product-card__ves-item свой вес
+                            input(type="hidden" value="" id="product-card-ves1")
+                        .product-card__kol
+                          ul.product-card__kol-list
+                            li.product-card__kol-item
+                              .quantity
+                                .quantity-plus +
+                                .quantity-val
+                                  input(type="number" value="1" step="1" min="1" max="")
+                                .quantity-minus -
+                            li.product-card__kol-item
+                              .product-card__atribute.attribute
+                                span Молочный
+                                .attribute-arrow
+                                  svg(width="11" height="10" viewBox="0 0 11 10" fill="none")
+                                    path(d="M9.91061 4.51778L5.39282 9.03557L0.875038 4.51778" fill="none" stroke="black")
+                                ul.attribute__list
+                                  li.attribute__item Медовый
+                                  li.attribute__item Песочный
+                                  li.attribute__item Бисквитный
+                                  li.attribute__item Йогуртовый
+                                  li.attribute__item Фруктовый
+                                input(type="hidden" value="" id="product-card-attr1")
+                  .product-card__footer
+                    a(href="#").btn.product-card__btn В корзину
+                    .price 1890 ₸
+        .product-card.cat.cat1.cat6.active
+                  .product-card__img
+                    img(src="img/tort12.png")
+                  .product-card__content
+                    h3.product-card__title Свадебный
+                    ul.product-card__tabs
+                      li.deckription-link.deckription-link--active Состав
+                      li.edit-link Изменить торт
+                    ul.product-card__tab
+                      li.deckription-tab.deckription-tab--open Сахар, масло сливочное, молоко сгущенное уваренное, белок яичный, пудра сахарная, гель шоколадный...
+                      li.edit-tab
+                        .product-card__ves
+                          ul.product-card__ves-list
+                            li.product-card__ves-item.product-card__ves-item--active 1.2кг
+                            li.product-card__ves-item 1.8кг
+                            li.product-card__ves-item 2.5кг
+                            li.product-card__ves-item свой вес
+                            input(type="hidden" value="" id="product-card-ves1")
+                        .product-card__kol
+                          ul.product-card__kol-list
+                            li.product-card__kol-item
+                              .quantity
+                                .quantity-plus +
+                                .quantity-val
+                                  input(type="number" value="1" step="1" min="1" max="")
+                                .quantity-minus -
+                            li.product-card__kol-item
+                              .product-card__atribute.attribute
+                                span Молочный
+                                .attribute-arrow
+                                  svg(width="11" height="10" viewBox="0 0 11 10" fill="none")
+                                    path(d="M9.91061 4.51778L5.39282 9.03557L0.875038 4.51778" fill="none" stroke="black")
+                                ul.attribute__list
+                                  li.attribute__item Медовый
+                                  li.attribute__item Песочный
+                                  li.attribute__item Бисквитный
+                                  li.attribute__item Йогуртовый
+                                  li.attribute__item Фруктовый
+                                input(type="hidden" value="" id="product-card-attr1")
+                  .product-card__footer
+                    a(href="#").btn.product-card__btn В корзину
+                    .price 1890 ₸
+        .product-card.cat.cat2.cat6
+                  .product-card__img
+                    img(src="img/tort1.png")
+                  .product-card__content
+                    h3.product-card__title Йогуртовый
+                    ul.product-card__tabs
+                      li.deckription-link.deckription-link--active Состав
+                      li.edit-link Изменить торт
+                    ul.product-card__tab
+                      li.deckription-tab.deckription-tab--open Сахар, масло сливочное, молоко сгущенное уваренное, белок яичный, пудра сахарная, гель шоколадный...
+                      li.edit-tab
+                        .product-card__ves
+                          ul.product-card__ves-list
+                            li.product-card__ves-item.product-card__ves-item--active 1.2кг
+                            li.product-card__ves-item 1.8кг
+                            li.product-card__ves-item 2.5кг
+                            li.product-card__ves-item свой вес
+                            input(type="hidden" value="" id="product-card-ves1")
+                        .product-card__kol
+                          ul.product-card__kol-list
+                            li.product-card__kol-item
+                              .quantity
+                                .quantity-plus +
+                                .quantity-val
+                                  input(type="number" value="1" step="1" min="1" max="")
+                                .quantity-minus -
+                            li.product-card__kol-item
+                              .product-card__atribute.attribute
+                                span Молочный
+                                .attribute-arrow
+                                  svg(width="11" height="10" viewBox="0 0 11 10" fill="none")
+                                    path(d="M9.91061 4.51778L5.39282 9.03557L0.875038 4.51778" fill="none" stroke="black")
+                                ul.attribute__list
+                                  li.attribute__item Медовый
+                                  li.attribute__item Песочный
+                                  li.attribute__item Бисквитный
+                                  li.attribute__item Йогуртовый
+                                  li.attribute__item Фруктовый
+                                input(type="hidden" value="" id="product-card-attr1")
+                  .product-card__footer
+                    a(href="#").btn.product-card__btn В корзину
+                    .price 1890 ₸
+        .product-card.cat.cat2.cat4
+                  .product-card__img
+                    img(src="img/tort2.png")
+                  .product-card__content
+                    h3.product-card__title Медовик
+                    ul.product-card__tabs
+                      li.deckription-link.deckription-link--active Состав
+                      li.edit-link Изменить торт
+                    ul.product-card__tab
+                      li.deckription-tab.deckription-tab--open Сахар, масло сливочное, молоко сгущенное уваренное, белок яичный, пудра сахарная, гель шоколадный...
+                      li.edit-tab
+                        .product-card__ves
+                          ul.product-card__ves-list
+                            li.product-card__ves-item.product-card__ves-item--active 1.2кг
+                            li.product-card__ves-item 1.8кг
+                            li.product-card__ves-item 2.5кг
+                            li.product-card__ves-item свой вес
+                            input(type="hidden" value="" id="product-card-ves1")
+                        .product-card__kol
+                          ul.product-card__kol-list
+                            li.product-card__kol-item
+                              .quantity
+                                .quantity-plus +
+                                .quantity-val
+                                  input(type="number" value="1" step="1" min="1" max="")
+                                .quantity-minus -
+                            li.product-card__kol-item
+                              .product-card__atribute.attribute
+                                span Молочный
+                                .attribute-arrow
+                                  svg(width="11" height="10" viewBox="0 0 11 10" fill="none")
+                                    path(d="M9.91061 4.51778L5.39282 9.03557L0.875038 4.51778" fill="none" stroke="black")
+                                ul.attribute__list
+                                  li.attribute__item Медовый
+                                  li.attribute__item Песочный
+                                  li.attribute__item Бисквитный
+                                  li.attribute__item Йогуртовый
+                                  li.attribute__item Фруктовый
+                                input(type="hidden" value="" id="product-card-attr1")
+                  .product-card__footer
+                    a(href="#").btn.product-card__btn В корзину
+                    .price 1890 ₸
+        .product-card.cat.cat2.cat5
+                  .product-card__img
+                    img(src="img/tort3.png")
+                  .product-card__content
+                    h3.product-card__title Наполеон
+                    ul.product-card__tabs
+                      li.deckription-link.deckription-link--active Состав
+                      li.edit-link Изменить торт
+                    ul.product-card__tab
+                      li.deckription-tab.deckription-tab--open Сахар, масло сливочное, молоко сгущенное уваренное, белок яичный, пудра сахарная, гель шоколадный...
+                      li.edit-tab
+                        .product-card__ves
+                          ul.product-card__ves-list
+                            li.product-card__ves-item.product-card__ves-item--active 1.2кг
+                            li.product-card__ves-item 1.8кг
+                            li.product-card__ves-item 2.5кг
+                            li.product-card__ves-item свой вес
+                            input(type="hidden" value="" id="product-card-ves1")
+                        .product-card__kol
+                          ul.product-card__kol-list
+                            li.product-card__kol-item
+                              .quantity
+                                .quantity-plus +
+                                .quantity-val
+                                  input(type="number" value="1" step="1" min="1" max="")
+                                .quantity-minus -
+                            li.product-card__kol-item
+                              .product-card__atribute.attribute
+                                span Молочный
+                                .attribute-arrow
+                                  svg(width="11" height="10" viewBox="0 0 11 10" fill="none")
+                                    path(d="M9.91061 4.51778L5.39282 9.03557L0.875038 4.51778" fill="none" stroke="black")
+                                ul.attribute__list
+                                  li.attribute__item Медовый
+                                  li.attribute__item Песочный
+                                  li.attribute__item Бисквитный
+                                  li.attribute__item Йогуртовый
+                                  li.attribute__item Фруктовый
+                                input(type="hidden" value="" id="product-card-attr1")
+                  .product-card__footer
+                    a(href="#").btn.product-card__btn В корзину
+                    .price 1890 ₸
+        .product-card.cat.cat2.cat6
+                  .product-card__img
+                    img(src="img/tort4.png")
+                  .product-card__content
+                    h3.product-card__title Девичьи грезы
+                    ul.product-card__tabs
+                      li.deckription-link.deckription-link--active Состав
+                      li.edit-link Изменить торт
+                    ul.product-card__tab
+                      li.deckription-tab.deckription-tab--open Сахар, масло сливочное, молоко сгущенное уваренное, белок яичный, пудра сахарная, гель шоколадный...
+                      li.edit-tab
+                        .product-card__ves
+                          ul.product-card__ves-list
+                            li.product-card__ves-item.product-card__ves-item--active 1.2кг
+                            li.product-card__ves-item 1.8кг
+                            li.product-card__ves-item 2.5кг
+                            li.product-card__ves-item свой вес
+                            input(type="hidden" value="" id="product-card-ves1")
+                        .product-card__kol
+                          ul.product-card__kol-list
+                            li.product-card__kol-item
+                              .quantity
+                                .quantity-plus +
+                                .quantity-val
+                                  input(type="number" value="1" step="1" min="1" max="")
+                                .quantity-minus -
+                            li.product-card__kol-item
+                              .product-card__atribute.attribute
+                                span Молочный
+                                .attribute-arrow
+                                  svg(width="11" height="10" viewBox="0 0 11 10" fill="none")
+                                    path(d="M9.91061 4.51778L5.39282 9.03557L0.875038 4.51778" fill="none" stroke="black")
+                                ul.attribute__list
+                                  li.attribute__item Медовый
+                                  li.attribute__item Песочный
+                                  li.attribute__item Бисквитный
+                                  li.attribute__item Йогуртовый
+                                  li.attribute__item Фруктовый
+                                input(type="hidden" value="" id="product-card-attr1")
+                  .product-card__footer
+                    a(href="#").btn.product-card__btn В корзину
+                    .price 1890 ₸
+        .product-card.cat.cat3
+                  .product-card__img
+                    img(src="img/tort5.png")
+                  .product-card__content
+                    h3.product-card__title Фруктовый
+                    ul.product-card__tabs
+                      li.deckription-link.deckription-link--active Состав
+                      li.edit-link Изменить торт
+                    ul.product-card__tab
+                      li.deckription-tab.deckription-tab--open Сахар, масло сливочное, молоко сгущенное уваренное, белок яичный, пудра сахарная, гель шоколадный...
+                      li.edit-tab
+                        .product-card__ves
+                          ul.product-card__ves-list
+                            li.product-card__ves-item.product-card__ves-item--active 1.2кг
+                            li.product-card__ves-item 1.8кг
+                            li.product-card__ves-item 2.5кг
+                            li.product-card__ves-item свой вес
+                            input(type="hidden" value="" id="product-card-ves1")
+                        .product-card__kol
+                          ul.product-card__kol-list
+                            li.product-card__kol-item
+                              .quantity
+                                .quantity-plus +
+                                .quantity-val
+                                  input(type="number" value="1" step="1" min="1" max="")
+                                .quantity-minus -
+                            li.product-card__kol-item
+                              .product-card__atribute.attribute
+                                span Молочный
+                                .attribute-arrow
+                                  svg(width="11" height="10" viewBox="0 0 11 10" fill="none")
+                                    path(d="M9.91061 4.51778L5.39282 9.03557L0.875038 4.51778" fill="none" stroke="black")
+                                ul.attribute__list
+                                  li.attribute__item Медовый
+                                  li.attribute__item Песочный
+                                  li.attribute__item Бисквитный
+                                  li.attribute__item Йогуртовый
+                                  li.attribute__item Фруктовый
+                                input(type="hidden" value="" id="product-card-attr1")
+                  .product-card__footer
+                    a(href="#").btn.product-card__btn В корзину
+                    .price 1890 ₸
+        .product-card.cat.cat3
+                  .product-card__img
+                    img(src="img/tort6.png")
+                  .product-card__content
+                    h3.product-card__title Кофейный
+                    ul.product-card__tabs
+                      li.deckription-link.deckription-link--active Состав
+                      li.edit-link Изменить торт
+                    ul.product-card__tab
+                      li.deckription-tab.deckription-tab--open Сахар, масло сливочное, молоко сгущенное уваренное, белок яичный, пудра сахарная, гель шоколадный...
+                      li.edit-tab
+                        .product-card__ves
+                          ul.product-card__ves-list
+                            li.product-card__ves-item.product-card__ves-item--active 1.2кг
+                            li.product-card__ves-item 1.8кг
+                            li.product-card__ves-item 2.5кг
+                            li.product-card__ves-item свой вес
+                            input(type="hidden" value="" id="product-card-ves1")
+                        .product-card__kol
+                          ul.product-card__kol-list
+                            li.product-card__kol-item
+                              .quantity
+                                .quantity-plus +
+                                .quantity-val
+                                  input(type="number" value="1" step="1" min="1" max="")
+                                .quantity-minus -
+                            li.product-card__kol-item
+                              .product-card__atribute.attribute
+                                span Молочный
+                                .attribute-arrow
+                                  svg(width="11" height="10" viewBox="0 0 11 10" fill="none")
+                                    path(d="M9.91061 4.51778L5.39282 9.03557L0.875038 4.51778" fill="none" stroke="black")
+                                ul.attribute__list
+                                  li.attribute__item Медовый
+                                  li.attribute__item Песочный
+                                  li.attribute__item Бисквитный
+                                  li.attribute__item Йогуртовый
+                                  li.attribute__item Фруктовый
+                                input(type="hidden" value="" id="product-card-attr1")
+                  .product-card__footer
+                    a(href="#").btn.product-card__btn В корзину
+                    .price 1890 ₸
+        .product-card.cat.cat3
+                  .product-card__img
+                    img(src="img/tort7.png")
+                  .product-card__content
+                    h3.product-card__title К чаю
+                    ul.product-card__tabs
+                      li.deckription-link.deckription-link--active Состав
+                      li.edit-link Изменить торт
+                    ul.product-card__tab
+                      li.deckription-tab.deckription-tab--open Сахар, масло сливочное, молоко сгущенное уваренное, белок яичный, пудра сахарная, гель шоколадный...
+                      li.edit-tab
+                        .product-card__ves
+                          ul.product-card__ves-list
+                            li.product-card__ves-item.product-card__ves-item--active 1.2кг
+                            li.product-card__ves-item 1.8кг
+                            li.product-card__ves-item 2.5кг
+                            li.product-card__ves-item свой вес
+                            input(type="hidden" value="" id="product-card-ves1")
+                        .product-card__kol
+                          ul.product-card__kol-list
+                            li.product-card__kol-item
+                              .quantity
+                                .quantity-plus +
+                                .quantity-val
+                                  input(type="number" value="1" step="1" min="1" max="")
+                                .quantity-minus -
+                            li.product-card__kol-item
+                              .product-card__atribute.attribute
+                                span Молочный
+                                .attribute-arrow
+                                  svg(width="11" height="10" viewBox="0 0 11 10" fill="none")
+                                    path(d="M9.91061 4.51778L5.39282 9.03557L0.875038 4.51778" fill="none" stroke="black")
+                                ul.attribute__list
+                                  li.attribute__item Медовый
+                                  li.attribute__item Песочный
+                                  li.attribute__item Бисквитный
+                                  li.attribute__item Йогуртовый
+                                  li.attribute__item Фруктовый
+                                input(type="hidden" value="" id="product-card-attr1")
+                  .product-card__footer
+                    a(href="#").btn.product-card__btn В корзину
+                    .price 1890 ₸
+        .product-card.cat.cat3
+                  .product-card__img
+                    img(src="img/tort8.png")
+                  .product-card__content
+                    h3.product-card__title Визит
+                    ul.product-card__tabs
+                      li.deckription-link.deckription-link--active Состав
+                      li.edit-link Изменить торт
+                    ul.product-card__tab
+                      li.deckription-tab.deckription-tab--open Сахар, масло сливочное, молоко сгущенное уваренное, белок яичный, пудра сахарная, гель шоколадный...
+                      li.edit-tab
+                        .product-card__ves
+                          ul.product-card__ves-list
+                            li.product-card__ves-item.product-card__ves-item--active 1.2кг
+                            li.product-card__ves-item 1.8кг
+                            li.product-card__ves-item 2.5кг
+                            li.product-card__ves-item свой вес
+                            input(type="hidden" value="" id="product-card-ves1")
+                        .product-card__kol
+                          ul.product-card__kol-list
+                            li.product-card__kol-item
+                              .quantity
+                                .quantity-plus +
+                                .quantity-val
+                                  input(type="number" value="1" step="1" min="1" max="")
+                                .quantity-minus -
+                            li.product-card__kol-item
+                              .product-card__atribute.attribute
+                                span Молочный
+                                .attribute-arrow
+                                  svg(width="11" height="10" viewBox="0 0 11 10" fill="none")
+                                    path(d="M9.91061 4.51778L5.39282 9.03557L0.875038 4.51778" fill="none" stroke="black")
+                                ul.attribute__list
+                                  li.attribute__item Медовый
+                                  li.attribute__item Песочный
+                                  li.attribute__item Бисквитный
+                                  li.attribute__item Йогуртовый
+                                  li.attribute__item Фруктовый
+                                input(type="hidden" value="" id="product-card-attr1")
+                  .product-card__footer
+                    a(href="#").btn.product-card__btn В корзину
+                    .price 1890 ₸
+        .product-card.cat.cat4
+                  .product-card__img
+                    img(src="img/tort1.png")
+                  .product-card__content
+                    h3.product-card__title Детский
+                    ul.product-card__tabs
+                      li.deckription-link.deckription-link--active Состав
+                      li.edit-link Изменить торт
+                    ul.product-card__tab
+                      li.deckription-tab.deckription-tab--open Сахар, масло сливочное, молоко сгущенное уваренное, белок яичный, пудра сахарная, гель шоколадный...
+                      li.edit-tab
+                        .product-card__ves
+                          ul.product-card__ves-list
+                            li.product-card__ves-item.product-card__ves-item--active 1.2кг
+                            li.product-card__ves-item 1.8кг
+                            li.product-card__ves-item 2.5кг
+                            li.product-card__ves-item свой вес
+                            input(type="hidden" value="" id="product-card-ves1")
+                        .product-card__kol
+                          ul.product-card__kol-list
+                            li.product-card__kol-item
+                              .quantity
+                                .quantity-plus +
+                                .quantity-val
+                                  input(type="number" value="1" step="1" min="1" max="")
+                                .quantity-minus -
+                            li.product-card__kol-item
+                              .product-card__atribute.attribute
+                                span Молочный
+                                .attribute-arrow
+                                  svg(width="11" height="10" viewBox="0 0 11 10" fill="none")
+                                    path(d="M9.91061 4.51778L5.39282 9.03557L0.875038 4.51778" fill="none" stroke="black")
+                                ul.attribute__list
+                                  li.attribute__item Медовый
+                                  li.attribute__item Песочный
+                                  li.attribute__item Бисквитный
+                                  li.attribute__item Йогуртовый
+                                  li.attribute__item Фруктовый
+                                input(type="hidden" value="" id="product-card-attr1")
+                  .product-card__footer
+                    a(href="#").btn.product-card__btn В корзину
+                    .price 1890 ₸
+        .product-card.cat.cat4
+                  .product-card__img
+                    img(src="img/tort3.png")
+                  .product-card__content
+                    h3.product-card__title Сказка
+                    ul.product-card__tabs
+                      li.deckription-link.deckription-link--active Состав
+                      li.edit-link Изменить торт
+                    ul.product-card__tab
+                      li.deckription-tab.deckription-tab--open Сахар, масло сливочное, молоко сгущенное уваренное, белок яичный, пудра сахарная, гель шоколадный...
+                      li.edit-tab
+                        .product-card__ves
+                          ul.product-card__ves-list
+                            li.product-card__ves-item.product-card__ves-item--active 1.2кг
+                            li.product-card__ves-item 1.8кг
+                            li.product-card__ves-item 2.5кг
+                            li.product-card__ves-item свой вес
+                            input(type="hidden" value="" id="product-card-ves1")
+                        .product-card__kol
+                          ul.product-card__kol-list
+                            li.product-card__kol-item
+                              .quantity
+                                .quantity-plus +
+                                .quantity-val
+                                  input(type="number" value="1" step="1" min="1" max="")
+                                .quantity-minus -
+                            li.product-card__kol-item
+                              .product-card__atribute.attribute
+                                span Молочный
+                                .attribute-arrow
+                                  svg(width="11" height="10" viewBox="0 0 11 10" fill="none")
+                                    path(d="M9.91061 4.51778L5.39282 9.03557L0.875038 4.51778" fill="none" stroke="black")
+                                ul.attribute__list
+                                  li.attribute__item Медовый
+                                  li.attribute__item Песочный
+                                  li.attribute__item Бисквитный
+                                  li.attribute__item Йогуртовый
+                                  li.attribute__item Фруктовый
+                                input(type="hidden" value="" id="product-card-attr1")
+                  .product-card__footer
+                    a(href="#").btn.product-card__btn В корзину
+                    .price 1890 ₸
+      .tort-zakaz__view-all
+        a.alt-btn(href="#") Открыть весь каталог
+          
+        
+
+
+      block

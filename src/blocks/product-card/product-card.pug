@@ -1,0 +1,33 @@
+//- Все примеси в этом файле должны начинаться c имени блока (product-card)
+
+mixin product-card(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +product-card('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' product-card--' + modsList[i].trim();
+      }
+    }
+
+  .product-card(class=allMods)&attributes(attributes)
+    .product-card__img
+      img(src="img/tort1.png")
+    .product-card__content
+      h3.product-card__title Йогуртовый
+      ul.producr-card__tabs
+        .li.deckription-link Состав
+        .li.edit-link Изменить торт
+      ul.producr-card__tabs
+        .li.deckription-tab Сахар, масло сливочное, молоко сгущенное уваренное, белок яичный, пудра сахарная, гель шоколадный...
+        .li.edit-tab
+
+      block

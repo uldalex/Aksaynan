@@ -13,16 +13,93 @@
 }
 
 
-/* stylelint-disable */
-// @font-face {
-//   font-family: 'FONTNAME';
-//   src: url('../fonts/FONTNAME.woff2') format('woff2'),
-//        url('../fonts/FONTNAME.woff') format('woff');
-//   font-weight: 400;
-//   font-style: normal;
-//   font-display: swap;
-// }
-/* stylelint-enable */
+/* open-sans-regular - latin_cyrillic */
+/* open-sans-regular - latin_cyrillic */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/open-sans-v18-latin_cyrillic-regular.eot'); /* IE9 Compat Modes */
+  src: local('Open Sans Regular'), local('OpenSans-Regular'),
+       url('fonts/open-sans-v18-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/open-sans-v18-latin_cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/open-sans-v18-latin_cyrillic-regular.woff') format('woff'), /* Modern Browsers */
+       url('fonts/open-sans-v18-latin_cyrillic-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('fonts/open-sans-v18-latin_cyrillic-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
+}
+/* open-sans-italic - latin_cyrillic */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: url('fonts/open-sans-v18-latin_cyrillic-italic.eot'); /* IE9 Compat Modes */
+  src: local('Open Sans Italic'), local('OpenSans-Italic'),
+       url('fonts/open-sans-v18-latin_cyrillic-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/open-sans-v18-latin_cyrillic-italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/open-sans-v18-latin_cyrillic-italic.woff') format('woff'), /* Modern Browsers */
+       url('fonts/open-sans-v18-latin_cyrillic-italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('fonts/open-sans-v18-latin_cyrillic-italic.svg#OpenSans') format('svg'); /* Legacy iOS */
+}
+/* open-sans-600 - latin_cyrillic */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: url('fonts/open-sans-v18-latin_cyrillic-600.eot'); /* IE9 Compat Modes */
+  src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'),
+       url('fonts/open-sans-v18-latin_cyrillic-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/open-sans-v18-latin_cyrillic-600.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/open-sans-v18-latin_cyrillic-600.woff') format('woff'), /* Modern Browsers */
+       url('fonts/open-sans-v18-latin_cyrillic-600.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('fonts/open-sans-v18-latin_cyrillic-600.svg#OpenSans') format('svg'); /* Legacy iOS */
+}
+/* open-sans-600italic - latin_cyrillic */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 600;
+  src: url('fonts/open-sans-v18-latin_cyrillic-600italic.eot'); /* IE9 Compat Modes */
+  src: local('Open Sans SemiBold Italic'), local('OpenSans-SemiBoldItalic'),
+       url('fonts/open-sans-v18-latin_cyrillic-600italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/open-sans-v18-latin_cyrillic-600italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/open-sans-v18-latin_cyrillic-600italic.woff') format('woff'), /* Modern Browsers */
+       url('fonts/open-sans-v18-latin_cyrillic-600italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('fonts/open-sans-v18-latin_cyrillic-600italic.svg#OpenSans') format('svg'); /* Legacy iOS */
+}
+/* open-sans-800 - latin_cyrillic */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 800;
+  src: url('fonts/open-sans-v18-latin_cyrillic-800.eot'); /* IE9 Compat Modes */
+  src: local('Open Sans ExtraBold'), local('OpenSans-ExtraBold'),
+       url('fonts/open-sans-v18-latin_cyrillic-800.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/open-sans-v18-latin_cyrillic-800.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/open-sans-v18-latin_cyrillic-800.woff') format('woff'), /* Modern Browsers */
+       url('fonts/open-sans-v18-latin_cyrillic-800.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('fonts/open-sans-v18-latin_cyrillic-800.svg#OpenSans') format('svg'); /* Legacy iOS */
+}
+/* open-sans-800italic - latin_cyrillic */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 800;
+  src: url('fonts/open-sans-v18-latin_cyrillic-800italic.eot'); /* IE9 Compat Modes */
+  src: local('Open Sans ExtraBold Italic'), local('OpenSans-ExtraBoldItalic'),
+       url('fonts/open-sans-v18-latin_cyrillic-800italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/open-sans-v18-latin_cyrillic-800italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/open-sans-v18-latin_cyrillic-800italic.woff') format('woff'), /* Modern Browsers */
+       url('fonts/open-sans-v18-latin_cyrillic-800italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('fonts/open-sans-v18-latin_cyrillic-800italic.svg#OpenSans') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Hello';
+  font-style: normal;
+  font-weight: 400;
+  src:  url('../fonts/HelloDinaScript.woff2') format('woff2'), /* Super Modern Browsers */
+
+}
 
 
 .page {
@@ -30,7 +107,7 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-text-size-adjust: 100%;
   min-width: 320px;
-  min-height: 100%;
+  min-height: 400vh;
 
   &__inner {
     min-height: 100vh;
@@ -56,14 +133,17 @@
 * {
   -webkit-tap-highlight-color: transparent;
 }
+body, html {
+  overflow-x: hidden;
 
+}
 body {
   display: flex;           // Исправляем баг в IE для min-height and flexbox (flex-direction:column)
   flex-direction: column;  // и прижимаем footer в IE 10-11
   margin: 0;
-  min-height: 100%;
+  min-height: 2000vh;
   word-break: break-word;
-  font-family: $font-family;
+  font-family: "Open Sans";
   font-size: $font-size;
   line-height: $line-height;
   text-align: left;
@@ -159,7 +239,8 @@ a {
 
   &:hover,
   &:focus {
-    color: $link-color--hover;
+    color: $link-color;
+    text-decoration: underline;
   }
 
   // &:visited {
@@ -195,7 +276,7 @@ h4,
 h5,
 h6 {
   margin-top: 1em;
-  margin-bottom: 0.5em;
+  margin-bottom: 2rem;
   font-family: $font-family;
   font-weight: 700;
   line-height: 1.2;
@@ -335,4 +416,426 @@ pre {
     background: transparent;
   }
 }
+.page {
 
+}
+.top-block-home {
+  min-height: 538px;
+  background-color: rgb(255, 239, 215);
+  position: relative;
+  padding-bottom: 3.5rem;
+  padding-bottom: 57px;
+
+  &__lenta {
+    position: absolute;
+    bottom: 0;
+    left: 80%;
+
+  }
+  &__lenta-niz {
+    position: absolute;
+    left: 60%;
+    
+}
+@media(max-width: 768px){
+  &__lenta-niz {
+    position: absolute;
+    left: 50%;
+    bottom: -25px;
+}
+}
+}
+
+.home-title{
+  visibility: hidden;
+  position: absolute;
+}
+
+.product-card {
+  border:1px solid #FFEFD7;
+  border-radius:30px;
+  padding:1.5rem 1rem;
+  display:flex;
+  flex-wrap: wrap;
+  max-width:100%;
+  overflow: hidden;
+  
+  &:hover {
+    border-color: $red;
+  }
+  &__title {
+    font-size:18px;
+  }
+ 
+  &__img {
+    width: 100%;
+    position: relative;
+    min-height: 300px;
+    height: 300px;
+    
+
+    & img {
+      position: absolute;
+      max-width: 130%;
+      right: 0;
+      min-width: 100%;
+  
+    }
+
+    }
+
+  &__tabs {
+    display: flex;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 0;
+    margin-bottom:1rem;
+  }
+  & .deckription-tab{
+    overflow: hidden;
+    max-height: 0px;
+    height:0;
+    transition: all 1s linear;
+  }
+
+  & .deckription-tab--open{
+    overflow: hidden;
+    max-height: 500px;
+    height:auto;
+    transition: all 1s linear;
+  }
+  .edit-tab{
+    overflow: hidden;
+    max-height: 0px;
+    height:0;
+    transition: all 1s linear;
+  }
+  .edit-tab--open{
+    overflow: hidden;
+    max-height: 500px;
+    height:auto;
+    transition: all 1s linear;
+  }
+  & .deckription-link{
+    list-style: none;
+    margin-right:10px;
+    padding-bottom:0.5rem;
+    border-bottom: 1px solid rgb(229, 229, 229);
+    transition: all 0.5s linear;
+    
+
+    &--active {
+      border-bottom: 1px solid $red;
+      transition: all 0.5s linear;
+      }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  & .edit-link{
+    list-style: none;
+    margin-right:10px;
+    padding-bottom:0.5rem;
+    border-bottom: 1px solid rgb(229, 229, 229);
+    transition: all 0.5s linear;
+
+    &--active {
+      border-bottom: 1px solid $red;
+      transition: all 0.5s linear;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__tab {
+    padding:0;
+
+    & li {
+      list-style: none;
+    }
+  }
+  &__ves-list{
+  background-color: #F4F4F4;
+  border-radius: 10px;
+  display: flex;
+  margin: 10px 0;
+  padding:0;
+  }
+
+  &__ves-item{
+    background-color: #F4F4F4;
+    border-radius: 7px;
+    padding: 4px 9px;
+    margin: 3px 2px;
+
+    &--active {
+      background-color: #ffffff;
+      box-shadow: 0px 0px 8px rgba(0,0,0,0.1); 
+    }
+
+    &:hover {
+      cursor: pointer;
+      font-weight: bold;
+      color: $red;
+      box-shadow: 0px 0px 8px rgba(0,0,0,0.1);
+    }
+  }
+  &__kol-list {
+    
+    display: flex;
+    margin: 10px 0;
+    padding:0;
+    justify-content: space-between;
+    position: relative;
+
+    &:before {
+      content: " ";
+    background-color: #F4F4F4;
+    border-radius: 10px;
+    position: absolute;
+    top:0;
+    right:0;
+    left:0;
+    padding: 15px 10px;
+    z-index: 0;
+    }
+  }
+  &__kol-item {
+    width:49%;
+    position: relative;
+  }
+  & .quantity {
+    display: flex;
+  }
+  & .quantity-plus {
+    display:flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 4px 9px;
+    margin: 3px 2px;
+    border-radius: 7px;
+    box-shadow: 0 0 8px rgba(0,0,0,.1);
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  & .quantity-minus {
+    display:flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 4px 9px;
+    margin: 3px 2px;
+    border-radius: 7px;
+    box-shadow: 0 0 8px rgba(0,0,0,.1);
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  & .quantity-val {
+    max-width:50px;
+    overflow: hidden;
+    display:flex;
+    align-items: center;
+    margin: 3px 2px;
+    border-radius: 7px;
+    box-shadow: 0 0 8px rgba(0,0,0,.1);
+  }
+  & input {
+    width: 70px;
+    outline: none;
+    padding: 4px 9px;
+    border: 0px;
+    border-radius: 10px;
+    background: transparent;
+  }
+  & .product-card__atribute{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 4px 9px;
+    margin: 3px 2px;
+
+     &:hover {
+       cursor: pointer;
+     }
+
+    & span {
+      background-color: #ffffff;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 0;
+      padding: 4px 9px;
+      margin: 3px 2px;
+      border-radius: 7px;
+      box-shadow: 0 0 8px rgba(0,0,0,.1);
+    }
+   }
+  & .attribute__list {
+    display:none;
+    max-height:0;
+    overflow: hidden;
+    width:100%;
+    top: 30px;
+    left: 0;
+    right: 0;
+    background-color: #f4f4f4;
+    z-index: 10;
+    padding: 0;
+    box-shadow: 0 0 8px rgba(0,0,0,.2);
+    transition: all 0.5s linear;
+
+    & li {
+      padding:0.3rem 0.5rem;
+    }
+    & li:hover {
+      padding:0.3rem 0.5rem;
+      background-color: #fff;
+      color:$red;
+      cursor: pointer;
+    }
+    &--open {
+      display: block;
+      max-height:500px;
+
+    }
+  }
+  & .attribute-arrow{
+    padding-left:5px;
+    transition: all 0.5 linear;
+    z-index:0;
+
+    &--open {
+      transform: rotate(180deg);
+    }
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top:20px;
+    width: 100%;
+  }
+
+  &__btn {
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    border: 2px solid #9f241d;
+    background: #ffffff;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 20px;
+    transition: all 0.5s linear;
+
+    &:hover, &:focus, &:active {
+      background-color: $red;
+      color:#ffffff;
+      text-decoration: none;
+      outline: none;
+      box-shadow: none;
+    }
+  }
+   & .price {
+     font-size:15px;
+     font-weight: 800;
+   }
+
+
+
+}
+.alt-btn {
+  text-decoration: none;
+  padding: .5rem 1.5rem;
+  border: 1px solid #c7c1c1;
+  background: #fff;
+  color:#8e8383;
+  font-weight: 600;
+  font-size: 11px;
+  border-radius: 20px;
+  -webkit-transition: all .5s linear;
+  transition: all .5s linear;
+  
+  &--dark {
+    background-color: #F4F4F4;
+  }
+  &.active{
+    background-color: #f4f4f4;
+    color:$red;
+  }
+
+  &:hover, &:focus, &:active {
+    background-color: #F4F4F4;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+.about {
+  position: relative;
+  color:#ffffff;
+  background: url(../img/footer.png), linear-gradient(90deg, #E7770B 0%, #EDA84B 100%);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  &__inner {
+    @include container();
+  }
+
+  &__row {
+    @include row();
+  }
+
+  &__col {
+    @include col(xl, 3)
+  }
+  &__card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position:relative;
+
+    & svg {
+      position: absolute;
+      top: 40%;
+      right: -25%;
+    }
+    & .icon-rotate {
+      top:48%;
+    }
+  }
+  &__img{
+   text-align: center;
+
+    &:before {
+      content:"";
+    }
+    &::after {
+      content:"";
+    }
+
+    & img{
+     max-width:75%;
+    }
+  }
+
+  & h3 {
+    padding: 68px 0 0 0;
+    text-align: center;
+    font-size: 40px;
+}
+
+  &__subtitle {
+    font-size:15px;
+    text-align:center;
+  }
+ & .parallax8 {
+  position: absolute;
+  left: 60%;
+  top:-1000px;
+ }
+}

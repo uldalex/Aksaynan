@@ -1,0 +1,25 @@
+//- Все примеси в этом файле должны начинаться c имени блока (language)
+
+mixin language(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +language('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' language--' + modsList[i].trim();
+      }
+    }
+
+  .language(class=allMods)&attributes(attributes)
+    a(htef="#").language__link.language__link--active РУС
+    span |
+    a(htef="#").language__link ҚАЗ
+      block

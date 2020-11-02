@@ -20,5 +20,6 @@ mixin logo(href, mods)
       }
     }
 
-  a.logo(class=allMods, href=href)&attributes(attributes)
+  .logo
+    a.logo__link(class=allMods, href=href)&attributes(attributes)
     block

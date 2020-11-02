@@ -1,0 +1,78 @@
+// В этом файле должны быть стили для БЭМ-блока tort-zakaz, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.tort-zakaz {
+  position: relative;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__inner {
+    @include container();
+
+  }
+  &__filter {
+    display:flex;
+    flex-wrap: wrap;
+
+  }
+  & .product-card {
+    width: calc(25% - 2em);
+    margin: 0 2em 0 0;
+}
+  &__sort{
+    margin: 1.5rem 0;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: flex-start;
+
+    & li {
+    position: relative;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0.2rem;
+    }
+
+  }
+
+  &__col {
+    @include col(xl,3 )
+    display: flex;
+  }
+  & .cat {
+    position: absolute;
+    left:-300vw;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    transform: scale(1.1);
+
+
+    &.active {
+      position: relative;
+      opacity: 1;
+      left:auto;
+      transform: scale(1);
+    }
+  }
+  
+  &__view-all {
+    text-align: center;
+    padding:4rem 0;
+
+    & .alt-btn {
+      font-size: 15px;
+    }
+}
+& .parallax7 {
+  position: absolute;
+  left: 20%;
+  bottom:-500px;
+  z-index: 1;
+  }
+}

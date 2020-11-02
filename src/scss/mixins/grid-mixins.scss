@@ -2,14 +2,16 @@ $screen-xs:                   0 !default;
 $screen-sm:                   480px !default;
 $screen-md:                   768px !default;
 $screen-lg:                   992px !default;
-$screen-xl:                   1200px !default;
-$screen-xxl:                  1800px !default;
+$screen-xl:                   1280px !default;
+$screen-xxl:                  1440px !default;
+$screen-xxll:                  1920px !default;
 
 $container-sm:                100% !default;
 $container-md:                100% !default;
 $container-lg:                ($screen-lg - 30) !default;
 $container-xl:                ($screen-xl - 30) !default;
-$container-xxl:               ($screen-xxl - 30) !default;
+$container-xxl:               ($screen-xxl - 100) !default;
+$container-xxll:               ($screen-xxll - 200) !default;
 
 $grid-columns:                12 !default;
 $grid-gutter-width:           30px !default;
@@ -26,7 +28,8 @@ $grid-gutter-width:           30px !default;
   $md-grid-gutter:  $grid-gutter-width,
   $lg-grid-gutter:  $grid-gutter-width,
   $xl-grid-gutter:  $grid-gutter-width,
-  $xxl-grid-gutter: $grid-gutter-width
+  $xxl-grid-gutter: $grid-gutter-width,
+  $xxll-grid-gutter: $grid-gutter-width
 ) {
   display: block;
   width: 100%;
@@ -77,9 +80,17 @@ $grid-gutter-width:           30px !default;
   @media (min-width: $screen-xxl) {
     width: $container-xxl;
 
-    @if ($xxl-grid-gutter != $xl-grid-gutter) {
+    @if ($xxl-grid-gutter != $xxl-grid-gutter) {
       padding-left: ($xxl-grid-gutter / 2);
       padding-right: ($xxl-grid-gutter / 2);
+    }
+  }
+  @media (min-width: $screen-xxll) {
+    width: $container-xxll;
+
+    @if ($xxll-grid-gutter != $xxll-grid-gutter) {
+      padding-left: ($xxll-grid-gutter / 2);
+      padding-right: ($xxll-grid-gutter / 2);
     }
   }
 }

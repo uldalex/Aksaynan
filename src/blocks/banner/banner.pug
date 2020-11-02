@@ -1,0 +1,53 @@
+//- Все примеси в этом файле должны начинаться c имени блока (banner)
+
+mixin banner(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +banner('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' banner--' + modsList[i].trim();
+      }
+    }
+
+  .banner(class=allMods)&attributes(attributes)
+    .banner__inner
+      img.parallax.parallax1(src="img/parallax1.png")
+      img.parallax.parallax2(src="img/parallax2.png")
+      .splide#banner
+        .splide__track
+          ul.splide__list
+            li.splide__slide
+                figure
+                  .slide-desckription
+                    h3.slide-desckription__title Подарок к заказу
+                    h4.slide-desckription__text шарики, капкейки, начинки,бесплатная доставка
+                  img(src='img/banner.png' width="1200px" height="350px" alt='Подарок к заказу')
+            li.splide__slide
+                figure
+                  .slide-desckription
+                    h3.slide-desckription__title Подарок к заказу
+                    h4.slide-desckription__text шарики, капкейки, начинки,бесплатная доставка
+                  img(src='img/banner2.jpeg' width="1200px" height="350px" alt='Подарок к заказу')
+            li.splide__slide
+              figure
+                .slide-desckription
+                  h3.slide-desckription__title Подарок к заказу
+                  h4.slide-desckription__text шарики, капкейки, начинки,бесплатная доставка
+                img(src='img/banner.jpeg' width="1200px" height="350px" alt='Подарок к заказу')
+            li.splide__slide
+              figure
+                .slide-desckription
+                  h3.slide-desckription__title Подарок к заказу
+                  h4.slide-desckription__text шарики, капкейки, начинки,бесплатная доставка
+                img(src='img/banner0.png' width="1200px" height="350px" alt='Подарок к заказу')
+            
+          block

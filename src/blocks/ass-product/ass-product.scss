@@ -1,0 +1,129 @@
+// В этом файле должны быть стили для БЭМ-блока ass-product, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.ass-product {
+
+  $block-name:                &; // #{$block-name}__element
+  position: relative;
+  max-width:100%;
+  margin-top: 100px;
+  
+  & .parallax4 {
+    position: absolute;
+    left: 48%;
+    top: 1500px;
+    width: 70px;
+    z-index: 1;
+    }
+
+  & .parallax5 {
+    position: absolute;
+    left: -40px;
+    top: -500px;
+    width: 110px;
+    z-index: 1;
+    }
+    &__inner {
+      @include container();
+    }
+
+    &__row {
+      @include row();
+    }
+    &__col {
+      @include col(xl,3 )
+      display: flex;
+    }
+
+    &__filter {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__sort {
+      margin:1.5rem 0;
+      padding:0;
+      display: flex;
+      width:100%;
+      align-items: center;
+      justify-content: space-between;
+
+      & li {
+        position: relative;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        & svg {
+          margin-left:5px;
+        }
+
+        
+      }
+    }
+    &__stores-list {
+      height:0;
+      max-height:0;
+      overflow: hidden;
+      position: absolute;
+      padding:0;
+      top: 34px;
+      left:0;
+      right:auto;
+      width: 10rem;
+      background-color: #F4F4F4;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: all 0.5s linear;
+      z-index: 5;
+
+      & li {
+        list-style: none;
+        padding:0.5rem;
+        font-weight: 400;
+
+        &:hover {
+          background-color: #ece6e6;
+        }
+
+        &.active{
+          color: $red;
+          font-weight: 800;
+        }
+      }
+    &--open {
+      height: auto;
+      max-height:200px;
+    }
+    }
+  & .product-card {
+    width: calc(25% - 2em);
+    margin: 0 2em 0 0;
+  }
+  &__view-all {
+    text-align: center;
+    padding:4rem 0;
+
+    & .alt-btn {
+      font-size: 15px;
+    }
+  }
+  & .store {
+    position: absolute;
+    left:-300vw;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    transform: scale(1.1);
+
+
+    &.active {
+      position: relative;
+      opacity: 1;
+      left:auto;
+      transform: scale(1);
+    }
+  }
+}

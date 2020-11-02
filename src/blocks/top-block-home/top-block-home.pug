@@ -1,0 +1,20 @@
+//- Все примеси в этом файле должны начинаться c имени блока (page-header)
+
+mixin top-block-home(mods)
+
+  //- Принимает:
+  //-   mods  {string} - список модификаторов
+  //- Вызов:
+        +page-header()
+          p «Шапка»
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' top-block-home--' + modsList[i].trim();
+      }
+    }
+
+  .top-block-home(class=allMods, role='banner')&attributes(attributes)

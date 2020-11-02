@@ -1,0 +1,10 @@
+// В этом файле должны быть стили для БЭМ-блока top-block-home, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.top-block-home {
+
+  $block-name:                &; // #{$block-name}__element
+  min-height: 538px;
+  background-color: rgb(255, 239, 215);
+}

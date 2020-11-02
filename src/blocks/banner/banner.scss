@@ -1,0 +1,307 @@
+// В этом файле должны быть стили для БЭМ-блока banner, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.banner {
+  $block-name:                &; // #{$block-name}__element
+  margin-top:2rem;
+  
+  &__inner {
+    @include container();
+    position: relative;
+  
+  &  figure {
+    position: relative;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+.splide {
+  position: relative;
+  visibility: hidden;
+  outline: none;
+  $root: &;
+
+  &__container {
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  &__list {
+    display: flex;
+    width: max-content;
+    margin: 0;
+    padding: 0;
+  }
+
+  &.is-active {
+
+    #{$root}__list {
+      display: flex;
+    }
+  }
+
+  &__slide {
+    box-sizing: border-box;
+    flex-shrink: 0;
+    position: relative;
+    list-style-type: none;
+    margin: 0;
+    outline: none;
+    text-align: center;
+    max-height:350px;
+    border-radius:30px;
+    overflow: hidden;
+    
+
+    img {
+      vertical-align: bottom;
+      border-radius: 30px;
+      object-fit: cover;
+      width: 1200px;
+      height: 350px;
+    }
+  }
+
+  &__slider {
+    position: relative;
+  }
+
+  &__track {
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+  }
+
+  &__arrow {
+    display: flex;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    width: 40px;
+    height: 32px;
+    border: none;
+    padding: 0;
+    background: transparent;
+    transform: translateY( -50% );
+
+    svg {
+      transition: 0.5s;
+      stroke: #ffffff;
+    }
+
+    path {
+      fill: $black;
+      fill-rule: evenodd;
+      transition: 0.5s;
+    }
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.9;
+
+      svg {
+        transition: 0.5s;
+        stroke: #f2e9f1;
+      }
+
+      circle {
+        fill: $black;
+        stroke: $black;
+        stroke-width: 1px;
+        transition: 0.5s;
+      }
+
+      path {
+        fill: $white;
+        fill-rule: evenodd;
+        transition: 0.5s;
+      }
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  //progress
+
+  &__progress {
+
+    &__bar {
+      width: 0;
+      height: 2rem;
+      background: #ccc;
+    }
+  }
+
+  #{$root}__slide {
+    position: relative;
+    border: 0 solid transparent;
+    opacity: 1;
+
+    div {
+      opacity: 1;
+    }
+
+    &.is-visible {
+      opacity: 1;
+      transition: all 0.9s linear;
+
+      img {
+        transform: matrix(0.7, 0, 0, 0.7, 200, 50);
+        transition: all 0.5s linear;
+      }
+    }
+
+    &.first {
+
+      img {
+        transform: matrix(0.7, 0, 0, 0.7, -200, 50);
+      }
+    }
+
+    &.is-active {
+
+      div {
+        opacity: 1;
+      }
+
+      img {
+        transform: matrix(1, 0, 0, 1, 0, 0);
+      }
+    }
+  }
+
+  #{$root}__arrow {
+    display: none;
+    transform: translate( -50%, 0 );
+
+    &--prev {
+      top: 50%;
+      left: 3vw;
+
+      svg {
+        transform: rotateZ( 0deg );
+      }
+    }
+
+    &--next {
+      top: 50%;
+      right: 2vw;
+
+      svg {
+        transform: rotateZ( 180deg );
+      }
+    }
+  }
+
+  &__pagination {
+    position: absolute;
+    z-index: 1;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX( -50% );
+    padding: 0;
+    display: flex;
+
+    & li {
+      list-style: none;
+    }
+    &__page {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background: transparent;
+      border: 2px solid  rgba(100,5,0,1);
+      border-radius: 50%;
+      margin: 3px;
+      padding: 0;
+      transition: transfrom .2s linear;
+      
+      &.is-active {
+        background: rgba(100,5,0,1);
+        
+      }
+
+      &:hover {
+        cursor: pointer;
+        opacity: .9;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+& .parallax1{
+  position: absolute;
+  perspective: 1px;
+  right: -40px;
+  z-index: 2;
+  top: -40px;
+  width: 100px;
+  height: auto;
+  overflow: hidden;
+
+ }
+ & .parallax2{
+  position: absolute;
+  perspective: 1px;
+  left: -80px;
+  z-index: 2;
+  bottom: 0px;
+  height: auto;
+  overflow: hidden;
+
+ }
+}
+
+
+
+.slide-desckription {
+  position: absolute;
+  @include container();
+  margin: 0 auto;
+  left: 10%;
+  right: 20%;
+  top: 5%;
+  z-index: 10;
+  text-transform: uppercase;
+
+ & h3 {
+    font-size: 94px;
+    line-height: 94px;
+    max-width:100%;
+    color: #e23c33;
+    font-family: 'Hello';
+    margin-bottom:0.5rem;
+    letter-spacing: 6px;
+    text-transform: none;
+    text-align: left;
+    -webkit-text-stroke: 0.1px rgba(255,255,255,0.8);
+
+    & svg {
+      width:100%;
+    }
+  }
+  &__text {
+    font-size:14px;
+    line-height: 20px;
+    max-width:50%;
+    padding:10px 0;
+    color: $red;
+    text-shadow: 0px 0px 4px #ffffff;
+    background-color: rgba(255,255,255,.4);
+    border-radius: 15px;
+   
+  }
+  
+
+}
+

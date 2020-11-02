@@ -5,12 +5,17 @@ $gray-darkest:                hsl(0, 0%, 10%);
 $gray-darker:                 hsl(0, 0%, 20%);
 $gray-darken:                 hsl(0, 0%, 30%);
 $gray-dark:                   hsl(0, 0%, 40%);
-$gray:                        hsl(0, 0%, 50%);
-$gray-light:                  hsl(0, 0%, 60%);
+$gray:                        hsl(0, 0%, 47%);
+$gray-light:                  hsl(0, 0%, 96%);
 $gray-lighten:                hsl(0, 0%, 70%);
 $gray-lighter:                hsl(0, 0%, 80%);
 $gray-lightest:               hsl(0, 0%, 90%);
 $white:                       hsl(0, 0%, 100%);
+$rose:                        hsl(36, 100, 92);
+$red:                         hsl(3, 69%, 37%);
+$orange-light:                hsl(40, 96%, 56%);
+$orange-dark:                 hsl(21, 85%, 50%);
+
 
 $color-main:                  hsl(208, 98%, 43%);
 $color-success:               hsl(120, 39%, 54%);
@@ -26,11 +31,11 @@ $color-gh:                    #24292e;
 
 // Семантические цвета
 
-$text-color:                  $gray-darkest;
+$text-color:                  $black;
 $text-color-muted:            $gray;
 $body-bg:                     $white;
 
-$link-color:                  $color-main;
+$link-color:                  $red;
 $link-color--hover:           darken($color-main, 15%);
 
 $border-color:                $gray-lighten;
@@ -39,11 +44,11 @@ $border-color:                $gray-lighten;
 
 // Базовая типографика
 
-$font-size:                   16px;
+$font-size:                   11px;
 
-$font-size-h1:                40px;
-$font-size-h2:                32px;
-$font-size-h3:                24px;
+$font-size-h1:                35px;
+$font-size-h2:                30px;
+$font-size-h3:                28px;
 $font-size-h4:                18px;
 $font-size-h5:                16px;
 $font-size-h6:                16px;

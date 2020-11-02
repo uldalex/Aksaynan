@@ -1,0 +1,250 @@
+// В этом файле должны быть стили для БЭМ-блока new-product, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.new-product {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__inner {
+    @include container();
+    position: relative;
+  }
+
+  .splide {
+    position: relative;
+    visibility: hidden;
+    outline: none;
+    $root: &;
+  
+    &__container {
+      box-sizing: border-box;
+      position: relative;
+    }
+  
+    &__list {
+      display: flex;
+      width: max-content;
+      margin: 0;
+      padding: 0;
+    }
+  
+    &.is-active {
+  
+      #{$root}__list {
+        display: flex;
+      }
+    }
+  
+    &__slide {
+      box-sizing: border-box;
+      flex-shrink: 0;
+      position: relative;
+      list-style-type: none;
+      margin: 0;
+      outline: none;
+      overflow: hidden;
+      padding: 0 2rem 0 0;
+      display:flex;
+      
+  
+      img {
+        vertical-align: bottom;
+        max-width: 150%;
+        margin-left: -32%;
+      }
+    }
+  
+    &__slider {
+      position: relative;
+    }
+  
+    &__track {
+      position: relative;
+      z-index: 0;
+      overflow: hidden;
+    }
+  
+    &__arrow {
+      display: flex;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      width: 40px;
+      height: 32px;
+      border: none;
+      padding: 0;
+      background: transparent;
+      transform: translateY( -50% );
+  
+      svg {
+        transition: 0.5s;
+        stroke: #ffffff;
+      }
+  
+      path {
+        fill: $black;
+        fill-rule: evenodd;
+        transition: 0.5s;
+      }
+  
+      &:hover {
+        cursor: pointer;
+        opacity: 0.9;
+  
+        svg {
+          transition: 0.5s;
+          stroke: #f2e9f1;
+        }
+  
+        circle {
+          fill: $black;
+          stroke: $black;
+          stroke-width: 1px;
+          transition: 0.5s;
+        }
+  
+        path {
+          fill: $white;
+          fill-rule: evenodd;
+          transition: 0.5s;
+        }
+      }
+  
+      &:focus {
+        outline: none;
+      }
+    }
+  
+    //progress
+  
+    &__progress {
+  
+      &__bar {
+        width: 0;
+        height: 2rem;
+        background: #ccc;
+      }
+    }
+  
+    #{$root}__slide {
+      position: relative;
+      border: 0 solid transparent;
+      opacity: 1;
+  
+      div {
+        opacity: 1;
+      }
+  
+      &.is-visible {
+        opacity: 1;
+        transition: all 0.9s linear;
+  
+        img {
+          transform: matrix(0.7, 0, 0, 0.7, 200, 50);
+          transition: all 0.5s linear;
+        }
+      }
+  
+      &.first {
+  
+        img {
+          transform: matrix(0.7, 0, 0, 0.7, -200, 50);
+        }
+      }
+  
+      &.is-active {
+  
+        div {
+          opacity: 1;
+        }
+  
+        img {
+          transform: matrix(1, 0, 0, 1, 0, 0);
+        }
+      }
+    }
+  
+    #{$root}__arrow {
+      display: none;
+      transform: translate( -50%, 0 );
+  
+      &--prev {
+        top: 50%;
+        left: 3vw;
+  
+        svg {
+          transform: rotateZ( 0deg );
+        }
+      }
+  
+      &--next {
+        top: 50%;
+        right: 2vw;
+  
+        svg {
+          transform: rotateZ( 180deg );
+        }
+      }
+    }
+  
+    &__pagination {
+      position: absolute;
+      z-index: 1;
+      bottom: -50px;
+      left: 50%;
+      transform: translateX( -50% );
+      padding: 0;
+      display: flex;
+  
+      & li {
+        list-style: none;
+      }
+      &__page {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background: transparent;
+        border: 2px solid  rgba(100,5,0,1);
+        border-radius: 50%;
+        margin: 3px;
+        padding: 0;
+        transition: transfrom .2s linear;
+        
+        &.is-active {
+          background: rgba(100,5,0,1);
+          
+        }
+  
+        &:hover {
+          cursor: pointer;
+          opacity: .9;
+        }
+  
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+
+  & .parallax3 {
+    position: absolute;
+    right: -40px;
+    top: 20px;
+    width: 142px;
+    z-index: 1;
+    }
+
+    & .parallax6 {
+    width: 60px;
+    position: absolute;
+    right: 30%;
+    bottom: -200px;
+    z-index: 1;
+    }
+ 
+}
