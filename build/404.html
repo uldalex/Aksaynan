@@ -2199,7 +2199,7 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
                 </div>
               </div>
             </div>
-            <div class="about__zakaz"> <a class="btn green-btn" href="#">Заказать уникальный торт</a></div>
+            <div class="about__zakaz"> <a class="btn green-btn" href="zakaz" data-toggle="modal" data-target="#zakaz">Заказать уникальный торт</a></div>
           </div>
         </div>
       </section>
@@ -2215,8 +2215,41 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
       </footer>
     </div>
   </div>
-  <script src="js/bundle.js"></script>
-
 </body>
+<div class="mini-cart"><img src="img/cart.png">
+  <div class="mini-cart__title">Корзина пуста</div>
+  <div class="mini-cart__content">Здесь будет список товаров</div>
+</div>
+<div class="modal" id="zakaz" tabindex="-1" role="dialog">
+  <div class="modal__dialog" role="document">
+    <div class="modal__content">
+      <div class="modal__header"><span class="close modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+        <h4 class="modal__title">Заказать уникальный торт</h4>
+      </div>
+      <div class="modal__body">
+        <form class="modal__form" id="feedback_form">
+          <div class="form-control"><label for="name">ФИО покупателя</label><input class="require" id="name" required="required" name="name" type="text"></div>
+          <div class="form-control"><label for="mail">Электронная почта</label><input class="require" id="mail" required="required" name="mail" type="email"></div>
+          <div class="form-control"><label for="phone">Телефон</label><input class="require" id="phone" required="required" name="phone" type="text"></div>
+          <div class="form-control form-control--row">
+            <div class="link-photo"><label for="link-photo">Добавьте ссылку на фото торта</label><input class="require" id="link-photo" name="link-photo" type="text" autocomplete="off"></div><span>или</span>
+            <div class="download-photo">
+              <div class="input__wrapper"><input class="input input__file" id="input__file" name="download-photo" type="file" autocomplete="off"><label class="file-label" for="input__file">
+                  <div class="input__file-icon-wrapper">
+                    <div class="nput__file-button-text">Загрузить фото</div><img src="img/add.png" alt="Добавить фото" width="20">
+                  </div>
+                </label></div>
+            </div>
+          </div>
+          <div class="form-control"><label for="message">Коментарий</label><textarea id="message" name="message" required="required"> </textarea></div>
+          <div class="form-control form-control--block"><input class="button" type="submit" value="Заказать звонок"></div>
+          <div class="form-agreement"><label class="checkbox-other" for="ch"><input id="ch" type="checkbox"><span>Нажимая на кнопку «Оплатить заказ», я даю согласие на обработку<br> персональных данных и соглашаюсь c условиями <a href="#">договора-оферты</a> и <a href="#">политикой конфиденциальности</a></span></label></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/bundle.js"></script>
+
 
 </html>

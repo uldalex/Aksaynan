@@ -32,7 +32,7 @@
     margin: 0;
 
     @media (min-width: $screen-lg) {
-      width: 600px;
+      width: 545px;
       margin: auto;
 
       @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
@@ -51,8 +51,11 @@
     position: relative;
     min-width: 100%;
     min-height: 100%;
-    background-color: #fff;
+    background-color: #ffefd7;
+    border-radius:20px;
     outline: 0;
+    padding: 30px;
+    box-shadow: 0px 10px 20px rgba(100, 5, 0, 0.3);
   }
 
   &__header {
@@ -63,16 +66,23 @@
   &__title {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
-    font-size: $font-size-h4;
-    line-height: 1.2;
-    font-weight: 700;
-    color: currentColor;
+    font-size: 23px;
+    color: $red;
+    text-align: center;
   }
 
   &__close {
     position: absolute !important; // stylelint-disable-line  declaration-no-important
     top: 5px;
-    right: 5px;
+    right: 15px;
+    width:20px;
+
+    & span:before {
+      background: #d4cbcb;
+    }
+    & span:after {
+      background: #d4cbcb;
+    }
   }
 
   &__body {
@@ -82,8 +92,7 @@
 
   &__footer {
     flex-shrink: 0;
-    padding: 15px;
-  }
+   }
 
   &__backdrop {
     position: fixed;
@@ -92,7 +101,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, $opacity);
+    background-color: rgba(255, 255, 255, $opacity);
 
     @media (min-width: $screen-lg) {
       animation: modal-backdrop-show $transition-time 1;

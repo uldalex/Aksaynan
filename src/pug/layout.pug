@@ -92,7 +92,7 @@ html(class='page  no-js', lang='ru')
                     .about__text Торт доставят по указанному адресу в указанное время
                     
               .about__zakaz 
-                a(href="#").btn.green-btn Заказать уникальный торт
+                a(href="zakaz" data-toggle="modal" data-target="#zakaz").btn.green-btn Заказать уникальный торт
        
        
         block content
@@ -103,6 +103,49 @@ html(class='page  no-js', lang='ru')
           block footer
             p «Подвал»
             p Контактный телефон: #[a(href='tel:+70000000000') +7 000 000 00 00]
+  
+  block page-bottom
+  .mini-cart
+    img(src="img/cart.png")
+    .mini-cart__title Корзина пуста
+    .mini-cart__content Здесь будет список товаров
 
-    block page-bottom
-      script(src='js/bundle.js')
+
+  +modal("zakaz","Заказать уникальный торт")
+        .modal__body 
+          form#feedback_form.modal__form
+            .form-control
+              label(for="name") ФИО покупателя
+              input#name.require(required="required" name="name" type="text")
+            .form-control
+              label(for="mail") Электронная почта
+              input#mail.require(required="required" name="mail" type="email")
+            .form-control
+              label(for="phone") Телефон
+              input#phone.require(required="required" name="phone" type="text")
+            .form-control.form-control--row
+              .link-photo
+                label(for="link-photo") Добавьте ссылку на фото торта
+                input#link-photo.require(name="link-photo" type="text" autocomplete="off")
+              span или
+              .download-photo
+                .input__wrapper
+                  input#input__file.input.input__file(name="download-photo" type="file" autocomplete="off")
+                  label.file-label(for="input__file")
+                    div.input__file-icon-wrapper
+                     div.nput__file-button-text Загрузить фото
+                     img(src='img/add.png', alt='Добавить фото', width='20')
+            .form-control
+              label(for="message") Коментарий
+              textarea#message(name="message" required="required") 
+             
+            .form-control.form-control--block
+              input.button(type="submit" value="Заказать звонок")
+
+            .form-agreement
+              label.checkbox-other(for="ch")
+                input#ch(type="checkbox")
+                span Нажимая на кнопку «Оплатить заказ», я даю согласие на обработку<br> персональных данных и соглашаюсь c условиями <a href="#">договора-оферты</a> и <a href="#">политикой конфиденциальности</a>
+             
+
+  script(src='js/bundle.js')
