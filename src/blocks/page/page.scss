@@ -1168,3 +1168,70 @@ color: #a7a7ad;
 
   }
 }
+
+.stories {
+  background: linear-gradient(105.02deg, #D30A04 0%, #6E0903 100%), #640500;
+  color:#ffffff;
+  padding: 0 0 4rem 0;
+
+  &__inner {
+    @include container();
+  }
+
+  &__row {
+   display:flex;
+  }
+  &__col1 {
+    width: 287px;
+  }
+  &__col2 {
+    margin-left:2%;
+    min-width: 70%;
+  }
+  & h3 {
+    font-size:40px;
+    letter-spacing: 2px;
+  }
+
+  &__address-card {
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    padding: 0.5rem 0.8rem;
+    margin:10px 0;
+  
+   & h4 {
+     margin-top:0.5rem;
+     margin-bottom: 0.5rem;
+   }
+
+    & .address-card__content {
+      color: #d49191;
+      & .senstore {
+       display:block;
+       font-size:13px;
+       color:#ffffff;
+    }
+   }
+
+    & .address-card__col {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+
+   }
+  }
+  &__link {
+    display:block;
+    color: #d49191;
+    margin: 0.5rem 0;
+    margin: 1rem 0;
+  }
+}
+.ymaps-2-1-77-ymaps-geolink-light {
+  color: #d49191;
+
+  &:hover {
+    color:#ffffff;
+  }
+}
