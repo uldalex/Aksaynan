@@ -1,8 +1,8 @@
-# Проект Аксайнан  ![Test Status](https://travis-ci.org/nicothin/NTH-start-project.svg?branch=master) [![Главная](https://uldalex.github.io/Aksaynan/build/index.html) [![dependencies Status](https://david-dm.org/nicothin/NTH-start-project/status.svg)](https://david-dm.org/nicothin/NTH-start-project)
+# Проект Аксайнан 
 
+## Смотреть верстку
 
-
-
+[Главная](https://uldalex.github.io/Aksaynan/build/index.html)
 
 ## Парадигма
 
