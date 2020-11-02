@@ -43,7 +43,17 @@ document.addEventListener( 'DOMContentLoaded', function () {
     $(this).siblings('.deckription-link').removeClass('deckription-link--active');
     $(this).parents('.product-card__content').find('.edit-tab').addClass('edit-tab--open')
     $(this).parents('.product-card__content').find('.deckription-tab').removeClass('deckription-tab--open')   
-  })
+  });
+
+  $('.some-ves').on('click', function(){
+    $(this).parent('.product-card__ves-list').find('.some-ves-input').addClass('some-ves-input--open');
+    $(this).parent('.product-card__ves-list').find('.close').addClass('close--open');
+  });
+
+  $('.product-card__ves-list .close').on('click', function(){
+    $(this).parent('.product-card__ves-list').find('.some-ves-input').removeClass('some-ves-input--open');
+    $(this).removeClass('close--open');
+  });
 
 
   
