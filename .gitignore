@@ -1,5 +1,4 @@
 design/
-build/*
 !build/readme.md
 
 src/pug/mixins.pug
