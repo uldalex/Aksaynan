@@ -4,10 +4,6 @@
 
 [Главная](https://uldalex.github.io/Aksaynan/build/index.html)
 
-## Смотреть верстку
-
-[Главная](https://uldalex.github.io/Aksaynan/build/index.html)
-
 ## Парадигма
 
 - Именование классов по БЭМ, разметка в [pug](https://pugjs.org/), стилизация [Sass](http://sass-lang.com/). См. [как работать с CSS-препроцессорами и БЭМ](http://nicothin.github.io/idiomatic-pre-CSS/)
