@@ -1173,6 +1173,7 @@ color: #a7a7ad;
   background: linear-gradient(105.02deg, #D30A04 0%, #6E0903 100%), #640500;
   color:#ffffff;
   padding: 0 0 4rem 0;
+  position: relative;
 
   &__inner {
     @include container();
@@ -1226,7 +1227,17 @@ color: #a7a7ad;
     color: #d49191;
     margin: 0.5rem 0;
     margin: 1rem 0;
+    &:hover {
+      color:#ffffff;
+    }
   }
+
+   & .parallax9 {
+    position: absolute;
+    width: 87px;
+    left: 29%;
+    bottom: -30px;
+   }
 }
 .ymaps-2-1-77-ymaps-geolink-light {
   color: #d49191;

@@ -2,4 +2,38 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
-.page-footer {}
+.page-footer {
+   background-color: #1C1000; 
+   color:#ffffff;
+   padding:4rem 0;
+
+   &__inner {
+       @include container();
+   }
+
+   &__row {
+       @include row();
+   }
+
+   &__col1 {
+       @include col(xl, 5)
+   }
+
+   &__col2 {
+    @include col(xl, 3)
+   }
+
+   &__col3 {
+    @include col(xl, 2)
+   }
+
+   &__top-block {
+    border-bottom: 2px solid #DF8930;
+    padding-bottom:1.5rem;
+   }
+
+   &__content {
+       display: flex;
+       align-items: center;
+   }
+}

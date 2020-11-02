@@ -94,6 +94,7 @@ html(class='page  no-js', lang='ru')
               .about__zakaz 
                 a(href="zakaz" data-toggle="modal" data-target="#zakaz").btn.green-btn Заказать уникальный торт
       section.stories
+        img.parallax.parallax9(src="img/parallax9.png")
         .stories__inner
           h3 Наши магазины
           .stories__row
@@ -106,7 +107,7 @@ html(class='page  no-js', lang='ru')
                   .address-card__content Время работы:
                     span.senstore 08:00–21:00
                   .address-card__content Контакты:
-                    span.senstore 8 (727) 330 3129
+                    span.senstore #[a(href='tel:+87273303129') 8 (727) 330 3129] 
               .stories__address-card.address-card
                 h4 Магазин на Толе Би
                 .address-card__content
@@ -124,11 +125,6 @@ html(class='page  no-js', lang='ru')
                 .address-card__content
                   span.ymaps-geolink Ул. Розыбакиева 33/1, ТК «Оптовка»
               a.stories__link(href="#") Показать все магазины
-                 
-          
-              
-
-
             .stories__col2
               #map
               div(style="position:relative;overflow:hidden;")
@@ -143,8 +139,8 @@ html(class='page  no-js', lang='ru')
       .page__footer-wrapper
         +page-footer()
           block footer
-            p «Подвал»
-            p Контактный телефон: #[a(href='tel:+70000000000') +7 000 000 00 00]
+           
+           
   
   block page-bottom
   .mini-cart
