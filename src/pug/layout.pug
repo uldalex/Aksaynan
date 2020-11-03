@@ -126,11 +126,8 @@ html(class='page  no-js', lang='ru')
                   span.ymaps-geolink Ул. Розыбакиева 33/1, ТК «Оптовка»
               a.stories__link(href="#") Показать все магазины
             .stories__col2
-              #map
-              div(style="position:relative;overflow:hidden;")
-                a(href="https://yandex.ru/maps/162/almaty/?utm_medium=mapframe&utm_source=maps") Алматы
-                a(href="https://yandex.ru/maps/162/almaty/?ll=76.832525%2C43.234545&mode=search&oid=1079677415&ol=biz&z=18") Алматы — Яндекс.Карты
-                iframe(src="https://yandex.ru/map-widget/v1/-/CCUAAXc7OD" width="100%" height="450" frameborder="1" allowfullscreen="true" style="position:relative; border-radius: 10px; border:1px solid #6E0903")
+              #map( style="width:100%; height:500px;")
+              
                
              
         block content
@@ -184,7 +181,7 @@ html(class='page  no-js', lang='ru')
               label.checkbox-other(for="ch")
                 input#ch(type="checkbox")
                 span Нажимая на кнопку «Оплатить заказ», я даю согласие на обработку<br> персональных данных и соглашаюсь c условиями <a href="#">договора-оферты</a> и <a href="#">политикой конфиденциальности</a>
-             
-  script(src="https://api-maps.yandex.ru/2.1/?apikey=74d8f79d-cf24-44cf-864a-a28bd40aba33&lang=ru_RU&load=Geolink")
+  script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=74d8f79d-cf24-44cf-864a-a28bd40aba33" type="text/javascript")
+  
   script(src='js/bundle.js')
   

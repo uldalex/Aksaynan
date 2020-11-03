@@ -2983,28 +2983,152 @@ function parallaxTop(){
     $('.parallax7').css({transform: 'rotate(-' + (1000 * scrolled/maxScroll) + 'deg)'});
     $('.parallax8').css('margin-top', +(scrolled * 0.5) + 'px');
     $('.parallax8').css({transform: 'rotate(-' + (500 * scrolled/maxScroll) + 'deg)'});
-
-  	
+     	
 }
 
 $(window).scroll(function(e){
 	parallaxTop();
   });
   
-  $(window).scroll(function(){
-    var wt = $(window).scrollTop();
-    var wh = $(window).height();
-    var et = $('.parallax7').offset().top;
-    var eh = $('.parallax7').outerHeight();
-    var dh = $(document).height(); 
-    var scrolled = $(window).scrollTop(); 
-    maxScroll = $(document).height()-$(window).height(); 
-    if (wt + wh >= et || wh + wt == dh || eh + et < wh){
-    $(window).scroll(function(){
-  
-  });
-     
-    }
+
+
+  ymaps.ready(function () {
+    var myMap = new ymaps.Map('map', {
+            center: [43.234542, 76.832134],
+            zoom: 12
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
+
+        // Создаём макет содержимого.
+        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+        ),
+
+        AcsayOne = new ymaps.Placemark(myMap.getCenter(), {
+            hintContent: 'Центральный магазин',
+            balloonContent: '«Аксай- 2», ул. Б.Момышулы, 36 А'
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            iconImageHref: '../img/map.svg',
+            // Размеры метки.
+            iconImageSize: [32, 39],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-5, -38]
+        }),
+
+        AksayTwo = new ymaps.Placemark([43.246850, 76.948160], {
+            hintContent: 'Магазин на Назарбаева',
+            balloonContent: 'Пр Назарбаева Н.А., д.148, магазин «Беташар»',
+            iconContent: '12'
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#imageWithContent',
+            // Своё изображение иконки метки.
+            iconImageHref: '../img/map.png',
+            // Размеры метки.
+            iconImageSize:  [19, 27],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-24, -24],
+            // Смещение слоя с содержимым относительно слоя с картинкой.
+            iconContentOffset: [15, 15],
+            // Макет содержимого.
+            iconContentLayout: MyIconContentLayout
+        });
+
+        AksayThree = new ymaps.Placemark([43.253383, 76.919594], {
+          hintContent: 'Магазин на Толе Би',
+          balloonContent: 'улица Толе Би 125, Алматы',
+          iconContent: '12'
+      }, {
+          // Опции.
+          // Необходимо указать данный тип макета.
+          iconLayout: 'default#imageWithContent',
+          // Своё изображение иконки метки.
+          iconImageHref: '../img/map.png',
+          // Размеры метки.
+          iconImageSize:  [19, 27],
+          // Смещение левого верхнего угла иконки относительно
+          // её "ножки" (точки привязки).
+          iconImageOffset: [-24, -24],
+          // Смещение слоя с содержимым относительно слоя с картинкой.
+          iconContentOffset: [15, 15],
+          // Макет содержимого.
+          iconContentLayout: MyIconContentLayout
+      });
+      AksayFour = new ymaps.Placemark([43.253383, 76.919594], {
+        hintContent: 'Магазин на Толе Би',
+        balloonContent: 'улица Толе Би 125, Алматы',
+        iconContent: '12'
+    }, {
+        // Опции.
+        // Необходимо указать данный тип макета.
+        iconLayout: 'default#imageWithContent',
+        // Своё изображение иконки метки.
+        iconImageHref: '../img/map.png',
+        // Размеры метки.
+        iconImageSize:  [19, 27],
+        // Смещение левого верхнего угла иконки относительно
+        // её "ножки" (точки привязки).
+        iconImageOffset: [-24, -24],
+        // Смещение слоя с содержимым относительно слоя с картинкой.
+        iconContentOffset: [15, 15],
+        // Макет содержимого.
+        iconContentLayout: MyIconContentLayout
+    });
+    AksayFive = new ymaps.Placemark([43.200924, 76.885970], {
+      hintContent: 'Магазин на Орбита-1',
+      balloonContent: 'Мкр. Орбита-1, ул. Навои, д.6',
+      iconContent: '12'
+  }, {
+      // Опции.
+      // Необходимо указать данный тип макета.
+      iconLayout: 'default#imageWithContent',
+      // Своё изображение иконки метки.
+      iconImageHref: '../img/map.png',
+      // Размеры метки.
+      iconImageSize: [19, 27],
+      // Смещение левого верхнего угла иконки относительно
+      // её "ножки" (точки привязки).
+      iconImageOffset:  [19, 27],
+      // Смещение слоя с содержимым относительно слоя с картинкой.
+      iconContentOffset: [-24, -24],
+      // Макет содержимого.
+      iconContentLayout: MyIconContentLayout
   });
 
-  
+  AksaySix = new ymaps.Placemark([43.256364, 76.886895], {
+    hintContent: 'Магазин на Розебакиева',
+    balloonContent: 'Ул. Розыбакиева 33/1, ТК «Оптовка»',
+    iconContent: '12'
+}, {
+    // Опции.
+    // Необходимо указать данный тип макета.
+    iconLayout: 'default#imageWithContent',
+    // Своё изображение иконки метки.
+    iconImageHref: '../img/map.png',
+    // Размеры метки.
+    iconImageSize: [19, 27],
+    // Смещение левого верхнего угла иконки относительно
+    // её "ножки" (точки привязки).
+    iconImageOffset: [-24, -24],
+    // Смещение слоя с содержимым относительно слоя с картинкой.
+    iconContentOffset: [15, 15],
+    // Макет содержимого.
+    iconContentLayout: MyIconContentLayout
+});
+
+    myMap.geoObjects
+        .add(AcsayOne)
+        .add(AksayTwo)
+        .add(AksayThree)
+        .add(AksayFour)
+        .add(AksayFive)
+        .add(AksaySix);
+});

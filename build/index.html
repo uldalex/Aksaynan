@@ -46,10 +46,10 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
                 <div class="logo"><a class="logo__link" href="/"></a><img src="img/logo.png" alt="Logo" width="98" height="71"></div>
                 <nav class="main-nav" id="nav"><button class="burger main-nav__toggler" aria-label="Показать главное меню" data-target-id="nav" data-target-class-toggle="main-nav--open"><span>Показать главное меню</span></button>
                   <ul class="main-nav__list">
-                    <li class="main-nav__item  main-nav__item--active"><a class="main-nav__link" href="/">Торты в ассортименте</a></li>
-                    <li class="main-nav__item"><a class="main-nav__link" href="/">Торты на заказ</a></li>
-                    <li class="main-nav__item"><a class="main-nav__link" href="/">Заказать по фото</a></li>
-                    <li class="main-nav__item"><a class="main-nav__link" href="/">Контакты</a></li>
+                    <li class="main-nav__item  main-nav__item--active"><a class="main-nav__link" href="/" data-target="null" data-toggle="null">Торты в ассортименте</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="/" data-target="null" data-toggle="null">Торты на заказ</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="#zakaz" data-target="null" data-toggle="null">Заказать по фото</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="/" data-target="null" data-toggle="null">Контакты</a></li>
                   </ul>
                 </nav>
                 <div class="language"><a class="language__link language__link--active" htef="#">РУС</a><span>|</span><a class="language__link" htef="#">ҚАЗ</a></div>
@@ -2235,8 +2235,7 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
             </div><a class="stories__link" href="#">Показать все магазины</a>
           </div>
           <div class="stories__col2">
-            <div id="map"></div>
-            <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/162/almaty/?utm_medium=mapframe&amp;utm_source=maps">Алматы</a><a href="https://yandex.ru/maps/162/almaty/?ll=76.832525%2C43.234545&amp;mode=search&amp;oid=1079677415&amp;ol=biz&amp;z=18">Алматы — Яндекс.Карты</a><iframe src="https://yandex.ru/map-widget/v1/-/CCUAAXc7OD" width="100%" height="450" frameborder="1" allowfullscreen="true" style="position:relative; border-radius: 10px; border:1px solid #6E0903"></iframe></div>
+            <div id="map" style="width:100%; height:500px;"></div>
           </div>
         </div>
       </div>
@@ -2247,28 +2246,73 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
           <div class="page-footer__top-block">
             <div class="page-footer__row">
               <div class="page-footer__col1">
-                <div class="page-footer__content"><img src="img/logo_footer.png" /><span>Хлебопекарное<br>предприятие</span></div>
+                <div class="page-footer__content"><img src="img/logo_footer.png" /><span class="page-footer__title">Хлебопекарное<br>предприятие</span></div>
               </div>
               <div class="page-footer__col2">
-                <div class="page-footer__content">Адрес:<span>г. Алматы, мкр. Аксай-2, ул. Бауыржана, Момышулы, 36 «А»</span></div>
+                <div class="page-footer__content"> </div><span class="page-footer__light page-footer__block">Адрес:</span><span class="page-footer__block">г. Алматы, мкр. Аксай-2, ул. Бауыржана,<br> Момышулы, 36 «А»</span>
               </div>
               <div class="page-footer__col3">
-                <div class="page-footer__content"><img src="img/map.png" /><span>Схема проезда</span></div>
+                <div class="page-footer__content"><img class="page-footer__map" src="img/map.png" /><span>Схема проезда</span></div>
               </div>
               <div class="page-footer__col3">
-                <div class="page-footer__content"><img src="img/map.png" /><span>Мы в инстаграм</span></div>
+                <div class="page-footer__content"><img class="page-footer__insta" src="img/insta.png" /><span>Мы в инстаграм</span></div>
               </div>
             </div>
           </div>
-          <div class="page-footer__content">
+        </div>
+        <div class="page-footer__inner">
+          <div class="page-footer__row">
+            <div class="page-footer__col2">
+              <div class="page-footer__menu footer-menu">
+                <div class="footer-menu__title">Торты в ассортименте</div>
+                <ul class="footer-menu__list">
+                  <li class="footer-menu__item"> <a href="#">Бисквитно-кремовые</a></li>
+                  <li class="footer-menu__item"><a href="#">Суфлейные</a></li>
+                  <li class="footer-menu__item"><a href="#">Со взбитыми сливками</a></li>
+                  <li class="footer-menu__item"><a href="#">Все</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="page-footer__col2">
+              <div class="page-footer__menu footer-menu">
+                <div class="footer-menu__title">Торты на заказ</div>
+                <ul class="footer-menu__list">
+                  <li class="footer-menu__item"><a href="#">Праздничные</a></li>
+                  <li class="footer-menu__item"><a href="#">Свадебные</a></li>
+                  <li class="footer-menu__item"><a href="#">Детские</a></li>
+                  <li class="footer-menu__item"><a href="#">Все</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="page-footer__col2">
+              <div class="page-footer__menu footer-menu">
+                <div class="footer-menu__title">О нас</div>
+                <ul class="footer-menu__list">
+                  <li class="footer-menu__item"></li><a href="https://aksaynan.kz/">Корпоративный сайт</a>
+                  <li class="footer-menu__item"><a href="#">О компании</a></li>
+                  <li class="footer-menu__item"><a href="#">Контакты</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="page-footer__col2">
+              <div class="page-footer__menu footer-menu">
+                <div class="footer-menu__title">Информация</div>
+                <ul class="footer-menu__list">
+                  <li class="footer-menu__item"><a href="#">Задать вопрос</a></li>
+                  <li class="footer-menu__item"><a href="#">Заявка на сотрудничество</a></li>
+                  <li class="footer-menu__item"><a href="#">Политика конфиденциальности</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-footer__inner">
+          <div class="page-footer__copy">
             <div class="page-footer__row">
-              <div class="page-footer__col3"></div>
-              <div class="page-footer__col3"></div>
-              <div class="page-footer__col3"></div>
-              <div class="page-footer__col3"></div>
+              <div class="page-footer__col6">©1988 - 2020&nbsp;<a href="https://aksaynan.kz/">ТОО «ХБК «Аксай»</a><span>– Все права защищены</span></div>
+              <div class="page-footer__col6">Разработка и создание сайта - креативное агентство -&nbsp;<a class="copy-link" target="blank" href="https://peoplesoft.kz/"><img src="img/peopleSoft.png" width="93px" /></a></div>
             </div>
           </div>
-          <div class="page-footer__copy"></div>
         </div>
       </footer>
     </div>
@@ -2307,7 +2351,7 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
     </div>
   </div>
 </div>
-<script src="https://api-maps.yandex.ru/2.1/?apikey=74d8f79d-cf24-44cf-864a-a28bd40aba33&amp;lang=ru_RU&amp;load=Geolink"></script><script src="js/bundle.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;amp;apikey=74d8f79d-cf24-44cf-864a-a28bd40aba33" type="text/javascript"></script><script src="js/bundle.js"></script>
 
 
 </html>

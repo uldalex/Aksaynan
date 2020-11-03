@@ -32,6 +32,7 @@ mixin main-nav-item(selectedID, item, level)
     if(selectedID == item.id) {
       thisItemClass += '  main-nav__item--active';
     }
+     
     if(item.childs) {
       thisItemClass += '  main-nav__item--has-child';
     }
@@ -41,7 +42,8 @@ mixin main-nav-item(selectedID, item, level)
     }
 
   li(class= thisItemClass)
-    a(class= thisLinkClass, href=item.url)= item.name
+    a(class= thisLinkClass, href=item.url, data-target=item.data-target, data-toggle=item.data-toggle)= item.name
+    
     block
 
 mixin main-nav-sublist-wrapper(level)

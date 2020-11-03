@@ -24,24 +24,75 @@ mixin page-footer(mods)
           .page-footer__col1
             .page-footer__content
               img(src="img/logo_footer.png")
-              span Хлебопекарное<br>предприятие
+              span.page-footer__title Хлебопекарное<br>предприятие
           .page-footer__col2
-            .page-footer__content Адрес:
-              span г. Алматы, мкр. Аксай-2, ул. Бауыржана, Момышулы, 36 «А»
+            .page-footer__content 
+            span.page-footer__light.page-footer__block Адрес:
+            span.page-footer__block г. Алматы, мкр. Аксай-2, ул. Бауыржана,<br> Момышулы, 36 «А»
           .page-footer__col3
             .page-footer__content
-              img(src="img/map.png") 
+              img.page-footer__map(src="img/map.png") 
               span Схема проезда
           .page-footer__col3
             .page-footer__content
-              img(src="img/map.png") 
+              img.page-footer__insta(src="img/insta.png") 
               span Мы в инстаграм
-
-      .page-footer__content
+    .page-footer__inner
         .page-footer__row
-          .page-footer__col3
-          .page-footer__col3
-          .page-footer__col3
-          .page-footer__col3
+          .page-footer__col2
+            .page-footer__menu.footer-menu
+              .footer-menu__title Торты в ассортименте
+              ul.footer-menu__list
+                li.footer-menu__item 
+                  a(href="#") Бисквитно-кремовые
+                li.footer-menu__item
+                  a(href="#") Суфлейные
+                li.footer-menu__item
+                  a(href="#") Со взбитыми сливками
+                li.footer-menu__item
+                  a(href="#") Все
+          .page-footer__col2
+            .page-footer__menu.footer-menu
+              .footer-menu__title Торты на заказ
+              ul.footer-menu__list
+                li.footer-menu__item
+                  a(href="#") Праздничные
+                li.footer-menu__item
+                  a(href="#") Свадебные
+                li.footer-menu__item
+                  a(href="#") Детские
+                li.footer-menu__item
+                  a(href="#") Все
+          .page-footer__col2
+            .page-footer__menu.footer-menu
+              .footer-menu__title О нас
+              ul.footer-menu__list
+                li.footer-menu__item
+                a(href="https://aksaynan.kz/") Корпоративный сайт
+                li.footer-menu__item
+                  a(href="#") О компании
+                li.footer-menu__item
+                  a(href="#") Контакты
+          .page-footer__col2
+            .page-footer__menu.footer-menu
+              .footer-menu__title Информация
+              ul.footer-menu__list
+                li.footer-menu__item
+                  a(href="#") Задать вопрос
+                li.footer-menu__item
+                  a(href="#") Заявка на сотрудничество
+                li.footer-menu__item
+                  a(href="#") Политика конфиденциальности
+    .page-footer__inner
       .page-footer__copy
-      block
+        .page-footer__row
+          .page-footer__col6 ©1988 - 2020&nbsp;
+            a(href="https://aksaynan.kz/") ТОО «ХБК «Аксай»
+            span – Все права защищены
+          .page-footer__col6 Разработка и создание сайта - креативное агентство -&nbsp;
+            a.copy-link(target="blank" href="https://peoplesoft.kz/")
+              img(src="img/peopleSoft.png" width="93px")
+      
+
+      
+    block
