@@ -3013,7 +3013,7 @@ $(window).scroll(function(e){
             // Необходимо указать данный тип макета.
             iconLayout: 'default#image',
             // Своё изображение иконки метки.
-            iconImageHref: '../img/map.svg',
+            iconImageHref: 'img/map.svg',
             // Размеры метки.
             iconImageSize: [32, 39],
             // Смещение левого верхнего угла иконки относительно
@@ -3030,7 +3030,7 @@ $(window).scroll(function(e){
             // Необходимо указать данный тип макета.
             iconLayout: 'default#imageWithContent',
             // Своё изображение иконки метки.
-            iconImageHref: '../img/map.png',
+            iconImageHref: 'img/map.png',
             // Размеры метки.
             iconImageSize:  [19, 27],
             // Смещение левого верхнего угла иконки относительно
@@ -3051,7 +3051,7 @@ $(window).scroll(function(e){
           // Необходимо указать данный тип макета.
           iconLayout: 'default#imageWithContent',
           // Своё изображение иконки метки.
-          iconImageHref: '../img/map.png',
+          iconImageHref: 'img/map.png',
           // Размеры метки.
           iconImageSize:  [19, 27],
           // Смещение левого верхнего угла иконки относительно
@@ -3071,7 +3071,7 @@ $(window).scroll(function(e){
         // Необходимо указать данный тип макета.
         iconLayout: 'default#imageWithContent',
         // Своё изображение иконки метки.
-        iconImageHref: '../img/map.png',
+        iconImageHref: 'img/map.png',
         // Размеры метки.
         iconImageSize:  [19, 27],
         // Смещение левого верхнего угла иконки относительно
@@ -3091,7 +3091,7 @@ $(window).scroll(function(e){
       // Необходимо указать данный тип макета.
       iconLayout: 'default#imageWithContent',
       // Своё изображение иконки метки.
-      iconImageHref: '../img/map.png',
+      iconImageHref: 'img/map.png',
       // Размеры метки.
       iconImageSize: [19, 27],
       // Смещение левого верхнего угла иконки относительно
@@ -3112,7 +3112,7 @@ $(window).scroll(function(e){
     // Необходимо указать данный тип макета.
     iconLayout: 'default#imageWithContent',
     // Своё изображение иконки метки.
-    iconImageHref: '../img/map.png',
+    iconImageHref: 'img/map.png',
     // Размеры метки.
     iconImageSize: [19, 27],
     // Смещение левого верхнего угла иконки относительно
