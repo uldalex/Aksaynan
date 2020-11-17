@@ -21,3 +21,11 @@
     border-radius: 30px;
   }
 }
+@media(max-width: 600px){
+.page-header {
+  .page-header__nav {
+    background-color: transparent;
+  }
+  
+}
+}

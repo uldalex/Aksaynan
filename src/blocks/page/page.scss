@@ -444,6 +444,26 @@ pre {
     bottom: -25px;
 }
 }
+@media(max-width: 600px){
+  .top-block-home__lenta-niz {
+    left: 30%;
+    bottom: -5px;
+}
+.top-block-home__lenta {
+  position: absolute;
+  bottom: 0px;
+  left: 80%;
+}
+
+ 
+}
+@media(max-width: 360px){
+  .top-block-home__lenta {
+    bottom: 17px;
+  } 
+}
+
+
 }
 
 .home-title{
@@ -493,6 +513,9 @@ pre {
     }
 
     }
+  &__content {
+    height: 226px;
+  }
 
   &__tabs {
     display: flex;
@@ -1271,4 +1294,9 @@ transition: all 1.2s ease;
 }
 .parallax8{
   transition: all 0.8s ease; 
+}
+@media (max-width: 600px;) {
+  .mini-cart {
+    display: none;
+  }
 }

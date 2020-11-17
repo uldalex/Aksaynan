@@ -126,4 +126,21 @@
       transform: scale(1);
     }
   }
+  
+}
+@media(max-width: 600px){
+  .ass-product {
+
+    & .parallax4{
+
+    }
+
+    & .parallax5{
+      left:-10px;
+      width: 50px;
+      
+    }
+
+  }
+
 }

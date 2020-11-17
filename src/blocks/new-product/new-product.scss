@@ -248,3 +248,29 @@
     }
  
 }
+
+@media (max-width: 600px) {
+  .new-product {
+
+    & .splide__slide {
+      padding: 0 0 0 0;
+
+    & img {
+        vertical-align: bottom;
+        max-width: 120%;
+        margin-left: -32%;
+        right: -30px;
+    }
+    }
+
+    & .parallax3 {
+      right: 10px;
+      width: 72px;
+      }
+  
+      & .parallax6 {
+      width: 30px;
+      }
+  }
+
+}
