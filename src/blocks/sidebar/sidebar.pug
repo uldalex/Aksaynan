@@ -1,0 +1,46 @@
+//- Все примеси в этом файле должны начинаться c имени блока (sidebar)
+
+mixin sidebar(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +sidebar('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' sidebar--' + modsList[i].trim();
+      }
+    }
+
+  .sidebar(class=allMods)&attributes(attributes)
+    .sidebar__inner
+      .sidebar__filter.filter
+        h3 Фильтр
+        p Найдите торт подходящий именно вам
+        .filter__item.filter__price
+          span Цена
+          .filter__range.range
+            - let min = 0, max = 12500;
+            - let a = 1000, b = 9500;
+          .wrap(role='group' aria-labelledby='multi-lbl' style=`--a: ${a}; --b: ${b}; --min: ${min}; --max: ${max}`)
+            .line-range
+            output.left(for='a' style='--c: var(--a)')
+              span от
+            label.sr-only(for='b') 
+            input#b(type='range' min=min value=b max=max)
+            output.right(for='b' style='--c: var(--b)')
+              span до
+            label.sr-only(for='a')
+            input#a(type='range' min=min value=a max=max)
+        .filter__item
+          span Магазин
+          .filter__shops
+            .filter__shop Магазин на Назарбаева
+              span Пр Назарбаева Н.А., д.148, магазин «Беташар»
+      block

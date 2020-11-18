@@ -26,6 +26,7 @@ $('.ass-product__stores-list li').on('click' , function(){
  $('.ass-product__stores-list li').removeClass('active');
  $(this).addClass('active')
  $(filter + Tort).addClass('active');
+ $('.ass-product__sort').toggleClass('ass-product__sort--open')
 
 });
 $('.ass-product__tort').on('click' , function(){
@@ -35,7 +36,12 @@ $('.ass-product__tort').on('click' , function(){
     $(this).addClass('active');
     $(this).siblings('.ass-product__tort').removeClass('active');
     $(filter + Store).addClass('active');
+    $('.ass-product__sort').toggleClass('ass-product__sort--open')
 
 
 });
+
+$('.ass-product__filter-toggler').on ('click', function(){
+    $('.ass-product__sort').toggleClass('ass-product__sort--open')
+})
 

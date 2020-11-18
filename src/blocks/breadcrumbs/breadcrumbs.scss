@@ -7,15 +7,15 @@
   margin-top: $typo-margin-vertical;
   margin-bottom: $typo-margin-vertical;
   padding: 0;
-  color: $text-color;
+  color: #640500;
 
   a {
-    color: $text-color;
+    color: #640500;
     text-decoration: none;
 
     &:hover,
     &:focus {
-      color: $text-color;
+      color: #640500;
       text-decoration: none;
     }
   }
@@ -25,11 +25,17 @@
     margin-right: 0.6em;
     white-space: nowrap;
 
-    &:not(:last-child):after {
-      content: '>';
+    &:last-child:after {
+      content: '↓';
       display: inline-block;
       margin-left: 0.8em;
-      color: $gray;
+      color: #640500;
+    }
+    &:not(:last-child):after {
+      content: '→';
+      display: inline-block;
+      margin-left: 0.8em;
+      color: #640500;
     }
   }
 }

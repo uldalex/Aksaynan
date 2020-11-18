@@ -3131,4 +3131,13 @@ $(window).scroll(function(e){
         .add(AksayFour)
         .add(AksayFive)
         .add(AksaySix);
+
+  // отключить прокрутку мышью      
+  myMap.behaviors.disable ('scrollZoom');
 });
+
+//фильтр
+addEventListener('input', e => {
+  let _t = e.target;
+  _t.parentNode.style.setProperty(`--${_t.id}`, +_t.value)
+}, false);

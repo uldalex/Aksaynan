@@ -1,0 +1,26 @@
+// В этом файле должны быть стили для БЭМ-блока sidebar, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.sidebar {
+
+  $block-name:                &; // #{$block-name}__element
+min-width: 256px;
+margin: 50px 30px 0 0;
+
+
+& h3 {
+  color:#640500;
+  font-size: 15px;
+  margin-bottom:5px;
+}
+
+& .filter {
+  padding:30px 20px;
+background: #FFFFFF;
+border: 1px solid #FFEFD7;
+box-sizing: border-box;
+box-shadow: 0px 10px 20px rgba(100, 5, 0, 0.3);
+border-radius: 20px;
+}
+}
