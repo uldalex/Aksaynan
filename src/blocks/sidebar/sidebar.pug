@@ -41,6 +41,86 @@ mixin sidebar(text, mods)
         .filter__item
           span Магазин
           .filter__shops
-            .filter__shop Магазин на Назарбаева
-              span Пр Назарбаева Н.А., д.148, магазин «Беташар»
+            .filter__shop 
+              .filter__content
+                .filter__shop-title Центральный магазин
+                  span «Аксай- 2», ул. Б.Момышулы, 36 А
+              .filter__arrow
+                svg(width="11" height="10" viewBox="0 0 11 10" fill="none")
+                  path(d="M9.91061 4.51778L5.39282 9.03557L0.875038 4.51778" fill="none" stroke="black")
+            ul.filter__shops-list
+              li
+                .filter__shop-title Магазин на Толе Би
+                  span улица Толе Би 125, Алматы
+              li
+                .filter__shop-title Магазин в Орбите-1
+                  span Мкр. Орбита-1, ул. Навои, д.6, уг.ул. Биржана
+              li
+                .filter__shop-title Магазин на Назарбаева
+                  span Пр Назарбаева Н.А., д.148, магазин «Беташар»
+              li
+                .filter__shop-title Магазин на Розыбакиева
+                  span Ул. Розыбакиева 33/1, ТК «Оптовка»
+          input(type="hidden" id="filter-store" value="")          
+        .filter__item
+          .filter__item-title Типы тортов
+          .filter-control
+            label.checkbox-other(for="tip1")
+              input#tip1(type="checkbox")
+              span Праздничные
+          .filter-control
+            label.checkbox-other(for="tip2")
+              input#tip2(type="checkbox" checked)
+              span Свадебные
+          .filter-control
+            label.checkbox-other(for="tip3")
+              input#tip3(type="checkbox")
+              span Детские
+          .filter-control
+            label.checkbox-other(for="tip4")
+              input#tip4(type="checkbox")
+              span На день рождения
+          .filter-control
+            label.checkbox-other(for="tip5")
+              input#tip5(type="checkbox")
+              span Корпоративные
+          .filter-control
+            label.checkbox-other(for="tip6")
+              input#tip6(type="checkbox")
+              span Эксклюзивные  
+        .filter__item
+          .filter__item-title Типы начинки
+          .filter-control
+            label.checkbox-other(for="tip1")
+              input#tip1(type="checkbox" checked)
+              span Наполеон
+          .filter-control
+            label.checkbox-other(for="tip2")
+              input#tip2(type="checkbox")
+              span Монро
+          .filter-control
+            label.checkbox-other(for="tip3")
+              input#tip3(type="checkbox")
+              span Медовик
+          .filter-control
+            label.checkbox-other(for="tip4")
+              input#tip4(type="checkbox" checked)
+              span Молочная девочка
+          .filter-control.filter-control--hidden
+            label.checkbox-other(for="tip5")
+              input#tip5(type="checkbox" )
+              span Наполеон
+          .filter-control.filter-control--hidden
+            label.checkbox-other(for="tip6")
+              input#tip6(type="checkbox")
+              span Монро
+          .filter-control.filter-control--hidden
+            label.checkbox-other(for="tip7")
+              input#tip7(type="checkbox")
+              span Медовик
+          .filter-control.filter-control--hidden
+            label.checkbox-other(for="tip8")
+              input#tip8(type="checkbox")
+              span Молочная девочка
+          a.filter__link(href="#")  Раскрыть весь список    
       block

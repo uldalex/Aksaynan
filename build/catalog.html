@@ -80,8 +80,49 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
                 </div>
                 <div class="filter__item"><span>Магазин</span>
                   <div class="filter__shops">
-                    <div class="filter__shop">Магазин на Назарбаева<span>Пр Назарбаева Н.А., д.148, магазин «Беташар»</span></div>
-                  </div>
+                    <div class="filter__shop">
+                      <div class="filter__content">
+                        <div class="filter__shop-title">Центральный магазин<span>«Аксай- 2», ул. Б.Момышулы, 36 А</span></div>
+                      </div>
+                      <div class="filter__arrow"><svg width="11" height="10" viewBox="0 0 11 10" fill="none">
+                          <path d="M9.91061 4.51778L5.39282 9.03557L0.875038 4.51778" fill="none" stroke="black"></path>
+                        </svg></div>
+                    </div>
+                    <ul class="filter__shops-list">
+                      <li>
+                        <div class="filter__shop-title">Магазин на Толе Би<span>улица Толе Би 125, Алматы</span></div>
+                      </li>
+                      <li>
+                        <div class="filter__shop-title">Магазин в Орбите-1<span>Мкр. Орбита-1, ул. Навои, д.6, уг.ул. Биржана</span></div>
+                      </li>
+                      <li>
+                        <div class="filter__shop-title">Магазин на Назарбаева<span>Пр Назарбаева Н.А., д.148, магазин «Беташар»</span></div>
+                      </li>
+                      <li>
+                        <div class="filter__shop-title">Магазин на Розыбакиева<span>Ул. Розыбакиева 33/1, ТК «Оптовка»</span></div>
+                      </li>
+                    </ul>
+                  </div><input type="hidden" id="filter-store" value="" />
+                </div>
+                <div class="filter__item">
+                  <div class="filter__item-title">Типы тортов</div>
+                  <div class="filter-control"><label class="checkbox-other" for="tip1"><input id="tip1" type="checkbox" /><span>Праздничные</span></label></div>
+                  <div class="filter-control"><label class="checkbox-other" for="tip2"><input id="tip2" type="checkbox" checked="checked" /><span>Свадебные</span></label></div>
+                  <div class="filter-control"><label class="checkbox-other" for="tip3"><input id="tip3" type="checkbox" /><span>Детские</span></label></div>
+                  <div class="filter-control"><label class="checkbox-other" for="tip4"><input id="tip4" type="checkbox" /><span>На день рождения</span></label></div>
+                  <div class="filter-control"><label class="checkbox-other" for="tip5"><input id="tip5" type="checkbox" /><span>Корпоративные</span></label></div>
+                  <div class="filter-control"><label class="checkbox-other" for="tip6"><input id="tip6" type="checkbox" /><span>Эксклюзивные  </span></label></div>
+                </div>
+                <div class="filter__item">
+                  <div class="filter__item-title">Типы начинки</div>
+                  <div class="filter-control"><label class="checkbox-other" for="tip1"><input id="tip1" type="checkbox" checked="checked" /><span>Наполеон</span></label></div>
+                  <div class="filter-control"><label class="checkbox-other" for="tip2"><input id="tip2" type="checkbox" /><span>Монро</span></label></div>
+                  <div class="filter-control"><label class="checkbox-other" for="tip3"><input id="tip3" type="checkbox" /><span>Медовик</span></label></div>
+                  <div class="filter-control"><label class="checkbox-other" for="tip4"><input id="tip4" type="checkbox" checked="checked" /><span>Молочная девочка</span></label></div>
+                  <div class="filter-control filter-control--hidden"><label class="checkbox-other" for="tip5"><input id="tip5" type="checkbox" /><span>Наполеон</span></label></div>
+                  <div class="filter-control filter-control--hidden"><label class="checkbox-other" for="tip6"><input id="tip6" type="checkbox" /><span>Монро</span></label></div>
+                  <div class="filter-control filter-control--hidden"><label class="checkbox-other" for="tip7"><input id="tip7" type="checkbox" /><span>Медовик</span></label></div>
+                  <div class="filter-control filter-control--hidden"><label class="checkbox-other" for="tip8"><input id="tip8" type="checkbox" /><span>Молочная девочка</span></label></div><a class="filter__link" href="#"> Раскрыть весь список </a>
                 </div>
               </div>
             </div>
@@ -897,7 +938,7 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
       </footer>
     </div>
   </div>
-</body>
+</body><img class="parallax parallax9" src="img/parallax5.png">
 <div class="mini-cart"><img src="img/cart.png">
   <div class="mini-cart__title">Корзина пуста</div>
   <div class="mini-cart__content">Здесь будет список товаров</div>

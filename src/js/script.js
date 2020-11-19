@@ -2947,20 +2947,7 @@
   
   }));
   
-  /*!
-   * Isotope v3.0.6
-   *
-   * Licensed GPLv3 for open source use
-   * or Isotope Commercial License for commercial use
-   *
-   * https://isotope.metafizzy.co
-   * Copyright 2010-2018 Metafizzy
-   */
-  
- 
-
-
-
+ // параллакс 
 function parallaxTop(){
     var scrolled = $(window).scrollTop();
     var iconRotate = $('.icon-rotate img');
@@ -2983,6 +2970,8 @@ function parallaxTop(){
     $('.parallax7').css({transform: 'rotate(-' + (1000 * scrolled/maxScroll) + 'deg)'});
     $('.parallax8').css('margin-top', +(scrolled * 0.5) + 'px');
     $('.parallax8').css({transform: 'rotate(-' + (500 * scrolled/maxScroll) + 'deg)'});
+    $('.parallax9').css('margin-top', -(scrolled * 0.6) + 'px');
+    $('.parallax9').css({transform: 'rotate(-' + (500 * scrolled/maxScroll) + 'deg)'});
      	
 }
 
@@ -2991,7 +2980,7 @@ $(window).scroll(function(e){
   });
   
 
-
+// карта
   ymaps.ready(function () {
     var myMap = new ymaps.Map('map', {
             center: [43.234542, 76.832134],
@@ -3136,8 +3125,28 @@ $(window).scroll(function(e){
   myMap.behaviors.disable ('scrollZoom');
 });
 
-//фильтр
+//фильтр range
 addEventListener('input', e => {
   let _t = e.target;
   _t.parentNode.style.setProperty(`--${_t.id}`, +_t.value)
 }, false);
+
+$('.filter__arrow').on ('click', function(){
+  $(this).toggleClass('filter__arrow--open')
+  $('.filter__shops-list').toggleClass('filter__shops-list--open')
+})
+
+$('.filter__shops-list li').on('click', function(){
+  var text = $(this).html();
+$('.filter__shops-list').removeClass('filter__shops-list--open');
+$('.filter__arrow').removeClass('filter__arrow--open');
+$(this).parent().parent().find('.filter__content').html(text);
+});
+
+$('.filter__link').on('click', function(){
+  var text= $(this).text();
+  $(this).text(
+  text == "Свернуть список" ? "Раскрыть весь список" : "Свернуть список");
+$('.filter-control--hidden').toggleClass('filter-control--hidden-open')
+  return false;
+});
