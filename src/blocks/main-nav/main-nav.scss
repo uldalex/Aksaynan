@@ -5,8 +5,8 @@
 .main-nav {
 
   $block-name:                &; // #{$block-name}__element
-  @include col(xl, 8);
-  @include col-offset(xl, 2);
+  @include col(md, 8);
+  @include col-offset(md, 2);
   position: relative;
   padding: 0.7rem;
   z-index: 10;

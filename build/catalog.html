@@ -38,16 +38,16 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
   <h1 class="home-title">Интернет-магазин "Аксайнан"</h1>
   <div class="page__inner">
     <div class="page__content">
-      <div class="top-block">
+      <div class="top-block"><img class="parallax parallax11" src="img/parallax2.png">
         <header class="page-header" role="banner">
           <div class="page-header__inner">
             <div class="page-header__nav">
               <div class="page-header__row">
-                <div class="logo"><a class="logo__link" href="/"></a><img src="img/logo.png" alt="Logo" width="98" height="71"></div>
+                <div class="logo"><a class="logo__link" href="/"><img src="img/logo.png" alt="Logo" width="98" height="71"></a></div>
                 <nav class="main-nav" id="nav"><button class="burger main-nav__toggler" aria-label="Показать главное меню" data-target-id="nav" data-target-class-toggle="main-nav--open"><span>Показать главное меню</span></button>
                   <ul class="main-nav__list">
-                    <li class="main-nav__item  main-nav__item--active"><a class="main-nav__link" href="/" data-target="null" data-toggle="null">Торты в ассортименте</a></li>
-                    <li class="main-nav__item"><a class="main-nav__link" href="/" data-target="null" data-toggle="null">Торты на заказ</a></li>
+                    <li class="main-nav__item  main-nav__item--active"><a class="main-nav__link" href="catalog.html" data-target="null" data-toggle="null">Торты в ассортименте</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="catalog.html" data-target="null" data-toggle="null">Торты на заказ</a></li>
                     <li class="main-nav__item"><a class="main-nav__link" href="#zakaz" data-target="null" data-toggle="null">Заказать по фото</a></li>
                     <li class="main-nav__item"><a class="main-nav__link" href="/" data-target="null" data-toggle="null">Контакты</a></li>
                   </ul>
@@ -66,10 +66,12 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
         </div>
       </div>
       <div class="page-main">
-        <div class="page-row">
+        <div class="page-row"><img class="parallax parallax10" src="img/parallax5.png"><img class="parallax parallax3" src="img/parallax3.png"><img class="parallax parallax12" src="img/parallax4.png"><img class="parallax parallax6" src="img/parallax6.png">
           <div class="sidebar">
             <div class="sidebar__inner">
+              <div class="sidebar__filter-toggler"><img src="img/filter.svg" width="40px" /></div>
               <div class="sidebar__filter filter">
+                <div class="sidebar__filter-toggler"><img class="close" src="img/close.svg" width="20px" /></div>
                 <h3>Фильтр</h3>
                 <p>Найдите торт подходящий именно вам</p>
                 <div class="filter__item filter__price"><span>Цена</span>
@@ -766,6 +768,7 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
                     </div>
                   </div>
                 </div>
+                <div class="catalog__footer"><img class="parallax parallax13" src="img/parallax7.png" /><a class="btn green-btn green-btn--light" htef="#">Загрузить еще</a></div>
               </div>
             </div>
           </div>
@@ -938,7 +941,7 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
       </footer>
     </div>
   </div>
-</body><img class="parallax parallax9" src="img/parallax5.png">
+</body>
 <div class="mini-cart"><img src="img/cart.png">
   <div class="mini-cart__title">Корзина пуста</div>
   <div class="mini-cart__content">Здесь будет список товаров</div>

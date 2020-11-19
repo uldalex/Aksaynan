@@ -5,7 +5,6 @@
 .sidebar {
 
   $block-name:                &; // #{$block-name}__element
-min-width: 256px;
 margin: 50px 30px 0 0;
 
 
@@ -22,6 +21,7 @@ border: 1px solid #FFEFD7;
 box-sizing: border-box;
 box-shadow: 0px 10px 20px rgba(100, 5, 0, 0.3);
 border-radius: 20px;
+min-width: 256px;
 
 &__shops-list {
   padding:0;
@@ -48,4 +48,35 @@ border-radius: 20px;
   }
 }
 }
+ &__filter-toggler{
+   display:none;
+ }
+}
+@media (max-width:600px){
+ 
+  .sidebar{
+   margin:20px 0 0 0;
+    
+   &__filter-toggler{
+    display:block;
+    min-width:40px;
+
+    & .close {
+      position: absolute;
+      right:20px;
+    }
+   }
+    & .filter {
+    min-width: 90vw; 
+    position: absolute;
+    z-index: 1000;
+    left: -200vw;
+    transition: all 0.5s linear;
+    
+  
+      &--open {
+        left: 0px;
+      }
+    } 
+  } 
 }

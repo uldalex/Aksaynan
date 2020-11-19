@@ -20,7 +20,12 @@ mixin sidebar(text, mods)
 
   .sidebar(class=allMods)&attributes(attributes)
     .sidebar__inner
+      .sidebar__filter-toggler
+        img(src="img/filter.svg" width="40px")
       .sidebar__filter.filter
+        .sidebar__filter-toggler
+          img.close(src="img/close.svg" width="20px")
+
         h3 Фильтр
         p Найдите торт подходящий именно вам
         .filter__item.filter__price

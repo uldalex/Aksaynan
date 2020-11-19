@@ -21,7 +21,11 @@
 }
 @media(max-width: 600px){
  .logo{
-    left: 30%;
+  left: 0;
+  right: 0;
+  width: 118px;
+  margin-left: auto;
+  margin-right: auto;
  }
 
 }

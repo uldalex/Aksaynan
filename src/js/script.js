@@ -2958,7 +2958,6 @@ function parallaxTop(){
     $('.parallax2').css('margin-bottom', +(scrolled * 0.8) + 'px');
     $('.parallax2').css('margin-left', -(scrolled * 0.3) + 'px');
     $('.parallax3').css('margin-top', +(scrolled * 0.6) + 'px');
-    $('.parallax3').css('margin-right', -(scrolled * 0.1) + 'px');
     $('.parallax3').css({transform: 'rotate(-' + (2000 * scrolled/maxScroll) + 'deg)'});
     $('.parallax5').css('margin-top', +(scrolled * 0.6) + 'px');
     $('.parallax5').css({transform: 'rotate(-' + (600 * scrolled/maxScroll) + 'deg)'});
@@ -2970,9 +2969,13 @@ function parallaxTop(){
     $('.parallax7').css({transform: 'rotate(-' + (1000 * scrolled/maxScroll) + 'deg)'});
     $('.parallax8').css('margin-top', +(scrolled * 0.5) + 'px');
     $('.parallax8').css({transform: 'rotate(-' + (500 * scrolled/maxScroll) + 'deg)'});
-    $('.parallax9').css('margin-top', -(scrolled * 0.6) + 'px');
-    $('.parallax9').css({transform: 'rotate(-' + (500 * scrolled/maxScroll) + 'deg)'});
-     	
+    $('.parallax10').css('margin-top', +(scrolled * 0.8) + 'px');
+    $('.parallax10').css({transform: 'rotate(-' + (500 * scrolled/maxScroll) + 'deg)'});
+    $('.parallax12').css('margin-bottom', +(scrolled * 0.2) + 'px');
+    $('.parallax12').css({transform: 'rotate(-' + (500 * scrolled/maxScroll) + 'deg)'});
+    $('.parallax13').css('margin-bottom', +(scrolled * 0.2) + 'px');
+
+         	
 }
 
 $(window).scroll(function(e){
@@ -3149,4 +3152,8 @@ $('.filter__link').on('click', function(){
   text == "Свернуть список" ? "Раскрыть весь список" : "Свернуть список");
 $('.filter-control--hidden').toggleClass('filter-control--hidden-open')
   return false;
+});
+$('.sidebar__filter-toggler').on('click', function(){
+$('.filter').toggleClass('filter--open');
+
 });
