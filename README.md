@@ -4,6 +4,7 @@
 
 [Главная](https://uldalex.github.io/Aksaynan/build/index.html)
 [Каталог](https://uldalex.github.io/Aksaynan/build/catalog.html)
+[Карточка товара](https://uldalex.github.io/Aksaynan/build/product-card.html)
 
 ## Парадигма
 
