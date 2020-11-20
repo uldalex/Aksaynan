@@ -16,15 +16,18 @@
    }
 
    &__col1 {
-       @include col(xl, 5)
+       @include col(xl, 5);
+       @include col(md, 3)
    }
 
    &__col2 {
     @include col(xl, 3)
+    @include col(md, 3)
    }
 
    &__col3 {
     @include col(xl, 2);
+    @include col(md, 3);
     padding-top: 1rem;
    }
    &__col6 {
