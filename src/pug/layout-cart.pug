@@ -1,0 +1,405 @@
+//- Стандартный шаблон страницы
+
+include mixins.pug
+
+doctype html
+html(class='page  no-js', lang='ru')
+
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    //- Edge и ряд мобильных браузеров слишком умны. Отключим это.
+    meta(name='format-detection', content='telephone=no')
+    meta(name='format-detection', content='date=no')
+    meta(name='format-detection', content='address=no')
+    meta(name='format-detection', content='email=no')
+    meta(content='notranslate', name='google')
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#ce2828">
+    <meta name="msapplication-TileColor" content="#b91d47">
+    <meta name="theme-color" content="#c41a1a">
+
+    block meta
+      title Home
+
+    block head
+      link(rel='stylesheet', href='css/style.css')
+      script
+        include ../js/head-script.js
+
+  body
+    noscript У вас отключен JavaScript. Это пугает.
+    h1.home-title Корзина
+    .page__inner
+      .page__content
+        .top-block
+         
+          +page-header()
+            +logo('/')
+              img(src='img/logo.png', alt='Logo', width='98', height='71')
+            block nav
+            +language()
+          .top-block__inner
+            +breadcrumbs()
+              +breadcrumbs-item('Главная', '/home')
+              
+            h1.page-title Корзина
+        .page-main
+            .page-row
+             img.parallax.parallax10-1(src="img/parallax5.png")
+             img.parallax.parallax3.parallax3-1(src="img/parallax3.png")
+             img.parallax.parallax12.parallax12-1(src="img/parallax4.png")
+             
+        .cart
+          .cart__inner
+              .cart__row
+                  .cart__content
+                    .cart__title Список тортов  
+                      span (2 торта) 
+                    ul.cart__list
+                      li.cart__item.cart-card
+                        .cart-card__img
+                          img(src="img/tort9.png")
+                        .cart-card__content
+                          .cart-card__title Детский торт
+                          .cart-card__info
+                            .cart-card__val
+                              |вес
+                              span 1.2кг
+                            .cart-card__val
+                              |Основа
+                              span Молочный
+                            .cart-card__val
+                              |Количество
+                              span 1.2кг
+                            .cart-card__val
+                              |Цена
+                              .price 3670
+                                span ₸
+                          .cart-card__bottom
+                            a.alt-btn.active(href="#") Удалить 
+                                svg(width="12px" height="12px" viewBox="0 0 12 12" )
+                                 path(d="M 6.5858175,5.9455931 11.558091,0.97382405 c 0.17506,-0.17504164 0.17506,-0.45883861 0,-0.63385915 -0.175061,-0.1750179 -0.458886,-0.17504296 -0.633925,0 L 5.9518699,5.3117331 0.97959671,0.3399649 c -0.17506062,-0.17504296 -0.45888731,-0.17504296 -0.63392551,0 -0.17503819,0.17504164 -0.17506061,0.45883862 0,0.63385915 L 5.3179447,5.9455692 0.3456712,10.917338 c -0.17506061,0.175042 -0.17506061,0.458839 0,0.633857 0.0875178,0.08751 0.20224719,0.131248 0.31697397,0.131248 0.11472941,0 0.22943244,-0.04374 0.31697396,-0.131248 L 5.9518699,6.5794501 10.924144,11.551195 c 0.08752,0.08751 0.202246,0.131248 0.316974,0.131248 0.114729,0 0.229431,-0.04374 0.316973,-0.131248 0.17506,-0.175042 0.17506,-0.458839 0,-0.633857 z" )
+                      li.cart__item.cart-card
+                        .cart-card__img
+                          img(src="img/tort14.png")
+                        .cart-card__content
+                          .cart-card__title Графские развалины
+                          .cart-card__info
+                            .cart-card__val
+                              |вес
+                              span 1.2кг
+                            .cart-card__val
+                              |Основа
+                              span Молочный
+                            .cart-card__val
+                              |Количество
+                              span 1.2кг
+                            .cart-card__val
+                              |Цена
+                              .price 3670
+                                span ₸
+                          .cart-card__bottom
+                            a.alt-btn.active(href="#") Удалить 
+                                svg(width="12px" height="12px" viewBox="0 0 12 12" )
+                                 path(d="M 6.5858175,5.9455931 11.558091,0.97382405 c 0.17506,-0.17504164 0.17506,-0.45883861 0,-0.63385915 -0.175061,-0.1750179 -0.458886,-0.17504296 -0.633925,0 L 5.9518699,5.3117331 0.97959671,0.3399649 c -0.17506062,-0.17504296 -0.45888731,-0.17504296 -0.63392551,0 -0.17503819,0.17504164 -0.17506061,0.45883862 0,0.63385915 L 5.3179447,5.9455692 0.3456712,10.917338 c -0.17506061,0.175042 -0.17506061,0.458839 0,0.633857 0.0875178,0.08751 0.20224719,0.131248 0.31697397,0.131248 0.11472941,0 0.22943244,-0.04374 0.31697396,-0.131248 L 5.9518699,6.5794501 10.924144,11.551195 c 0.08752,0.08751 0.202246,0.131248 0.316974,0.131248 0.114729,0 0.229431,-0.04374 0.316973,-0.131248 0.17506,-0.175042 0.17506,-0.458839 0,-0.633857 z" )
+                      li.cart__item.cart-card
+                        .cart-card__img
+                          img(src="img/tort10.png")
+                        .cart-card__content
+                          .cart-card__title Торт "Цифра"
+                          .cart-card__info
+                            .cart-card__val
+                              |вес
+                              span 1.2кг
+                            .cart-card__val
+                              |Основа
+                              span Молочный
+                            .cart-card__val
+                              |Количество
+                              span 1.2кг
+                            .cart-card__val
+                              |Цена
+                              .price 3670
+                                span ₸
+                          .cart-card__bottom
+                            a.alt-btn.active(href="#") Удалить 
+                                svg(width="12px" height="12px" viewBox="0 0 12 12" )
+                                 path(d="M 6.5858175,5.9455931 11.558091,0.97382405 c 0.17506,-0.17504164 0.17506,-0.45883861 0,-0.63385915 -0.175061,-0.1750179 -0.458886,-0.17504296 -0.633925,0 L 5.9518699,5.3117331 0.97959671,0.3399649 c -0.17506062,-0.17504296 -0.45888731,-0.17504296 -0.63392551,0 -0.17503819,0.17504164 -0.17506061,0.45883862 0,0.63385915 L 5.3179447,5.9455692 0.3456712,10.917338 c -0.17506061,0.175042 -0.17506061,0.458839 0,0.633857 0.0875178,0.08751 0.20224719,0.131248 0.31697397,0.131248 0.11472941,0 0.22943244,-0.04374 0.31697396,-0.131248 L 5.9518699,6.5794501 10.924144,11.551195 c 0.08752,0.08751 0.202246,0.131248 0.316974,0.131248 0.114729,0 0.229431,-0.04374 0.316973,-0.131248 0.17506,-0.175042 0.17506,-0.458839 0,-0.633857 z" )
+                           
+                            
+                        
+                        
+
+                      
+                  .cart__sidebar
+                    
+                     .product-card.product-page__card
+                       .product-card__content
+                         h3.product-card__title Заказ
+                         p Итоговый отчет по вашему заказу:
+                         .product-page__con
+                    
+                       .product-card__bottom
+                         span Количество тортов
+                         .price 4 шт.
+                       .product-card__bottom
+                         span Стоимость доставки
+                         .price 500 ₸
+                       .product-card__bottom
+                         span Срок доставки
+                         .price от 3 дней
+                       .product-card__bottom <hr>
+                         span Итоговая цена
+                         .price.price--big 1430 ₸
+                       .product-card__footer
+                         a(href="#").btn.product-card__btn Оформить заказ
+            
+          
+           
+               
+        section.related
+           
+            .related__inner  
+              h3 Возможно вас заинтересует  
+              .related__row
+                .related__col
+                  .product-card
+                    .product-card__label.zak Заказной
+                    .product-card__img
+                      img(src="img/tort9.png")
+                    .product-card__content
+                      h3.product-card__title Детский торт
+                      ul.product-card__tabs
+                        li.deckription-link.deckription-link--active Состав
+                        li.edit-link Изменить торт
+                      ul.product-card__tab
+                        li.deckription-tab.deckription-tab--open Сахар, масло сливочное, молоко сгущенное уваренное, белок яичный, пудра сахарная, гель шоколадный...
+                        li.edit-tab
+                          .product-card__ves
+                            ul.product-card__ves-list
+                              li.product-card__ves-item.product-card__ves-item--active 1.2кг
+                              li.product-card__ves-item 1.8кг
+                              li.product-card__ves-item 2.5кг
+                              li.product-card__ves-item.some-ves свой вес
+                              input(type="text" value="" class="some-ves-input")
+                              img.close(src="img/close.svg")
+                              input(type="hidden" value="" id="product-card-ves1")
+                          .product-card__kol
+                            ul.product-card__kol-list
+                              li.product-card__kol-item
+                                .quantity
+                                  .quantity-plus +
+                                  .quantity-val
+                                    input(type="number" value="1" step="1" min="1" max="")
+                                  .quantity-minus -
+                              li.product-card__kol-item
+                                .product-card__atribute.attribute
+                                  span Молочный
+                                  .attribute-arrow
+                                    svg(width="11" height="10" viewBox="0 0 11 10" fill="none")
+                                      path(d="M9.91061 4.51778L5.39282 9.03557L0.875038 4.51778" fill="none" stroke="black")
+                                  ul.attribute__list
+                                    li.attribute__item Медовый
+                                    li.attribute__item Песочный
+                                    li.attribute__item Бисквитный
+                                    li.attribute__item Йогуртовый
+                                    li.attribute__item Фруктовый
+                                  input(type="hidden" value="" id="product-card-attr1")
+                    .product-card__footer
+                      a(href="#").btn.product-card__btn В корзину
+                      .price 1890 ₸
+                .related__col
+                  .product-card
+                    .product-card__img
+                      img(src="img/tort13.png")
+                    .product-card__content
+                      h3.product-card__title Глория
+                      ul.product-card__tabs
+                        li.deckription-link.deckription-link--active Состав
+                        li.edit-link Изменить торт
+                      ul.product-card__tab
+                        li.deckription-tab.deckription-tab--open Сахар, масло сливочное, молоко сгущенное уваренное, белок яичный, пудра сахарная, гель шоколадный...
+                        li.edit-tab
+                          .product-card__ves
+                            ul.product-card__ves-list
+                              li.product-card__ves-item.product-card__ves-item--active 1.2кг
+                              li.product-card__ves-item 1.8кг
+                              li.product-card__ves-item 2.5кг
+                              li.product-card__ves-item.some-ves свой вес
+                              input(type="text" value="" class="some-ves-input")
+                              img.close(src="img/close.svg")
+                              input(type="hidden" value="" id="product-card-ves1")
+                          .product-card__kol
+                            ul.product-card__kol-list
+                              li.product-card__kol-item
+                                .quantity
+                                  .quantity-plus +
+                                  .quantity-val
+                                    input(type="number" value="1" step="1" min="1" max="")
+                                  .quantity-minus -
+                              li.product-card__kol-item
+                                .product-card__atribute.attribute
+                                  span Молочный
+                                  .attribute-arrow
+                                    svg(width="11" height="10" viewBox="0 0 11 10" fill="none")
+                                      path(d="M9.91061 4.51778L5.39282 9.03557L0.875038 4.51778" fill="none" stroke="black")
+                                  ul.attribute__list
+                                    li.attribute__item Медовый
+                                    li.attribute__item Песочный
+                                    li.attribute__item Бисквитный
+                                    li.attribute__item Йогуртовый
+                                    li.attribute__item Фруктовый
+                                  input(type="hidden" value="" id="product-card-attr1")
+                    .product-card__footer
+                      a(href="#").btn.product-card__btn В корзину
+                      .price 1890 ₸
+                .related__col
+                  .product-card
+                    .product-card__label.zak Заказной
+                    .product-card__img
+                      img(src="img/tort11.png")
+                    .product-card__content
+                      h3.product-card__title Фруктовый торт
+                      ul.product-card__tabs
+                        li.deckription-link.deckription-link--active Состав
+                        li.edit-link Изменить торт
+                      ul.product-card__tab
+                        li.deckription-tab.deckription-tab--open Сахар, масло сливочное, молоко сгущенное уваренное, белок яичный, пудра сахарная, гель шоколадный...
+                        li.edit-tab
+                          .product-card__ves
+                            ul.product-card__ves-list
+                              li.product-card__ves-item.product-card__ves-item--active 1.2кг
+                              li.product-card__ves-item 1.8кг
+                              li.product-card__ves-item 2.5кг
+                              li.product-card__ves-item.some-ves свой вес
+                              input(type="text" value="" class="some-ves-input")
+                              img.close(src="img/close.svg")
+                              input(type="hidden" value="" id="product-card-ves1")
+                          .product-card__kol
+                            ul.product-card__kol-list
+                              li.product-card__kol-item
+                                .quantity
+                                  .quantity-plus +
+                                  .quantity-val
+                                    input(type="number" value="1" step="1" min="1" max="")
+                                  .quantity-minus -
+                              li.product-card__kol-item
+                                .product-card__atribute.attribute
+                                  span Молочный
+                                  .attribute-arrow
+                                    svg(width="11" height="10" viewBox="0 0 11 10" fill="none")
+                                      path(d="M9.91061 4.51778L5.39282 9.03557L0.875038 4.51778" fill="none" stroke="black")
+                                  ul.attribute__list
+                                    li.attribute__item Медовый
+                                    li.attribute__item Песочный
+                                    li.attribute__item Бисквитный
+                                    li.attribute__item Йогуртовый
+                                    li.attribute__item Фруктовый
+                                  input(type="hidden" value="" id="product-card-attr1")
+                    .product-card__footer
+                      a(href="#").btn.product-card__btn В корзину
+                      .price 1890 ₸
+                .related__col
+                  .product-card
+                    .product-card__img
+                      img(src="img/tort7.png")
+                    .product-card__content
+                      h3.product-card__title Алматинский
+                      ul.product-card__tabs
+                        li.deckription-link.deckription-link--active Состав
+                        li.edit-link Изменить торт
+                      ul.product-card__tab
+                        li.deckription-tab.deckription-tab--open Сахар, масло сливочное, молоко сгущенное уваренное, белок яичный, пудра сахарная, гель шоколадный...
+                        li.edit-tab
+                          .product-card__ves
+                            ul.product-card__ves-list
+                              li.product-card__ves-item.product-card__ves-item--active 1.2кг
+                              li.product-card__ves-item 1.8кг
+                              li.product-card__ves-item 2.5кг
+                              li.product-card__ves-item.some-ves свой вес
+                              input(type="text" value="" class="some-ves-input")
+                              img.close(src="img/close.svg")
+                              input(type="hidden" value="" id="product-card-ves1")
+                          .product-card__kol
+                            ul.product-card__kol-list
+                              li.product-card__kol-item
+                                .quantity
+                                  .quantity-plus +
+                                  .quantity-val
+                                    input(type="number" value="1" step="1" min="1" max="")
+                                  .quantity-minus -
+                              li.product-card__kol-item
+                                .product-card__atribute.attribute
+                                  span Молочный
+                                  .attribute-arrow
+                                    svg(width="11" height="10" viewBox="0 0 11 10" fill="none")
+                                      path(d="M9.91061 4.51778L5.39282 9.03557L0.875038 4.51778" fill="none" stroke="black")
+                                  ul.attribute__list
+                                    li.attribute__item Медовый
+                                    li.attribute__item Песочный
+                                    li.attribute__item Бисквитный
+                                    li.attribute__item Йогуртовый
+                                    li.attribute__item Фруктовый
+                                  input(type="hidden" value="" id="product-card-attr1")
+                    .product-card__footer
+                      a(href="#").btn.product-card__btn В корзину
+                      .price 1890 ₸     
+        block content
+          p содержимое
+          
+      .page__footer-wrapper
+        +page-footer()
+          block footer
+           
+           
+ 
+  block page-bottom
+  .mini-cart
+    img(src="img/cart.png")
+    .mini-cart__title Корзина пуста
+    .mini-cart__content Здесь будет список товаров
+
+
+  +modal("zakaz","Заказать уникальный торт")
+        .modal__body 
+          form#feedback_form.modal__form
+            .form-control
+              label(for="name") ФИО покупателя
+              input#name.require(required="required" name="name" type="text")
+            .form-control
+              label(for="mail") Электронная почта
+              input#mail.require(required="required" name="mail" type="email")
+            .form-control
+              label(for="phone") Телефон
+              input#phone.require(required="required" name="phone" type="text")
+            .form-control.form-control--row
+              .link-photo
+                label(for="link-photo") Добавьте ссылку на фото торта
+                input#link-photo.require(name="link-photo" type="text" autocomplete="off")
+              span или
+              .download-photo
+                .input__wrapper
+                  input#input__file.input.input__file(name="download-photo" type="file" autocomplete="off")
+                  label.file-label(for="input__file")
+                    div.input__file-icon-wrapper
+                     div.nput__file-button-text Загрузить фото
+                     img(src='img/add.png', alt='Добавить фото', width='20')
+            .form-control
+              label(for="message") Коментарий
+              textarea#message(name="message" required="required") 
+             
+            .form-control.form-control--block
+              input.button(type="submit" value="Заказать звонок")
+
+            .form-agreement
+              label.checkbox-other(for="ch")
+                input#ch(type="checkbox")
+                span Нажимая на кнопку «Оплатить заказ», я даю согласие на обработку<br> персональных данных и соглашаюсь c условиями <a href="#">договора-оферты</a> и <a href="#">политикой конфиденциальности</a>
+  script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=74d8f79d-cf24-44cf-864a-a28bd40aba33" type="text/javascript")
+  
+  script(src='js/bundle.js')
+  

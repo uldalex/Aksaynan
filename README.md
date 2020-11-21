@@ -6,6 +6,7 @@
 [Каталог](https://uldalex.github.io/Aksaynan/build/catalog.html)<br>
 [Карточка заказного торта](https://uldalex.github.io/Aksaynan/build/product-card-zakaznoy.html)<br>
 [Карточка ассортиментного торта](https://uldalex.github.io/Aksaynan/build/product-card.html)<br>
+[Корзина](https://uldalex.github.io/Aksaynan/build/cart.html)<br>
 
 ## Парадигма
 

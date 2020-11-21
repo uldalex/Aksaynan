@@ -2971,6 +2971,8 @@ function parallaxTop(){
     $('.parallax8').css({transform: 'rotate(-' + (500 * scrolled/maxScroll) + 'deg)'});
     $('.parallax10').css('margin-top', +(scrolled * 0.8) + 'px');
     $('.parallax10').css({transform: 'rotate(-' + (500 * scrolled/maxScroll) + 'deg)'});
+    $('.parallax10-1').css('margin-top', +(scrolled * 0.2) + 'px');
+    $('.parallax10-1').css({transform: 'rotate(-' + (360 * scrolled/maxScroll) + 'deg)'});
     $('.parallax12').css('margin-bottom', +(scrolled * 0.2) + 'px');
     $('.parallax12').css({transform: 'rotate(-' + (500 * scrolled/maxScroll) + 'deg)'});
     $('.parallax13').css('margin-bottom', +(scrolled * 0.2) + 'px');
