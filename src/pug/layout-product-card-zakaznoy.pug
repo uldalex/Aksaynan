@@ -50,9 +50,9 @@ html(class='page  no-js', lang='ru')
             img.parallax.parallax6(src="img/parallax6.png")
             .product-page__col-1
                 .product-page__media
-                     
+                    .product-page__label Заказной 
                     figure
-                      img(src="img/tort7.png")
+                      img(src="img/tort10.png")
                     #product-page__galery.product-page__galery.splide
                       .splide__track
                         ul.splide__list
@@ -75,33 +75,20 @@ html(class='page  no-js', lang='ru')
             .product-page__col-2
                  +breadcrumbs()
                    +breadcrumbs-item('Главная', '/home')
-                   +breadcrumbs-item('Торты в ассортименте')
-                 h1.page-title Алматинский
+                   +breadcrumbs-item('Торты на заказ')
+                 h1.page-title Торт цифра
                  .product-page__values
                     .product-page__val
                       img(src="img/vesy.png")
                       .product-page__val-content
                         span Масса нетто
-                        .product-page__ves от <span> 1,0</span> кг (-1,5%)
+                        .product-page__ves от <span> 1,0</span> кг
                     .product-page__val
                       img(src="img/clock.png")
                       .product-page__val-content
                         span Срок хранения
                         .product-page__ves  <span> 120</span> часов
                  .product-page__content
-
-                    .product-page__info
-                      .product-page__info-col
-                        .product-page__info-item.active Ккал на 100г 
-                          span 359 ккал
-                      .product-page__info-col
-                        .product-page__info-item Белки
-                          span 4.4г
-                        .product-page__info-item Жиры
-                          span 14.5г
-                        .product-page__info-item Углеводы
-                          span 53,6г
-
                     .product-page__content-title Состав
                     p Cливки растительные, вода, яйцо куриное, гель шоколадный [сироп глюкозный, вода, сахар, какао, загуститель (Е418), регулятор кислотности (Е330), ароматизатор, консервант (Е202)], сахар, мука пшеничная, вода, стабилизатор сливок [сахар, какао, кислота Е170, вкусовая добавка], глазурь шоколадная, крахмал картофельный, шоколад, ароматизатор
                     .product-page__content-title Условия хранения
@@ -118,33 +105,32 @@ html(class='page  no-js', lang='ru')
                     h3.product-card__title Заказать торт
                     p Выберите какой вы хотите торт:
                     .product-page__con
-                        span.grey Магазин
-                        .filter__item
-                          .filter__shops
-                              .filter__shop 
-                                .filter__content
-                                 .filter__shop-title Центральный магазин
-                                    span «Аксай- 2», ул. Б.Момышулы, 36 А
-                                .filter__arrow
-                                   svg(width="11" height="10" viewBox="0 0 11 10" fill="none")
-                                     path(d="M9.91061 4.51778L5.39282 9.03557L0.875038 4.51778" fill="none" stroke="black")
-                              ul.filter__shops-list
-                                li 
-                                  .filter__shop-title Магазин на Толе Би
-                                     span улица Толе Би 125, Алматы
-                                li
-                                  .filter__shop-title Магазин на Толе Би
-                                     span улица Толе Би 125, Алматы
-                                li
-                                  .filter__shop-title Магазин в Орбите-1
-                                     span Мкр. Орбита-1, ул. Навои, д.6, уг.ул. Биржана
-                                li
-                                  .filter__shop-title Магазин на Назарбаева
-                                     span Пр Назарбаева Н.А., д.148, магазин «Беташар»
-                                li
-                                  .filter__shop-title Магазин на Розыбакиева
-                                    span Ул. Розыбакиева 33/1, ТК «Оптовка»
- 
+                        span.grey Вес
+                        .product-card__ves
+                          ul.product-card__ves-list
+                            li.product-card__ves-item.product-card__ves-item--active 1.2кг
+                            li.product-card__ves-item 1.8кг
+                            li.product-card__ves-item 2.5кг
+                            li.product-card__ves-item.some-ves свой вес
+                            input(type="text" value="" class="some-ves-input")
+                            img.close(src="img/close.svg")
+                            input(type="hidden" value="" id="product-card-ves1")
+                        span.grey Основа
+                        .product-card__kol
+                          ul.product-card__kol-list
+                            li.product-card__kol-item
+                              .product-card__atribute.attribute
+                                span Молочный
+                                .attribute-arrow
+                                  svg(width="11" height="10" viewBox="0 0 11 10" fill="none")
+                                    path(d="M9.91061 4.51778L5.39282 9.03557L0.875038 4.51778" fill="none" stroke="black")
+                                ul.attribute__list
+                                  li.attribute__item Медовый
+                                  li.attribute__item Песочный
+                                  li.attribute__item Бисквитный
+                                  li.attribute__item Йогуртовый
+                                  li.attribute__item Фруктовый
+                                input(type="hidden" value="" id="product-card-attr1")
                         span.grey Количество
                         .product-card__kol
                           ul.product-card__kol-list

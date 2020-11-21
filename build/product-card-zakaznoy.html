@@ -63,7 +63,8 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
         <div class="page-row"><img class="parallax parallax10" src="img/parallax8.png"><img class="parallax parallax14" src="img/parallax3.png"><img class="parallax parallax12" src="img/parallax4.png"><img class="parallax parallax6" src="img/parallax6.png">
           <div class="product-page__col-1">
             <div class="product-page__media">
-              <figure><img src="img/tort7.png"></figure>
+              <div class="product-page__label">Заказной </div>
+              <figure><img src="img/tort10.png"></figure>
               <div class="product-page__galery splide" id="product-page__galery">
                 <div class="splide__track">
                   <ul class="splide__list">
@@ -82,13 +83,13 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
           <div class="product-page__col-2">
             <ul class="breadcrumbs" aria-label="Breadcrumb" role="navigation">
               <li class="breadcrumbs__item"><a href="/home">Главная</a></li>
-              <li class="breadcrumbs__item"><span>Торты в ассортименте</span></li>
+              <li class="breadcrumbs__item"><span>Торты на заказ</span></li>
             </ul>
-            <h1 class="page-title">Алматинский</h1>
+            <h1 class="page-title">Торт цифра</h1>
             <div class="product-page__values">
               <div class="product-page__val"><img src="img/vesy.png">
                 <div class="product-page__val-content"><span>Масса нетто</span>
-                  <div class="product-page__ves">от <span> 1,0</span> кг (-1,5%)</div>
+                  <div class="product-page__ves">от <span> 1,0</span> кг</div>
                 </div>
               </div>
               <div class="product-page__val"><img src="img/clock.png">
@@ -98,16 +99,6 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
               </div>
             </div>
             <div class="product-page__content">
-              <div class="product-page__info">
-                <div class="product-page__info-col">
-                  <div class="product-page__info-item active">Ккал на 100г <span>359 ккал</span></div>
-                </div>
-                <div class="product-page__info-col">
-                  <div class="product-page__info-item">Белки<span>4.4г</span></div>
-                  <div class="product-page__info-item">Жиры<span>14.5г</span></div>
-                  <div class="product-page__info-item">Углеводы<span>53,6г</span></div>
-                </div>
-              </div>
               <div class="product-page__content-title">Состав</div>
               <p>Cливки растительные, вода, яйцо куриное, гель шоколадный [сироп глюкозный, вода, сахар, какао, загуститель (Е418), регулятор кислотности (Е330), ароматизатор, консервант (Е202)], сахар, мука пшеничная, вода, стабилизатор сливок [сахар, какао, кислота Е170, вкусовая добавка], глазурь шоколадная, крахмал картофельный, шоколад, ароматизатор</p>
               <div class="product-page__content-title">Условия хранения</div>
@@ -123,35 +114,32 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
               <div class="product-card__content">
                 <h3 class="product-card__title">Заказать торт</h3>
                 <p>Выберите какой вы хотите торт:</p>
-                <div class="product-page__con"><span class="grey">Магазин</span>
-                  <div class="filter__item">
-                    <div class="filter__shops">
-                      <div class="filter__shop">
-                        <div class="filter__content">
-                          <div class="filter__shop-title">Центральный магазин<span>«Аксай- 2», ул. Б.Момышулы, 36 А</span></div>
+                <div class="product-page__con"><span class="grey">Вес</span>
+                  <div class="product-card__ves">
+                    <ul class="product-card__ves-list">
+                      <li class="product-card__ves-item product-card__ves-item--active">1.2кг</li>
+                      <li class="product-card__ves-item">1.8кг</li>
+                      <li class="product-card__ves-item">2.5кг</li>
+                      <li class="product-card__ves-item some-ves">свой вес</li><input class="some-ves-input" type="text" value=""><img class="close" src="img/close.svg"><input type="hidden" value="" id="product-card-ves1">
+                    </ul>
+                  </div><span class="grey">Основа</span>
+                  <div class="product-card__kol">
+                    <ul class="product-card__kol-list">
+                      <li class="product-card__kol-item">
+                        <div class="product-card__atribute attribute"><span>Молочный</span>
+                          <div class="attribute-arrow"><svg width="11" height="10" viewBox="0 0 11 10" fill="none">
+                              <path d="M9.91061 4.51778L5.39282 9.03557L0.875038 4.51778" fill="none" stroke="black"></path>
+                            </svg></div>
+                          <ul class="attribute__list">
+                            <li class="attribute__item">Медовый</li>
+                            <li class="attribute__item">Песочный</li>
+                            <li class="attribute__item">Бисквитный</li>
+                            <li class="attribute__item">Йогуртовый</li>
+                            <li class="attribute__item">Фруктовый</li>
+                          </ul><input type="hidden" value="" id="product-card-attr1">
                         </div>
-                        <div class="filter__arrow"><svg width="11" height="10" viewBox="0 0 11 10" fill="none">
-                            <path d="M9.91061 4.51778L5.39282 9.03557L0.875038 4.51778" fill="none" stroke="black"></path>
-                          </svg></div>
-                      </div>
-                      <ul class="filter__shops-list">
-                        <li>
-                          <div class="filter__shop-title">Магазин на Толе Би<span>улица Толе Би 125, Алматы</span></div>
-                        </li>
-                        <li>
-                          <div class="filter__shop-title">Магазин на Толе Би<span>улица Толе Би 125, Алматы</span></div>
-                        </li>
-                        <li>
-                          <div class="filter__shop-title">Магазин в Орбите-1<span>Мкр. Орбита-1, ул. Навои, д.6, уг.ул. Биржана</span></div>
-                        </li>
-                        <li>
-                          <div class="filter__shop-title">Магазин на Назарбаева<span>Пр Назарбаева Н.А., д.148, магазин «Беташар»</span></div>
-                        </li>
-                        <li>
-                          <div class="filter__shop-title">Магазин на Розыбакиева<span>Ул. Розыбакиева 33/1, ТК «Оптовка»</span></div>
-                        </li>
-                      </ul>
-                    </div>
+                      </li>
+                    </ul>
                   </div><span class="grey">Количество</span>
                   <div class="product-card__kol">
                     <ul class="product-card__kol-list">

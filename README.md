@@ -2,9 +2,10 @@
 
 ## Смотреть верстку
 
-[Главная](https://uldalex.github.io/Aksaynan/build/index.html)
-[Каталог](https://uldalex.github.io/Aksaynan/build/catalog.html)
-[Карточка товара](https://uldalex.github.io/Aksaynan/build/product-card.html)
+[Главная](https://uldalex.github.io/Aksaynan/build/index.html)<br>
+[Каталог](https://uldalex.github.io/Aksaynan/build/catalog.html)<br>
+[Карточка заказного торта](https://uldalex.github.io/Aksaynan/build/product-card-zakaznoy.html)<br>
+[Карточка ассортиментного торта](https://uldalex.github.io/Aksaynan/build/product-card.html)<br>
 
 ## Парадигма
 
