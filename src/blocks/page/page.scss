@@ -475,6 +475,16 @@ pre {
     @include container();
     padding-top: 52px;
   }
+
+  &__row {
+    @include row();
+  }
+
+  &__col{
+    @include col(xl,8);
+    @include col-offset(xl,2)
+  }
+
   & h1 {
     color: #96161B;
     margin-top:10px;
@@ -1324,7 +1334,10 @@ transition: all 1.2s ease;
   bottom: -200px;
   z-index: 1;
 }
-.parallax7 {
+.parallax7-1 {
+  position: absolute;
+  z-index: 5;
+  width: 70px;
   transition: all 0.5s ease;
 }
 .parallax8{
@@ -1387,6 +1400,14 @@ transition: all 1.2s ease;
 }
 .parallax12-1{
   bottom: 50px;
+}
+.parallax12-2{
+  position: absolute;
+  left: 75%;
+  top: -300px;
+  width: 70px;
+  z-index: 1;
+  transition: all 0.8s ease; 
 }
 .parallax13 {
   position: absolute;
@@ -1773,6 +1794,7 @@ left:0;
       border-top-right-radius: 10px;
       border-bottom-right-radius: 10px;
     }
+    
   } 
   @media (max-width:320px){
     &__info-item {
@@ -2205,8 +2227,280 @@ $spinner-size: 20px;
   }
 
 }
-@media (max-width:1025px) and (min-width:768px){
 
+//order
+.order {
+
+  &__inner {
+    @include container();
+  }
+
+  &__row {
+    @include row();
+  }
+
+  &__content {
+    @include col (xl, 8, $grid-columns, 0 );
+    @include col-offset(xl, 2);
+    padding-top:3rem;
+  }
+
+  &__title {
+    font-size:23px;
+    font-weight:700;
+    padding-bottom:0.4rem
+  }
+
+  &__products {
+   padding-top:2rem;
+  }
+
+  &__products-subtitle {
+    color:#797986;
+    padding-bottom:1rem;
+    line-height: 20px;
+  }
+  &__product-count {
+    color:#797986;
+    font-size:15px;
+    font-weight:600;
+    clear: both;
+
+    & span {
+      font-weight:400;
+    }
+
+  }
+
+  &__list {
+    padding:0;
+  }
+
+  &__item {
+    width:50%;
+    float:left;
+    list-style: none;
+    display: flex;
+
+    &:nth-child(odd){
+      padding: 1rem 0.5rem 1rem 0;
+
+    }
+    &:nth-child(even){
+      padding: 1rem 0rem 1rem 0;
+
+    }
+
+  }
+  &__img {
+    width:80px;
+    max-width: 80px;
+    border: 1px solid #ffefd7;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80px;
+    min-width: 80px;
+    margin-right: 0.5rem;
+
+    & img {
+      border-radius: 20px;
+    }
+  }
+
+  &__product-content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__product-title{
+    max-width:50%;
+    width:50%;
+    font-size:15px;
+  }
+  &__product-price{
+    max-width:50%;
+    width:50%;
+    text-align: right;
+    font-size:15px;
+    font-weight:700;
+  }
+
+  &__value {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  &__val {
+    color: #8e8383;
+    font-size: 11px;
+    
+    & span {
+      color: #000000;
+      padding-left:5px;
+
+    }
+  }
+  
+  &__tabs-link {
+    padding: 0;
+    display: flex;
+    background-color: #F4F4F4;
+    border-radius:6px;
+
+    & li.dostavka-link {
+      list-style: none;
+      padding: 0.6rem;
+      font-size:15px;
+      min-width: 49%;
+      text-align: center;
+      border-radius:5px;
+      margin: 2px;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+
+      &.active {
+       background-color: #ffffff;
+       box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+      }
+
+    }
+  
+  }
+  &__tabs-content {
+      padding:0;
+
+      li.dostavka {
+        list-style:none;
+        height:0;
+        max-height:0;
+        overflow: hidden;
+        transition:all 0.3s linear;
+
+        &.open{
+          height:auto;
+          max-height: 800px;
+        }
+      }
+    }
+  &__payment{
+    margin: 0.5rem 0;
+    padding: 1.5rem;
+    border-radius: 20px;
+    border: 1px solid #cccccc;
+    position:relative;
+    background: #ffffff;
+    color:#cccccc;
+
+    &:after {
+    content: "";
+    position: absolute;
+    bottom: -webkit-calc(100% - 4px); /*may require prefix for old browser support*/
+    bottom: calc(100% - 4px); /*i.e. half the height*/
+    left: 80px;
+    height: 10px;
+    width: 10px;
+    background: inherit;
+    transform: rotate(45deg);
+    border-top:inherit;
+    border-left:inherit;
+    box-shadow:inherit;
+    }
+  }
+
+  & .payment {
+
+    &__title {
+      font-size: 11px;
+      text-transform: uppercase;
+      color:#cccccc;
+      font-weight:600;
+    }
+
+    &__metods{
+      padding: 0.5rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+
+      & img {
+        margin: 0 0.5rem 0 0;
+      }
+    }
+  }
+  & input {
+    padding-left:10px;
+  }
+  & textarea {
+    padding:10px;
+  }
+  & .form-control-row {
+    @include row();
+    }
+  & .col6 {
+    @include col(md, 6)
+  }
+  & .filter__content {
+    width:100%;
+  }
+  .filter__shop-title{
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+  }
+  & .filter__arrow {
+    min-width:58px;
+    min-height:58px;
+  }
+  & .filter__shops-list {
+    padding: 0;
+    margin: 0;
+    height: 0;
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: all 1s linear;
+    transition: all 1s linear;
+
+    &--open {
+      height: auto;
+      max-height: 500px;
+  }
+    & li:hover {
+    cursor: pointer;
+    background-color: #e2dbdb;
+    } 
+  }
+
+  & .product-card__btn {
+    text-decoration: none;
+    padding: .5rem 1.5rem;
+    border: 2px solid #9f241d;
+    background-color: #9f241d;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 20px;
+    -webkit-transition: all .5s linear;
+    transition: all .5s linear;
+    color: #fff;
+
+    &:hover, &:active, &focus {
+      background-color: #fff;
+      color: #9f241d;
+    }
+}
+  &__form{
+    margin-bottom:4rem;
+  }
+  }
+
+
+@media (max-width:1025px) and (min-width:768px){
+ 
   .product-card__footer{
     flex-wrap: wrap;
     justify-content: center;
@@ -2239,6 +2533,20 @@ $spinner-size: 20px;
 }
 }
 @media (max-width:768px){
+
+  .order__content {
+    padding-left:15px;
+    padding-right:15px;
+  }
+  .top-block__col{
+    padding-left:15px;
+    padding-right:15px;
+
+  }
+  .form-control.col6{
+    padding-left:15px;
+    padding-right:15px;
+  }
   .page-header .page-header__nav {
     background-color: transparent;
 }
@@ -2345,6 +2653,23 @@ $spinner-size: 20px;
 }
 
 @media (max-width: 600px) {
+  .parallax12-2 {
+    position: absolute;
+    left: 75%;
+    top: -270px;
+    width: 40px;
+    z-index: 1;
+    -webkit-transition: all .8s ease;
+    transition: all .8s ease;
+}
+  .order__item{
+    width:100%;
+  }
+  .order__val {
+    display: flex;
+    flex-direction: column;
+  }
+  
   .mini-cart {
     display: none;
   }

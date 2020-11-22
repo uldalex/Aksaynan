@@ -1,0 +1,261 @@
+//- Стандартный шаблон страницы
+
+include mixins.pug
+
+doctype html
+html(class='page  no-js', lang='ru')
+
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    //- Edge и ряд мобильных браузеров слишком умны. Отключим это.
+    meta(name='format-detection', content='telephone=no')
+    meta(name='format-detection', content='date=no')
+    meta(name='format-detection', content='address=no')
+    meta(name='format-detection', content='email=no')
+    meta(content='notranslate', name='google')
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#ce2828">
+    <meta name="msapplication-TileColor" content="#b91d47">
+    <meta name="theme-color" content="#c41a1a">
+
+    block meta
+      title Home
+
+    block head
+      link(rel='stylesheet', href='css/style.css')
+      script
+        include ../js/head-script.js
+
+  body
+    noscript У вас отключен JavaScript. Это пугает.
+    h1.home-title Корзина
+    .page__inner
+      .page__content
+        .top-block
+         
+          +page-header()
+            +logo('/')
+              img(src='img/logo.png', alt='Logo', width='98', height='71')
+            block nav
+            +language()
+          .top-block__inner
+            .top-block__row
+              .top-block__col
+                +breadcrumbs()
+                  +breadcrumbs-item('Главная', '/home')
+                  +breadcrumbs-item('Корзина')
+                h1.page-title Оформление заказа
+        .page-main
+            .page-row
+             img.parallax.parallax10-1(src="img/parallax5.png")
+             img.parallax.parallax3.parallax3-1(src="img/parallax3.png")
+             img.parallax.parallax12-2(src="img/parallax4.png")
+             img.parallax.parallax12(src="img/parallax4.png")
+             
+             
+        .order
+          .order__inner
+              .order__row
+                  .order__content
+                    .order__title Данные покупателя
+                    form.order__form(action="POST")
+                     .form-control
+                       label(for="name") ФИО покупателя
+                       input#name.require(required="required" name="name" type="text" placeholder="Иванов Иван Иванович")
+                     .form-control
+                       label(for="mail") Электронная почта
+                       input#mail.require(required="required" name="mail" type="mail" placeholder="example@mail.ru")
+                     .form-control
+                       label(for="phone") Телефон
+                       input#phone.require(required="required" name="phone" type="phone" placeholder="+7 777 123 4567")
+                     .order__products
+                       .order__title Торты на заказ
+                       .order__products-subtitle Торты на заказ изготавливаются от 2 суток и могут быть доставлены на любой<br> удобный для вас адрес. При заказе торта от 5 киллограм доставка — <strong>бесплатно</strong>.
+                       .order__product-count Список тортов <span>(3 торта)</span>
+                       ul.order__list
+                         li.order__item
+                           .order__img
+                             img(src="img/tort13.png")
+                           .order__product-content
+                             .order__product-title Глория
+                             .order__product-price 3670 <span>₸</span>
+                             .order__value
+                               .order__val
+                                 |вес:
+                                 span 1.2кг
+                               .order__val
+                                 |Основа:
+                                 span Молочный
+                               .order__val
+                                 |Количество:
+                                 span 1.2кг
+                         li.order__item
+                           .order__img
+                             img(src="img/tort16.png")
+                           .order__product-content
+                             .order__product-title Грильяж
+                             .order__product-price 6890 <span>₸</span>
+                             .order__value
+                               .order__val
+                                 |вес:
+                                 span 1.2кг
+                               .order__val
+                                 |Основа:
+                                 span Молочный
+                               .order__val
+                                 |Количество:
+                                 span 1.2кг      
+                         li.order__item
+                           .order__img
+                             img(src="img/tort7.png")
+                           .order__product-content
+                             .order__product-title Бисквитно-кремовый
+                             .order__product-price 1820 <span>₸</span>
+                             .order__value
+                               .order__val
+                                 |вес:
+                                 span 1.2кг
+                               .order__val
+                                 |Основа:
+                                 span Молочный
+                               .order__val
+                                 |Количество:
+                                 span 1.2кг
+                       .order__product-count Доставка
+                       .form-control
+                         label(for="dostavka") Выберите способ доставки
+                       ul.order__tabs-link
+                         li#samovivoz-link.dostavka-link Самовывоз
+                         li#dostavka-link.dostavka-link.active Доставка
+                       ul.order__tabs-content 
+                         li#dostavka.dostavka.open
+                           .form-control
+                             label(for="sity") Город
+                             input#sity.require( name="sity" type="text" placeholder="Алматы")
+                           .form-control
+                             label(for="street") Улица
+                             input#street.require( name="street" type="text" placeholder="Пр. Абая")
+                           .form-control-row
+                             .form-control.col6
+                               label(for="home") Номер дома
+                               input#home.require( name="home" type="text" placeholder="25")
+                             .form-control.col6
+                               label(for="flat") Квартира
+                               input#flat.require( name="flat" type="text" placeholder="150")
+                              
+                           .form-control
+                             label(for="message") Комментарий
+                             textarea#message.require( name="message"  placeholder="При необходимости, укажите комментарий для курьера")
+                         li#samovivoz.dostavka 
+                            .filter__item
+                              span Магазин для самовывоза
+                              .filter__shops
+                                .filter__shop 
+                                  .filter__content
+                                    .filter__shop-title Центральный магазин
+                                      span «Аксай- 2», ул. Б.Момышулы, 36 А
+                                  .filter__arrow
+                                    svg(width="11" height="10" viewBox="0 0 11 10" fill="none")
+                                      path(d="M9.91061 4.51778L5.39282 9.03557L0.875038 4.51778" fill="none" stroke="black")
+                                ul.filter__shops-list
+                                  li
+                                    .filter__shop-title Магазин на Толе Би
+                                      span улица Толе Би 125, Алматы
+                                  li
+                                    .filter__shop-title Магазин в Орбите-1
+                                      span Мкр. Орбита-1, ул. Навои, д.6, уг.ул. Биржана
+                                  li
+                                    .filter__shop-title Магазин на Назарбаева
+                                      span Пр Назарбаева Н.А., д.148, магазин «Беташар»
+                                  li
+                                    .filter__shop-title Магазин на Розыбакиева
+                                      span Ул. Розыбакиева 33/1, ТК «Оптовка»
+                                                         
+                            .form-control
+                              label(for="message") Комментарий
+                              textarea#message.require( name="message"  placeholder="При необходимости, укажите комментарий для курьера")
+                       img.parallax.parallax7-1(src="img/parallax7.png")
+                       a.btn.product-card__btn(href="#") Оплатить заказ
+                       .order__payment.payments
+                         .payment__title Доступные способы оплаты
+                         .payment__metods
+                           img(src="img/payment1.png")
+                           img(src="img/payment2.png")
+                           img(src="img/payment3.png")
+                           img(src="img/payment4.png")
+                           img(src="img/payment5.png")
+                           img(src="img/payment6.png")
+                         .payment__metods
+                           img(src="img/payment7.png")
+                           span Безопасность транзакций гарантирует <strong>Казком</strong>
+                       .form-agreement
+                         label.checkbox-other(for="agreement")
+                           input#agreement(type="checkbox")
+                           span Нажимая на кнопку «Оплатить заказ», я даю согласие на обработку<br> персональных данных и соглашаюсь c условиями <a href="#">договора-оферты</a> и <a href="#">политикой конфиденциальности</a>
+
+                      
+
+                       
+                      
+                    
+                            
+    
+        block content
+          p содержимое
+          
+      .page__footer-wrapper
+        +page-footer()
+          block footer
+           
+           
+ 
+  block page-bottom
+  .mini-cart
+    img(src="img/cart.png")
+    .mini-cart__title Корзина пуста
+    .mini-cart__content Здесь будет список товаров
+
+
+  +modal("zakaz","Заказать уникальный торт")
+        .modal__body 
+          form#feedback_form.modal__form
+            .form-control
+              label(for="name") ФИО покупателя
+              input#name.require(required="required" name="name" type="text")
+            .form-control
+              label(for="mail") Электронная почта
+              input#mail.require(required="required" name="mail" type="email")
+            .form-control
+              label(for="phone") Телефон
+              input#phone.require(required="required" name="phone" type="text")
+            .form-control.form-control--row
+              .link-photo
+                label(for="link-photo") Добавьте ссылку на фото торта
+                input#link-photo.require(name="link-photo" type="text" autocomplete="off")
+              span или
+              .download-photo
+                .input__wrapper
+                  input#input__file.input.input__file(name="download-photo" type="file" autocomplete="off")
+                  label.file-label(for="input__file")
+                    div.input__file-icon-wrapper
+                     div.nput__file-button-text Загрузить фото
+                     img(src='img/add.png', alt='Добавить фото', width='20')
+            .form-control
+              label(for="message") Коментарий
+              textarea#message(name="message" required="required") 
+             
+            .form-control.form-control--block
+              input.button(type="submit" value="Заказать звонок")
+
+            .form-agreement
+              label.checkbox-other(for="ch")
+                input#ch(type="checkbox")
+                span Нажимая на кнопку «Оплатить заказ», я даю согласие на обработку<br> персональных данных и соглашаюсь c условиями <a href="#">договора-оферты</a> и <a href="#">политикой конфиденциальности</a>
+  script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=74d8f79d-cf24-44cf-864a-a28bd40aba33" type="text/javascript")
+  
+  script(src='js/bundle.js')
+  

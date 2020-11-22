@@ -2979,6 +2979,8 @@ function parallaxTop(){
     $('.parallax14').css('margin-top', +(scrolled * 0.2) + 'px');
     $('.parallax14').css({transform: 'rotate(-' + (500 * scrolled/maxScroll) + 'deg)'});
     $('.parallax15').css('margin-top', +(scrolled * 0.1) + 'px');
+    $('.parallax7-1').css('margin-top', -(scrolled * 0.2) + 'px');
+    $('.parallax7-1').css({transform: 'rotate(-' + (500 * scrolled/maxScroll) + 'deg)'});
 
          	
 }
@@ -3162,6 +3164,18 @@ $('.sidebar__filter-toggler').on('click', function(){
 $('.filter').toggleClass('filter--open');
 
 });
+$('#dostavka-link').on('click', function(){
+  $(this).addClass('active');
+  $('#samovivoz-link').removeClass('active');
+  $('#dostavka').addClass('open')
+  $('#samovivoz').removeClass('open')
+ });
+ $('#samovivoz-link').on('click', function(){
+  $(this).addClass('active');
+  $('#dostavka-link').removeClass('active');
+  $('#samovivoz').addClass('open')
+  $('#dostavka').removeClass('open')
+ });
 //galery
 /*!
  * Splide.js

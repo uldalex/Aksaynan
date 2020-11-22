@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html class="page  no-js" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="date=no">
+  <meta name="format-detection" content="address=no">
+  <meta name="format-detection" content="email=no">
+  <meta content="notranslate" name="google">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#ce2828">
+  <meta name="msapplication-TileColor" content="#b91d47">
+  <meta name="theme-color" content="#c41a1a">
+  <title>Оформление заказа</title>
+  <meta name="description" content="">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+function cth(c){document.documentElement.classList.add(c)}
+'ontouchstart' in window?cth('touch'):cth('no-touch');
+if(typeof InstallTrigger!=='undefined')cth('firefox');
+if(/constructor/i.test(window.HTMLElement)||(function(p){return p.toString()==="[object SafariRemoteNotification]"})(!window['safari']||(typeof safari!=='undefined'&&safari.pushNotification)))cth('safari');
+if(/*@cc_on!@*/false||!!document.documentMode)cth('ie');
+if(!(/*@cc_on!@*/false||!!document.documentMode)&&!!window.StyleMedia)cth('edge');
+if(!!window.chrome&&(!!window.chrome.webstore||!!window.chrome.runtime))cth('chrome');
+if(~navigator.appVersion.indexOf("Win"))cth('windows');
+if(~navigator.appVersion.indexOf("Mac"))cth('osx');
+if(~navigator.appVersion.indexOf("Linux"))cth('linux');
+</script>
+</head>
+
+<body><noscript>У вас отключен JavaScript. Это пугает.</noscript>
+  <h1 class="home-title">Корзина</h1>
+  <div class="page__inner">
+    <div class="page__content">
+      <div class="top-block">
+        <header class="page-header" role="banner">
+          <div class="page-header__inner">
+            <div class="page-header__nav">
+              <div class="page-header__row">
+                <div class="logo"><a class="logo__link" href="/"><img src="img/logo.png" alt="Logo" width="98" height="71"></a></div>
+                <nav class="main-nav" id="nav"><button class="burger main-nav__toggler" aria-label="Показать главное меню" data-target-id="nav" data-target-class-toggle="main-nav--open"><span>Показать главное меню</span></button>
+                  <ul class="main-nav__list">
+                    <li class="main-nav__item  main-nav__item--active"><a class="main-nav__link" href="catalog.html" data-target="null" data-toggle="null">Торты в ассортименте</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="catalog.html" data-target="null" data-toggle="null">Торты на заказ</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="#zakaz" data-target="null" data-toggle="null">Заказать по фото</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="/" data-target="null" data-toggle="null">Контакты</a></li>
+                  </ul>
+                </nav>
+                <div class="language"><a class="language__link language__link--active" htef="#">РУС</a><span>|</span><a class="language__link" htef="#">ҚАЗ</a></div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="top-block__inner">
+          <div class="top-block__row">
+            <div class="top-block__col">
+              <ul class="breadcrumbs" aria-label="Breadcrumb" role="navigation">
+                <li class="breadcrumbs__item"><a href="/home">Главная</a></li>
+                <li class="breadcrumbs__item"><span>Корзина</span></li>
+              </ul>
+              <h1 class="page-title">Оформление заказа</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page-main">
+        <div class="page-row"><img class="parallax parallax10-1" src="img/parallax5.png"><img class="parallax parallax3 parallax3-1" src="img/parallax3.png"><img class="parallax parallax12-2" src="img/parallax4.png"><img class="parallax parallax12" src="img/parallax4.png"></div>
+      </div>
+      <div class="order">
+        <div class="order__inner">
+          <div class="order__row">
+            <div class="order__content">
+              <div class="order__title">Данные покупателя</div>
+              <form class="order__form" action="POST">
+                <div class="form-control"><label for="name">ФИО покупателя</label><input class="require" id="name" required="required" name="name" type="text" placeholder="Иванов Иван Иванович"></div>
+                <div class="form-control"><label for="mail">Электронная почта</label><input class="require" id="mail" required="required" name="mail" type="mail" placeholder="example@mail.ru"></div>
+                <div class="form-control"><label for="phone">Телефон</label><input class="require" id="phone" required="required" name="phone" type="phone" placeholder="+7 777 123 4567"></div>
+                <div class="order__products">
+                  <div class="order__title">Торты в ассортименте</div>
+                  <div class="order__products-subtitle">Торты в ассортименте можно забрать одном из <a href="#">7 наших магазинов</a> в день заказа.<br> Мы заботимся о свежести тортов, поэтому срок хранения тортов ограничен.</div>
+                  <div class="order__product-count">Список тортов <span>(1 торт)</span></div>
+                  <ul class="order__list">
+                    <li class="order__item">
+                      <div class="order__img"><img src="img/tort14.png"></div>
+                      <div class="order__product-content">
+                        <div class="order__product-title">Графские развалины</div>
+                        <div class="order__product-price">3670 <span>₸</span></div>
+                        <div class="order__value">
+                          <div class="order__val">вес:<span>1.2кг</span></div>
+                          <div class="order__val">Основа:<span>Молочный</span></div>
+                          <div class="order__val">Количество:<span>1.2кг</span></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="order__item">
+                      <div class="order__img"><img src="img/tort15.png"></div>
+                      <div class="order__product-content">
+                        <div class="order__product-title">Дамиля</div>
+                        <div class="order__product-price">6890 <span>₸</span></div>
+                        <div class="order__value">
+                          <div class="order__val">вес:<span>1.2кг</span></div>
+                          <div class="order__val">Основа:<span>Молочный</span></div>
+                          <div class="order__val">Количество:<span>1.2кг      </span></div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="order__product-count">Доставка</div>
+                  <div class="form-control"><label for="dostavka">Выберите способ доставки</label></div>
+                  <ul class="order__tabs-link">
+                    <li class="dostavka-link" id="samovivoz-link">Самовывоз</li>
+                    <li class="dostavka-link active" id="dostavka-link">Доставка</li>
+                  </ul>
+                  <ul class="order__tabs-content">
+                    <li class="dostavka open" id="dostavka">
+                      <div class="form-control"><label for="sity">Город</label><input class="require" id="sity" name="sity" type="text" placeholder="Алматы"></div>
+                      <div class="form-control"><label for="street">Улица</label><input class="require" id="street" name="street" type="text" placeholder="Пр. Абая"></div>
+                      <div class="form-control-row">
+                        <div class="form-control col6"><label for="home">Номер дома</label><input class="require" id="home" name="home" type="text" placeholder="25"></div>
+                        <div class="form-control col6"><label for="flat">Квартира</label><input class="require" id="flat" name="flat" type="text" placeholder="150"></div>
+                      </div>
+                      <div class="form-control"><label for="message">Комментарий</label><textarea class="require" id="message" name="message" placeholder="При необходимости, укажите комментарий для курьера"></textarea></div>
+                    </li>
+                    <li class="dostavka" id="samovivoz">
+                      <div class="filter__item"><span>Магазин для самовывоза</span>
+                        <div class="filter__shops">
+                          <div class="filter__shop">
+                            <div class="filter__content">
+                              <div class="filter__shop-title">Центральный магазин<span>«Аксай- 2», ул. Б.Момышулы, 36 А</span></div>
+                            </div>
+                            <div class="filter__arrow"><svg width="11" height="10" viewBox="0 0 11 10" fill="none">
+                                <path d="M9.91061 4.51778L5.39282 9.03557L0.875038 4.51778" fill="none" stroke="black"></path>
+                              </svg></div>
+                          </div>
+                          <ul class="filter__shops-list">
+                            <li>
+                              <div class="filter__shop-title">Магазин на Толе Би<span>улица Толе Би 125, Алматы</span></div>
+                            </li>
+                            <li>
+                              <div class="filter__shop-title">Магазин в Орбите-1<span>Мкр. Орбита-1, ул. Навои, д.6, уг.ул. Биржана</span></div>
+                            </li>
+                            <li>
+                              <div class="filter__shop-title">Магазин на Назарбаева<span>Пр Назарбаева Н.А., д.148, магазин «Беташар»</span></div>
+                            </li>
+                            <li>
+                              <div class="filter__shop-title">Магазин на Розыбакиева<span>Ул. Розыбакиева 33/1, ТК «Оптовка»</span></div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="form-control"><label for="message">Комментарий</label><textarea class="require" id="message" name="message" placeholder="При необходимости, укажите комментарий для курьера"></textarea></div>
+                    </li>
+                  </ul><img class="parallax parallax7-1" src="img/parallax7.png"><a class="btn product-card__btn" href="#">Оплатить заказ</a>
+                  <div class="order__payment payments">
+                    <div class="payment__title">Доступные способы оплаты</div>
+                    <div class="payment__metods"><img src="img/payment1.png"><img src="img/payment2.png"><img src="img/payment3.png"><img src="img/payment4.png"><img src="img/payment5.png"><img src="img/payment6.png"></div>
+                    <div class="payment__metods"><img src="img/payment7.png"><span>Безопасность транзакций гарантирует <strong>Казком</strong></span></div>
+                  </div>
+                  <div class="form-agreement"><label class="checkbox-other" for="agreement"><input id="agreement" type="checkbox"><span>Нажимая на кнопку «Оплатить заказ», я даю согласие на обработку<br> персональных данных и соглашаюсь c условиями <a href="#">договора-оферты</a> и <a href="#">политикой конфиденциальности</a></span></label></div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page__footer-wrapper">
+      <footer class="page-footer" role="contentinfo">
+        <div class="page-footer__inner">
+          <div class="page-footer__top-block">
+            <div class="page-footer__row">
+              <div class="page-footer__col1">
+                <div class="page-footer__content"><img src="img/logo_footer.png" /><span class="page-footer__title">Хлебопекарное<br>предприятие</span></div>
+              </div>
+              <div class="page-footer__col2">
+                <div class="page-footer__content"> </div><span class="page-footer__light page-footer__block">Адрес:</span><span class="page-footer__block">г. Алматы, мкр. Аксай-2, ул. Бауыржана,<br> Момышулы, 36 «А»</span>
+              </div>
+              <div class="page-footer__col3">
+                <div class="page-footer__content"><img class="page-footer__map" src="img/map.png" /><span>Схема проезда</span></div>
+              </div>
+              <div class="page-footer__col3">
+                <div class="page-footer__content"><img class="page-footer__insta" src="img/insta.png" /><span>Мы в инстаграм</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-footer__inner">
+          <div class="page-footer__row">
+            <div class="page-footer__col2">
+              <div class="page-footer__menu footer-menu">
+                <div class="footer-menu__title">Торты в ассортименте</div>
+                <ul class="footer-menu__list">
+                  <li class="footer-menu__item"> <a href="#">Бисквитно-кремовые</a></li>
+                  <li class="footer-menu__item"><a href="#">Суфлейные</a></li>
+                  <li class="footer-menu__item"><a href="#">Со взбитыми сливками</a></li>
+                  <li class="footer-menu__item"><a href="#">Все</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="page-footer__col2">
+              <div class="page-footer__menu footer-menu">
+                <div class="footer-menu__title">Торты на заказ</div>
+                <ul class="footer-menu__list">
+                  <li class="footer-menu__item"><a href="#">Праздничные</a></li>
+                  <li class="footer-menu__item"><a href="#">Свадебные</a></li>
+                  <li class="footer-menu__item"><a href="#">Детские</a></li>
+                  <li class="footer-menu__item"><a href="#">Все</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="page-footer__col2">
+              <div class="page-footer__menu footer-menu">
+                <div class="footer-menu__title">О нас</div>
+                <ul class="footer-menu__list">
+                  <li class="footer-menu__item"><a href="https://aksaynan.kz/">Корпоративный сайт</a></li>
+                  <li class="footer-menu__item"><a href="#">О компании</a></li>
+                  <li class="footer-menu__item"><a href="#">Контакты</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="page-footer__col2">
+              <div class="page-footer__menu footer-menu">
+                <div class="footer-menu__title">Информация</div>
+                <ul class="footer-menu__list">
+                  <li class="footer-menu__item"><a href="#">Задать вопрос</a></li>
+                  <li class="footer-menu__item"><a href="#">Заявка на сотрудничество</a></li>
+                  <li class="footer-menu__item"><a href="#">Политика конфиденциальности</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-footer__inner">
+          <div class="page-footer__copy">
+            <div class="page-footer__row">
+              <div class="page-footer__col6">©1988 - 2020&nbsp;<a href="https://aksaynan.kz/">ТОО «ХБК «Аксай»</a><span>– Все права защищены</span></div>
+              <div class="page-footer__col6">Разработка и создание сайта - креативное агентство -&nbsp;<a class="copy-link" target="blank" href="https://peoplesoft.kz/"><img src="img/peopleSoft.png" width="93px" /></a></div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+</body>
+<div class="mini-cart"><img src="img/cart.png">
+  <div class="mini-cart__title">Корзина пуста</div>
+  <div class="mini-cart__content">Здесь будет список товаров</div>
+</div>
+<div class="modal" id="zakaz" tabindex="-1" role="dialog">
+  <div class="modal__dialog" role="document">
+    <div class="modal__content">
+      <div class="modal__header"><span class="close modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+        <h4 class="modal__title">Заказать уникальный торт</h4>
+      </div>
+      <div class="modal__body">
+        <form class="modal__form" id="feedback_form">
+          <div class="form-control"><label for="name">ФИО покупателя</label><input class="require" id="name" required="required" name="name" type="text"></div>
+          <div class="form-control"><label for="mail">Электронная почта</label><input class="require" id="mail" required="required" name="mail" type="email"></div>
+          <div class="form-control"><label for="phone">Телефон</label><input class="require" id="phone" required="required" name="phone" type="text"></div>
+          <div class="form-control form-control--row">
+            <div class="link-photo"><label for="link-photo">Добавьте ссылку на фото торта</label><input class="require" id="link-photo" name="link-photo" type="text" autocomplete="off"></div><span>или</span>
+            <div class="download-photo">
+              <div class="input__wrapper"><input class="input input__file" id="input__file" name="download-photo" type="file" autocomplete="off"><label class="file-label" for="input__file">
+                  <div class="input__file-icon-wrapper">
+                    <div class="nput__file-button-text">Загрузить фото</div><img src="img/add.png" alt="Добавить фото" width="20">
+                  </div>
+                </label></div>
+            </div>
+          </div>
+          <div class="form-control"><label for="message">Коментарий</label><textarea id="message" name="message" required="required"> </textarea></div>
+          <div class="form-control form-control--block"><input class="button" type="submit" value="Заказать звонок"></div>
+          <div class="form-agreement"><label class="checkbox-other" for="ch"><input id="ch" type="checkbox"><span>Нажимая на кнопку «Оплатить заказ», я даю согласие на обработку<br> персональных данных и соглашаюсь c условиями <a href="#">договора-оферты</a> и <a href="#">политикой конфиденциальности</a></span></label></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;amp;apikey=74d8f79d-cf24-44cf-864a-a28bd40aba33" type="text/javascript"></script><script src="js/bundle.js"></script>
+
+
+</html>

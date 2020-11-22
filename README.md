@@ -7,6 +7,8 @@
 [Карточка заказного торта](https://uldalex.github.io/Aksaynan/build/product-card-zakaznoy.html)<br>
 [Карточка ассортиментного торта](https://uldalex.github.io/Aksaynan/build/product-card.html)<br>
 [Корзина](https://uldalex.github.io/Aksaynan/build/cart.html)<br>
+[Оформление заказа](https://uldalex.github.io/Aksaynan/build/order.html)<br>
+[Оформление заказа ассортиментный торт](https://uldalex.github.io/Aksaynan/build/order-ass.html)<br>
 
 ## Парадигма
 
