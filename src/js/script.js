@@ -2955,22 +2955,22 @@ function parallaxTop(){
     $('.parallax1').css('margin-top', +(scrolled * 0.4) + 'px');
     $('.parallax1').css('margin-right', -(scrolled * 0.2) + 'px');
     $('.parallax1').css({transform: 'rotate(+' + (360 * scrolled/maxScroll) + 'deg)'});
-    $('.parallax2').css('margin-bottom', +(scrolled * 0.8) + 'px');
+    $('.parallax2').css('margin-bottom', +(scrolled * 0.4) + 'px');
     $('.parallax2').css('margin-left', -(scrolled * 0.3) + 'px');
-    $('.parallax3').css('margin-top', +(scrolled * 0.6) + 'px');
-    $('.parallax3').css({transform: 'rotate(-' + (2000 * scrolled/maxScroll) + 'deg)'});
-    $('.parallax5').css('margin-top', +(scrolled * 0.6) + 'px');
-    $('.parallax5').css({transform: 'rotate(-' + (600 * scrolled/maxScroll) + 'deg)'});
-    $('.parallax4').css('margin-top', -(scrolled * 0.6) + 'px');
-    $('.parallax4').css({transform: 'rotate(-' + (1000 * scrolled/maxScroll) + 'deg)'})
-    $('.parallax6').css('margin-bottom', +(scrolled * 0.5) + 'px');
-    $('.parallax6').css({transform: 'rotate(-' + (1000 * scrolled/maxScroll) + 'deg)'});
+    $('.parallax3').css('margin-top', +(scrolled * 0.3) + 'px');
+    $('.parallax3').css({transform: 'rotate(-' + (360 * scrolled/maxScroll) + 'deg)'});
+    $('.parallax5').css('margin-top', +(scrolled * 0.2) + 'px');
+    $('.parallax5').css({transform: 'rotate(-' + (180 * scrolled/maxScroll) + 'deg)'});
+    $('.parallax4').css('margin-top', -(scrolled * 0.3) + 'px');
+    $('.parallax4').css({transform: 'rotate(-' + (360 * scrolled/maxScroll) + 'deg)'})
+    $('.parallax6').css('margin-bottom', +(scrolled * 0.2) + 'px');
+    $('.parallax6').css({transform: 'rotate(-' + (360 * scrolled/maxScroll) + 'deg)'});
     $('.parallax7').css('margin-bottom', +(scrolled * 0.2) + 'px');
-    $('.parallax7').css({transform: 'rotate(-' + (1000 * scrolled/maxScroll) + 'deg)'});
-    $('.parallax8').css('margin-top', +(scrolled * 0.5) + 'px');
-    $('.parallax8').css({transform: 'rotate(-' + (500 * scrolled/maxScroll) + 'deg)'});
-    $('.parallax10').css('margin-top', +(scrolled * 0.8) + 'px');
-    $('.parallax10').css({transform: 'rotate(-' + (500 * scrolled/maxScroll) + 'deg)'});
+    $('.parallax7').css({transform: 'rotate(-' + (180 * scrolled/maxScroll) + 'deg)'});
+    $('.parallax8').css('margin-top', +(scrolled * 0.4) + 'px');
+    $('.parallax8').css({transform: 'rotate(-' + (180 * scrolled/maxScroll) + 'deg)'});
+    $('.parallax10').css('margin-top', +(scrolled * 0.2) + 'px');
+    $('.parallax10').css({transform: 'rotate(-' + (180 * scrolled/maxScroll) + 'deg)'});
     $('.parallax10-1').css('margin-top', +(scrolled * 0.2) + 'px');
     $('.parallax10-1').css({transform: 'rotate(-' + (360 * scrolled/maxScroll) + 'deg)'});
     $('.parallax12').css('margin-bottom', +(scrolled * 0.2) + 'px');
