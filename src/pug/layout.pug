@@ -151,17 +151,17 @@ html(class='page  no-js', lang='ru')
           form#feedback_form.modal__form
             .form-control
               label(for="name") ФИО покупателя
-              input#name.require(required="required" name="name" type="text")
+              input#name.require(required="required" name="name" type="text" placeholder="Иванов Иван Иванович")
             .form-control
               label(for="mail") Электронная почта
-              input#mail.require(required="required" name="mail" type="email")
+              input#mail.require(required="required" name="mail" type="email" placeholder="example@mail.ru")
             .form-control
               label(for="phone") Телефон
-              input#phone.require(required="required" name="phone" type="text")
+              input#phone.require(required="required" name="phone" type="text" placeholder="+7 777 123 4567")
             .form-control.form-control--row
               .link-photo
                 label(for="link-photo") Добавьте ссылку на фото торта
-                input#link-photo.require(name="link-photo" type="text" autocomplete="off")
+                input#link-photo.require(name="link-photo" type="text" autocomplete="off" placeholder="https://")
               span или
               .download-photo
                 .input__wrapper
@@ -171,11 +171,11 @@ html(class='page  no-js', lang='ru')
                      div.nput__file-button-text Загрузить фото
                      img(src='img/add.png', alt='Добавить фото', width='20')
             .form-control
-              label(for="message") Коментарий
-              textarea#message(name="message" required="required") 
+              label(for="message") Коментарии
+              textarea#message(name="message" placeholder="При необходимости, укажите комментарий, если у вас есть особенные пожелания к торту") 
              
             .form-control.form-control--block
-              input.button(type="submit" value="Заказать звонок")
+              input.button(type="submit" value="Отправить заказ")
 
             .form-agreement
               label.checkbox-other(for="ch")

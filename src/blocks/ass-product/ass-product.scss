@@ -128,6 +128,14 @@
   }
   
 }
+.store-arrow { 
+  transform: none;
+ 
+ &--open {
+  transform: rotate(180deg);
+}
+}
+
 
 @media(max-width: 1025px){
   .ass-product {

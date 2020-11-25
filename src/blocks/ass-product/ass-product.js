@@ -29,6 +29,18 @@ $('.ass-product__stores-list li').on('click' , function(){
  $('.ass-product__sort').toggleClass('ass-product__sort--open')
 
 });
+
+$(document).mouseup(function (e){ // событие клика по веб-документу
+    var div = $(".ass-product__stores-list"); // тут указываем ID элемента
+    if (!div.is(e.target) // если клик был не по нашему блоку
+        && div.has(e.target).length === 0) { // и не по его дочерним элементам
+      div.removeClass('ass-product__stores-list--open')
+      $('.store-arrow').removeClass('store-arrow--open');
+     
+    }
+  });
+
+
 $('.ass-product__tort').on('click' , function(){
     $('.store').removeClass('active');
     var Store = $('.ass-product__stores-list li.active').data('filter');

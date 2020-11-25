@@ -31,10 +31,23 @@ document.addEventListener( 'DOMContentLoaded', function () {
   var productCardAttr = $('.attribute'); 
   var productCardArrow = $('.attribute-arrow');
 
-  $('.attribute-arrow, .attribute span').on('click', function(){
-      $('.attribute-arrow').toggleClass('attribute-arrow--open');
+  $('.attribute span').on('click', function(){
+      $(this).parent(productCardAttr).find('.attribute-arrow').toggleClass('attribute-arrow--open');
       $(this).parent(productCardAttr).find('.attribute__list').toggleClass('attribute__list--open');
   });
+  $('.attribute-arrow').on('click', function(){
+    $(this).toggleClass('attribute-arrow--open');
+    $(this).parent(productCardAttr).find('.attribute__list').toggleClass('attribute__list--open');
+});
+
+$(document).mouseup(function (e){ // событие клика по веб-документу
+  var div = $(".attribute__list"); // тут указываем ID элемента
+  if (!div.is(e.target) // если клик был не по нашему блоку
+      && div.has(e.target).length === 0) { // и не по его дочерним элементам
+    div.removeClass('attribute__list--open');
+    div.parent(productCardAttr).find('.attribute-arrow').removeClass('attribute-arrow--open');
+  }
+});
 
   $('.attribute__item').on('click', function(){
       var text = $(this).text();
@@ -65,6 +78,14 @@ document.addEventListener( 'DOMContentLoaded', function () {
     $(this).parent('.product-card__ves-list').find('.some-ves-input').removeClass('some-ves-input--open');
     $(this).removeClass('close--open');
   });
-
+  
+    $(document).mouseup(function (e){ // событие клика по веб-документу
+      var div = $(".some-ves-input"); // тут указываем ID элемента
+      if (!div.is(e.target) // если клик был не по нашему блоку
+          && div.has(e.target).length === 0) { // и не по его дочерним элементам
+        div.removeClass('some-ves-input--open');
+      }
+    });
+ 
 
   

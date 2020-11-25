@@ -66,9 +66,7 @@
 
     &--active {
 
-      & > #{$block-name}__link { // stylelint-disable-line  selector-combinator-blacklist
-        color: $red;
-      }
+    
     }
   }
 

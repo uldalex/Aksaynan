@@ -583,11 +583,13 @@ pre {
     padding-bottom:0.5rem;
     border-bottom: 1px solid rgb(229, 229, 229);
     transition: all 0.5s linear;
+    color:#b3b3b3;
     
 
     &--active {
       border-bottom: 1px solid $red;
       transition: all 0.5s linear;
+      color:$red;
       }
     &:hover {
       cursor: pointer;
@@ -603,6 +605,7 @@ pre {
     &--active {
       border-bottom: 1px solid $red;
       transition: all 0.5s linear;
+      color:$red;
     }
     &:hover {
       cursor: pointer;
@@ -639,7 +642,7 @@ pre {
     }
   }
   & .close {
-    width: 15px;
+    width: 0px;
     z-index: 6;
     position: absolute;
     right: 8px;
@@ -651,8 +654,7 @@ pre {
     }
 
     &--open {
-      top:8px;
-      opacity:1
+ 
     }
 
   }
@@ -753,7 +755,7 @@ pre {
     flex-wrap: wrap;
     align-items: center;
     justify-content: flex-end;
-    padding: 4px 9px;
+    padding: 4px 4px;
     margin: 3px 2px;
 
      &:hover {
@@ -767,7 +769,7 @@ pre {
       right: 0;
       left: 0;
       z-index: 0;
-      padding: 4px 9px;
+      padding: 4px 4px;
       margin: 3px 2px;
       border-radius: 7px;
       box-shadow: 0 0 8px rgba(0,0,0,.1);
@@ -1009,12 +1011,22 @@ pre {
     border:1px solid #dcdce2;
     color: #797986;
     border-radius:6px;
+    padding-left: 20px;
 
     &:focus {
       outline: none;
     border: 1px solid #797986;
     }
   }
+
+  & textarea{
+    padding:10px 20px;
+
+    & #placeholder {
+      display: block;
+    }
+  }
+  
   
   & input.button {
     display: inline-block;
