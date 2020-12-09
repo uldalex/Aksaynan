@@ -4,6 +4,7 @@
 
 .tort-zakaz {
   position: relative;
+  margin-top:70px;
 
   $block-name:                &; // #{$block-name}__element
 
@@ -16,12 +17,17 @@
     flex-wrap: wrap;
 
   }
+
+  & h3 {
+    margin-top:0;
+    margin-bottom:28px;
+  }
   & .product-card {
     width: calc(25% - 2em);
     margin: 0 2em 0 0;
 }
   &__sort{
-    margin: 1.5rem 0;
+    margin: 30px 0 50px;
     padding: 0;
     display: flex;
     width: 100%;
@@ -57,13 +63,14 @@
       position: relative;
       opacity: 1;
       left:auto;
+      overflow: inherit;
       transform: scale(1);
     }
   }
   
   &__view-all {
     text-align: center;
-    padding:4rem 0;
+    padding:4rem 0 0;
 
     & .alt-btn {
       font-size: 15px;
@@ -74,6 +81,7 @@
   left: 20%;
   bottom:-500px;
   z-index: 1;
+  transition: all .8s ease;
   }
 }
 

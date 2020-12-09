@@ -2952,36 +2952,21 @@ function parallaxTop(){
     var scrolled = $(window).scrollTop();
     var iconRotate = $('.icon-rotate img');
     maxScroll = $(document).height()-$(window).height();
-    $('.parallax1').css('margin-top', +(scrolled * 0.4) + 'px');
-    $('.parallax1').css('margin-right', -(scrolled * 0.2) + 'px');
-    $('.parallax1').css({transform: 'rotate(+' + (360 * scrolled/maxScroll) + 'deg)'});
+    $('.parallax1').css('margin-top', +(scrolled * 0.2) + 'px');
     $('.parallax2').css('margin-bottom', +(scrolled * 0.4) + 'px');
-    $('.parallax2').css('margin-left', -(scrolled * 0.3) + 'px');
     $('.parallax3').css('margin-top', +(scrolled * 0.3) + 'px');
-    $('.parallax3').css({transform: 'rotate(-' + (360 * scrolled/maxScroll) + 'deg)'});
     $('.parallax5').css('margin-top', +(scrolled * 0.2) + 'px');
-    $('.parallax5').css({transform: 'rotate(-' + (180 * scrolled/maxScroll) + 'deg)'});
     $('.parallax4').css('margin-top', -(scrolled * 0.3) + 'px');
-    $('.parallax4').css({transform: 'rotate(-' + (360 * scrolled/maxScroll) + 'deg)'})
-    $('.parallax6').css('margin-bottom', +(scrolled * 0.2) + 'px');
-    $('.parallax6').css({transform: 'rotate(-' + (360 * scrolled/maxScroll) + 'deg)'});
-    $('.parallax7').css('margin-bottom', +(scrolled * 0.2) + 'px');
-    $('.parallax7').css({transform: 'rotate(-' + (180 * scrolled/maxScroll) + 'deg)'});
-    $('.parallax8').css('margin-top', +(scrolled * 0.4) + 'px');
-    $('.parallax8').css({transform: 'rotate(-' + (180 * scrolled/maxScroll) + 'deg)'});
+    $('.parallax6').css('margin-top', +(scrolled * 0.1) + 'px');
+    $('.parallax7').css('margin-bottom', +(scrolled * 0.1) + 'px');
+    $('.parallax8').css('margin-top', +(scrolled * 0.3) + 'px');
     $('.parallax10').css('margin-top', +(scrolled * 0.2) + 'px');
-    $('.parallax10').css({transform: 'rotate(-' + (180 * scrolled/maxScroll) + 'deg)'});
     $('.parallax10-1').css('margin-top', +(scrolled * 0.2) + 'px');
-    $('.parallax10-1').css({transform: 'rotate(-' + (360 * scrolled/maxScroll) + 'deg)'});
     $('.parallax12').css('margin-bottom', +(scrolled * 0.2) + 'px');
-    $('.parallax12').css({transform: 'rotate(-' + (500 * scrolled/maxScroll) + 'deg)'});
     $('.parallax13').css('margin-bottom', +(scrolled * 0.2) + 'px');
     $('.parallax14').css('margin-top', +(scrolled * 0.2) + 'px');
-    $('.parallax14').css({transform: 'rotate(-' + (500 * scrolled/maxScroll) + 'deg)'});
     $('.parallax15').css('margin-top', +(scrolled * 0.1) + 'px');
     $('.parallax7-1').css('margin-top', -(scrolled * 0.2) + 'px');
-    $('.parallax7-1').css({transform: 'rotate(-' + (500 * scrolled/maxScroll) + 'deg)'});
-
          	
 }
 
@@ -3134,6 +3119,15 @@ $(window).scroll(function(e){
   // отключить прокрутку мышью      
   myMap.behaviors.disable ('scrollZoom');
 });
+
+  
+$('.address-card').on ('click', function(){
+  $('.address-card').removeClass('address-card--open');
+  $('.address-card').find('.ymaps-geolink').removeClass('senstore');
+  $(this).addClass('address-card--open');
+  $(this).find('.ymaps-geolink').addClass('senstore')
+  
+})
 
 //фильтр range
 addEventListener('input', e => {
@@ -9074,3 +9068,28 @@ document.addEventListener( 'DOMContentLoaded', function () {
         autoplay: true,
         } ).mount();
 } );
+
+
+
+$('a.product-card__btn').on('click',function(){
+       
+  /*Полёт в корзину*/
+  id = $(this);
+  tmp= $(this).find('.count')
+  txt= $(this).find('.product-card__tocart')
+  xrect = $(".mini-cart").offset().left + 50;
+  yrect = $(".mini-cart").offset().top + 30;
+  $(tmp)
+   .clone()
+         .css({'position' : 'absolute', 'font-size': '8px', 'padding': '3px 6px','color': '#fff', 'background-color': '#9f241d',
+         'border-radius': '20px','z-index' : '11100', 'top': $(this).offset().top + 10,'left': $(this).offset().left + 60})
+         .appendTo("body")
+         .animate({ left:  xrect +'px', top: yrect + 'px', }, 3000, function() {
+          $(this).remove();
+          });
+ setTimeout(function(){
+  $(txt).text('Добавить еще')  
+ }, 1000)       
+ }
+);
+    

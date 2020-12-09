@@ -99,7 +99,7 @@ html(class='page  no-js', lang='ru')
           h3 Наши магазины
           .stories__row
             .stories__col1
-              .stories__address-card.address-card
+              .stories__address-card.address-card.address-card--open
                 h4 Центральный магазин
                 .address-card__content Адрес:
                   span.senstore «Аксай- 2», ул. Б.Момышулы, 36 А
@@ -112,18 +112,38 @@ html(class='page  no-js', lang='ru')
                 h4 Магазин на Толе Би
                 .address-card__content
                   span.ymaps-geolink улица Толе Би 125, Алматы
+                .address-card__col
+                  .address-card__content Время работы:
+                    span.senstore 08:00–21:00
+                  .address-card__content Контакты:
+                    span.senstore #[a(href='tel:+87273303129') 8 (727) 330 3129] 
               .stories__address-card.address-card
                 h4 Магазин в Орбите-1
                 .address-card__content
                   span.ymaps-geolink Мкр. Орбита-1, ул. Навои, д.6, уг.ул. Биржана
+                .address-card__col
+                  .address-card__content Время работы:
+                    span.senstore 08:00–21:00
+                  .address-card__content Контакты:
+                    span.senstore #[a(href='tel:+87273303129') 8 (727) 330 3129] 
               .stories__address-card.address-card
                 h4 Магазин на Назарбаева
                 .address-card__content 
                   span.ymaps-geolink Пр Назарбаева Н.А., д.148, магазин «Беташар»
+                .address-card__col
+                  .address-card__content Время работы:
+                    span.senstore 08:00–21:00
+                  .address-card__content Контакты:
+                    span.senstore #[a(href='tel:+87273303129') 8 (727) 330 3129] 
               .stories__address-card.address-card
                 h4 Магазин на Розыбакиева
                 .address-card__content
                   span.ymaps-geolink Ул. Розыбакиева 33/1, ТК «Оптовка»
+                .address-card__col
+                  .address-card__content Время работы:
+                    span.senstore 08:00–21:00
+                  .address-card__content Контакты:
+                    span.senstore #[a(href='tel:+87273303129') 8 (727) 330 3129] 
               a.stories__link(href="#") Показать все магазины
             .stories__col2
               #map( style="width:100%; height:500px;")

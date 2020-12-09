@@ -502,15 +502,14 @@ pre {
 .product-card {
   border:1px solid #FFEFD7;
   border-radius:30px;
-  padding:1.5rem 1rem;
+  padding:1.5rem 0px;
   display:flex;
   flex-wrap: wrap;
   max-width:100%;
-  overflow: hidden;
   position: relative;
   
   &:hover {
-    border-color: #e6cca5;
+  
   }
   &__title {
     font-size:18px;
@@ -531,6 +530,7 @@ pre {
     position: relative;
     min-height: 300px;
     height: 300px;
+    overflow: hidden;
     
 
     & img {
@@ -543,7 +543,8 @@ pre {
 
     }
   &__content {
-    height: 226px;
+    min-height: 200px;
+    padding:0 20px;
   }
 
   &__tabs {
@@ -572,7 +573,7 @@ pre {
     transition: all 1s linear;
   }
   .edit-tab--open{
-    overflow: hidden;
+    overflow: inherit;
     max-height: 500px;
     height:auto;
     transition: all 1s linear;
@@ -620,24 +621,31 @@ pre {
   }
   &__ves-list{
   background-color: #F4F4F4;
-  border-radius: 10px;
+  border-radius: 5px;
   display: flex;
   margin: 10px 0;
-  padding:0;
+  padding:2px;
   position:relative;
+  justify-content: space-between;
+  overflow: hidden;
 
   & .some-ves-input {
-    position: absolute;
+     position: absolute;
     z-index: 5;
     background-color: #ffffff;
     box-shadow: 0 0 8px rgba(0,0,0,.1);
-    right: 5px;
+    right: 2px;
     top: -200px;
     opacity: 0;
+    border-radius: 5px;
+    width: 70px;
+    outline: 0;
+    padding: 5px 10px;
 
     &--open {
-      top: 3px;
+      top: 2px;
       opacity:1;
+      bottom:2px;
 
     }
   }
@@ -663,19 +671,21 @@ pre {
   &__ves-item{
     background-color: #F4F4F4;
     border-radius: 7px;
-    padding: 4px 9px;
-    margin: 3px 2px;
+    padding: 5px 10px;
+    
 
     &--active {
       background-color: #ffffff;
       box-shadow: 0px 0px 8px rgba(0,0,0,0.1); 
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
     }
 
     &:hover {
       cursor: pointer;
-      font-weight: bold;
-      color: $red;
+        color: #A1241E;
+        background-color: #ffffff;
       box-shadow: 0px 0px 8px rgba(0,0,0,0.1);
+      box-shadow:0px 2px 10px rgba(0, 0, 0, 0.15);
     }
     
   }
@@ -689,8 +699,7 @@ pre {
 
     &:before {
       content: " ";
-    background-color: #F4F4F4;
-    border-radius: 10px;
+        border-radius: 10px;
     position: absolute;
     top:0;
     right:0;
@@ -699,20 +708,35 @@ pre {
     z-index: 0;
     }
   }
-  &__kol-item {
-    width:49%;
+  &__kol-item:first-child {
+    width:40%;
     position: relative;
+    border-radius: 7px;
+    background-color: #F4F4F4;
+    overflow: hidden;
+    max-height:30px;
+  }
+  &__kol-item:last-child {
+    width:58%;
+    position: relative;
+    border-radius: 7px;
+    background-color: #F4F4F4;
   }
   & .quantity {
     display: flex;
+    width: 100%;
+    justify-content: space-between;
   }
   & .quantity-plus {
     display:flex;
     align-items: center;
+    justify-content: center;
     background-color: #ffffff;
-    padding: 4px 9px;
-    margin: 3px 2px;
-    border-radius: 7px;
+    width:25px;
+    min-width:25px;
+    height:25px;
+    margin: 2px 2px;
+    border-radius: 5px;
     box-shadow: 0 0 8px rgba(0,0,0,.1);
 
     &:hover {
@@ -723,10 +747,13 @@ pre {
   & .quantity-minus {
     display:flex;
     align-items: center;
+    justify-content: center;
     background-color: #ffffff;
-    padding: 4px 9px;
-    margin: 3px 2px;
-    border-radius: 7px;
+    width:25px;
+    min-width:25px;
+    height:25px;
+    margin: 2px 2px;
+    border-radius: 5px;
     box-shadow: 0 0 8px rgba(0,0,0,.1);
 
       &:hover {
@@ -734,20 +761,18 @@ pre {
       }
     }
   & .quantity-val {
-    max-width:50px;
     overflow: hidden;
     display:flex;
     align-items: center;
-    margin: 3px 2px;
-    border-radius: 7px;
-    box-shadow: 0 0 8px rgba(0,0,0,.1);
+    margin: 2px 1px;
+    border-radius: 5px;
+  
   }
   & input {
-    width: 70px;
-    outline: none;
-    padding: 4px 9px;
+     outline: none;
+    border-radius: 5px;
     border: 0px;
-    border-radius: 10px;
+    padding-left: 10px;
     background: transparent;
   }
   & .product-card__atribute{
@@ -755,22 +780,17 @@ pre {
     flex-wrap: wrap;
     align-items: center;
     justify-content: flex-end;
-    padding: 4px 4px;
-    margin: 3px 2px;
-
+  
      &:hover {
        cursor: pointer;
      }
 
     & span {
       background-color: #ffffff;
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
       z-index: 0;
-      padding: 4px 4px;
-      margin: 3px 2px;
+      width:100%;
+      padding: 5px 10px;
+      margin: 2px 2px;
       border-radius: 7px;
       box-shadow: 0 0 8px rgba(0,0,0,.1);
     }
@@ -799,6 +819,7 @@ pre {
       cursor: pointer;
     }
     &--open {
+      position: absolute;
       display: block;
       max-height:500px;
 
@@ -806,6 +827,8 @@ pre {
   }
   & .attribute-arrow{
     padding-left:5px;
+    position: absolute;
+    right:10px;
     transition: all 0.5 linear;
     z-index:0;
 
@@ -818,10 +841,12 @@ pre {
     justify-content: space-between;
     align-items: center;
     margin-top:20px;
+    padding:0 20px;
     width: 100%;
   }
 
   &__btn {
+    position: relative;
     text-decoration: none;
     padding: 0.5rem 1.5rem;
     border: 2px solid #9f241d;
@@ -837,6 +862,10 @@ pre {
       text-decoration: none;
       outline: none;
       box-shadow: none;
+    }
+    & .count{
+opacity:0;
+position: absolute;
     }
   }
    & .price {
@@ -861,17 +890,32 @@ pre {
   
   &--dark {
     background-color: #F4F4F4;
+    border-color:#F4F4F4;
+    color:#8e8383;
   }
   &.active{
     background-color: #f4f4f4;
-    color:$red;
+    border-color:#F4F4F4;
+    color:#8e8383;
   }
-
+ 
   &:hover, &:focus, &:active {
     background-color: #F4F4F4;
+    border-color:#F4F4F4;
     cursor: pointer;
     text-decoration: none;
+    color:#8e8383;
   }
+
+  &--noborder {
+    border:1px solid transparent;
+  
+    &:hover, &:focus, &:active {
+      background-color: #fff;
+      cursor: pointer;
+      text-decoration: none;
+    }
+   }
   
 }
 .green-btn{
@@ -904,6 +948,7 @@ pre {
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: contain;
+  margin-top:106px;
 
   &__inner {
     @include container();
@@ -970,16 +1015,18 @@ pre {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding:4rem;
+    padding: 50px;
    }
    &__title {
     font-size: 18px;
     padding-bottom: 12px;
+    font-weight:600;
    }
 
    &__text {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 300;
+    opacity:0.7;
    }
 }
 .form-control{
@@ -1210,34 +1257,35 @@ color: #a7a7ad;
 }
 
 .mini-cart{
+  @include col(md, 4);
   position:fixed;
   width:257px;
-  right: 158px;
-  top: 10vw;
-  padding:2rem 10px;
+  height:70px;
+  right: 12.5%;
+  bottom: 20px;
+  padding: 10px;
   background: #FFFFFF;
   border: 1px solid #FFEFD7;
   box-sizing: border-box;
   box-shadow: 0px 10px 20px rgba(100, 5, 0, 0.3);
   border-radius: 10px;
   z-index:100;
-
   img {
     width: 113px;
     position: absolute;
     bottom: -10px;
-    left: -20px;
+    left: -50px;
   }
   &__title {
     color:#640500;
     font-size: 15px;
-    padding-left:50px;
+    padding-left:30px;
     text-align: center;
 
   }
 
   &__content {
-    padding-left:80px;
+    padding-left:60px;
 
   }
 }
@@ -1268,11 +1316,15 @@ color: #a7a7ad;
   }
 
   &__address-card {
-    border: 1px solid #ffffff;
+
+    &:hover {
+      cursor: pointer;
+    }
+    
     border-radius: 10px;
     padding: 0.5rem 0.8rem;
     margin:10px 0;
-  
+      
    & h4 {
      margin-top:0.5rem;
      margin-bottom: 0.5rem;
@@ -1291,7 +1343,11 @@ color: #a7a7ad;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5rem 0;
+    padding:  0;
+    height:0;
+    max-height:0;
+    overflow:hidden;
+    transition:all 0.5s linear;
 
    }
   }
@@ -1311,6 +1367,19 @@ color: #a7a7ad;
     left: 29%;
     bottom: -30px;
    }
+   #map {
+    border-radius: 20px;
+    overflow: hidden;
+   }
+   & .address-card--open{
+    border: 1px solid #ffffff;
+
+    & .address-card__col {
+      padding: 0.5rem 0;
+      height:auto;
+      max-height:300px;
+    }
+  }
 }
 .ymaps-2-1-77-ymaps-geolink-light {
   color: #d49191;
@@ -1698,7 +1767,15 @@ left:0;
 
   &__media {
     position: relative;
-
+    
+    & figure {
+      
+      & img {
+        width:130%;
+        max-width: 130%;
+        margin-left: -30%;
+      }
+    }
    & .splide__slide img {
       vertical-align: bottom;
       border-radius: 20px;
@@ -1904,6 +1981,7 @@ left:0;
     }
 
     & .product-card__btn {
+      position: relative;
       text-decoration: none;
       padding: .5rem 1.5rem;
       border: 2px solid #9f241d;
@@ -1920,9 +1998,14 @@ left:0;
         background-color: #ffffff;
         color: #9f241d;
       }
+
+      & .count{
+     opacity:0;
+     position: absolute;
+      }
       
     }
-
+ 
     & .product-card__content{
       height: auto;
     }
@@ -2489,6 +2572,7 @@ $spinner-size: 20px;
   }
 
   & .product-card__btn {
+    position: relative;
     text-decoration: none;
     padding: .5rem 1.5rem;
     border: 2px solid #9f241d;
@@ -2503,6 +2587,11 @@ $spinner-size: 20px;
     &:hover, &:active, &focus {
       background-color: #fff;
       color: #9f241d;
+    }
+
+    & .count{
+    opacity:0;
+    position: absolute;
     }
 }
   &__form{
@@ -2796,7 +2885,7 @@ $spinner-size: 20px;
 
 }
 .about__zakaz{
-padding:4rem 0;
+padding: 30px 0;
 }
 .product-page__col-3 {
   margin-top: 1rem;

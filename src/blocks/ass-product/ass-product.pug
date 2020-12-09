@@ -45,11 +45,11 @@ mixin ass-product(text, mods)
         li.ass-product__tort.alt-btn(data-tort=".tort5") Медовые
         li.ass-product__tort.alt-btn(data-tort=".tort6") Крошковые
         li.ass-product__tort.alt-btn(data-tort=".tort7") Слоеные
-        li.ass-product__tort.alt-btn(data-tort=".tort8") еще
+        li.ass-product__tort.alt-btn.alt-btn--noborder(data-tort=".tort8") Eще
 
 
       .ass-product__filter
-        .product-card.store.store1.store3.store5.store7.tort1.tort3.tort5.tort7.active
+        #11.product-card.store.store1.store3.store5.store7.tort1.tort3.tort5.tort7.active
                   .product-card__img
                     img(src="img/tort5.png")
                   .product-card__content
@@ -91,7 +91,7 @@ mixin ass-product(text, mods)
                                   li.attribute__item Фруктовый
                                 input(type="hidden" value="" id="product-card-attr1")
                   .product-card__footer
-                    a(href="#").btn.product-card__btn В корзину
+                    a( el="11").btn.product-card__btn <span class="product-card__tocart">В корзину </span> <span class="count">1</span>
                     .price 1890 ₸
         .product-card.store.store1.store3.store5.store7.tort1.tort3.tort5.tort7.active
                   .product-card__img
@@ -135,7 +135,7 @@ mixin ass-product(text, mods)
                                   li.attribute__item Фруктовый
                                 input(type="hidden" value="" id="product-card-attr1")
                   .product-card__footer
-                    a(href="#").btn.product-card__btn В корзину
+                    a(href="#").btn.product-card__btn В корзину <span>1</span>
                     .price 1890 ₸
         .product-card.store.store1.store3.store5.store7.tort1.tort3.tort5.tort7.active
                   .product-card__img
@@ -179,7 +179,7 @@ mixin ass-product(text, mods)
                                   li.attribute__item Фруктовый
                                 input(type="hidden" value="" id="product-card-attr1")
                   .product-card__footer
-                    a(href="#").btn.product-card__btn В корзину
+                    a(href="#").btn.product-card__btn В корзину <span>1</span>
                     .price 1890 ₸
         .product-card.store.store1.store3.store5.store7.tort1.tort3.tort5.tort7.active
                   .product-card__img
@@ -223,7 +223,7 @@ mixin ass-product(text, mods)
                                   li.attribute__item Фруктовый
                                 input(type="hidden" value="" id="product-card-attr1")
                   .product-card__footer
-                    a(href="#").btn.product-card__btn В корзину
+                    a(href="#").btn.product-card__btn В корзину <span>1</span>
                     .price 1890 ₸
         .product-card.store.store1.store3.store5.store7.tort2.tort4.tort6.tort8
                   .product-card__img
@@ -267,7 +267,7 @@ mixin ass-product(text, mods)
                                   li.attribute__item Фруктовый
                                 input(type="hidden" value="" id="product-card-attr1")
                   .product-card__footer
-                    a(href="#").btn.product-card__btn В корзину
+                    a(href="#").btn.product-card__btn В корзину <span>1</span>
                     .price 1890 ₸
         .product-card.store.store1.store3.store5.store7.tort2.tort4.tort6.tort8
                   .product-card__img
@@ -311,7 +311,7 @@ mixin ass-product(text, mods)
                                   li.attribute__item Фруктовый
                                 input(type="hidden" value="" id="product-card-attr1")
                   .product-card__footer
-                    a(href="#").btn.product-card__btn В корзину
+                    a(href="#").btn.product-card__btn В корзину <span>1</span>
                     .price 1890 ₸
         .product-card.store.store1.store3.store5.store7.tort2.tort4.tort6.tort8
                   .product-card__img
@@ -355,7 +355,7 @@ mixin ass-product(text, mods)
                                   li.attribute__item Фруктовый
                                 input(type="hidden" value="" id="product-card-attr1")
                   .product-card__footer
-                    a(href="#").btn.product-card__btn В корзину
+                    a(href="#").btn.product-card__btn В корзину <span>1</span>
                     .price 1890 ₸
         .product-card.store.store1.store3.store5.store7.tort2.tort4.tort6.tort8
                   .product-card__img
@@ -399,7 +399,7 @@ mixin ass-product(text, mods)
                                   li.attribute__item Фруктовый
                                 input(type="hidden" value="" id="product-card-attr1")
                   .product-card__footer
-                    a(href="#").btn.product-card__btn В корзину
+                    a(href="#").btn.product-card__btn В корзину <span>1</span>
                     .price 1890 ₸
         .product-card.store.store2.store4.store6.tort2.tort4.tort6.tort8
                   .product-card__img
@@ -443,7 +443,7 @@ mixin ass-product(text, mods)
                                   li.attribute__item Фруктовый
                                 input(type="hidden" value="" id="product-card-attr1")
                   .product-card__footer
-                    a(href="#").btn.product-card__btn В корзину
+                    a(href="#").btn.product-card__btn В корзину <span>1</span>
                     .price 1890 ₸
         .product-card.store.store2.store4.store6.tort2.tort4.tort6.tort8
                   .product-card__img
@@ -487,7 +487,7 @@ mixin ass-product(text, mods)
                                   li.attribute__item Фруктовый
                                 input(type="hidden" value="" id="product-card-attr1")
                   .product-card__footer
-                    a(href="#").btn.product-card__btn В корзину
+                    a(href="#").btn.product-card__btn В корзину <span>1</span>
                     .price 1890 ₸
         .product-card.store.store2.store4.store6.tort2.tort4.tort6.tort8
                   .product-card__img
@@ -531,7 +531,7 @@ mixin ass-product(text, mods)
                                   li.attribute__item Фруктовый
                                 input(type="hidden" value="" id="product-card-attr1")
                   .product-card__footer
-                    a(href="#").btn.product-card__btn В корзину
+                    a(href="#").btn.product-card__btn В корзину <span>1</span>
                     .price 1890 ₸
         .product-card.store.store2.store4.store6.tort2.tort4.tort6.tort8
                   .product-card__img
@@ -575,7 +575,7 @@ mixin ass-product(text, mods)
                                   li.attribute__item Фруктовый
                                 input(type="hidden" value="" id="product-card-attr1")
                   .product-card__footer
-                    a(href="#").btn.product-card__btn В корзину
+                    a(href="#").btn.product-card__btn В корзину <span>1</span>
                     .price 1890 ₸
         .product-card.store.store2.store4.store6.tort1.tort3.tort5.tort7
                   .product-card__img
@@ -619,7 +619,7 @@ mixin ass-product(text, mods)
                                   li.attribute__item Фруктовый
                                 input(type="hidden" value="" id="product-card-attr1")
                   .product-card__footer
-                    a(href="#").btn.product-card__btn В корзину
+                    a(href="#").btn.product-card__btn В корзину <span>1</span>
                     .price 1890 ₸
         .product-card.store.store2.store4.store6.tort1.tort3.tort5.tort7
                   .product-card__img
@@ -663,7 +663,7 @@ mixin ass-product(text, mods)
                                   li.attribute__item Фруктовый
                                 input(type="hidden" value="" id="product-card-attr1")
                   .product-card__footer
-                    a(href="#").btn.product-card__btn В корзину
+                    a(href="#").btn.product-card__btn В корзину <span>1</span>
                     .price 1890 ₸
         .product-card.store.store2.store4.store6.tort1.tort3.tort5.tort7
                   .product-card__img
@@ -707,7 +707,7 @@ mixin ass-product(text, mods)
                                   li.attribute__item Фруктовый
                                 input(type="hidden" value="" id="product-card-attr1")
                   .product-card__footer
-                    a(href="#").btn.product-card__btn В корзину
+                    a(href="#").btn.product-card__btn В корзину <span>1</span>
                     .price 1890 ₸
                 
       .ass-product__view-all

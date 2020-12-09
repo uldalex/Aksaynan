@@ -71,6 +71,7 @@ $(document).mouseup(function (e){ // событие клика по веб-до�
 
   $('.some-ves').on('click', function(){
     $(this).parent('.product-card__ves-list').find('.some-ves-input').addClass('some-ves-input--open');
+    $(this).parent('.product-card__ves-list').find('.some-ves-input').focus();
     $(this).parent('.product-card__ves-list').find('.close').addClass('close--open');
   });
 
@@ -79,13 +80,13 @@ $(document).mouseup(function (e){ // событие клика по веб-до�
     $(this).removeClass('close--open');
   });
   
-    $(document).mouseup(function (e){ // событие клика по веб-документу
-      var div = $(".some-ves-input"); // тут указываем ID элемента
-      if (!div.is(e.target) // если клик был не по нашему блоку
-          && div.has(e.target).length === 0) { // и не по его дочерним элементам
-        div.removeClass('some-ves-input--open');
+
+
+    $( ".some-ves-input" ).blur(function() {
+      if($(this). val() == ''){
+        $(this).removeClass('some-ves-input--open');
       }
-    });
+     });
  
 
   

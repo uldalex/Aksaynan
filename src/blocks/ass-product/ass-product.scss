@@ -36,13 +36,18 @@
       display: flex;
     }
 
+    & h3 {
+      margin-top:0;
+      margin-bottom:27px;
+    }
+
     &__filter {
       display: flex;
       flex-wrap: wrap;
     }
 
     &__sort {
-      margin:1.5rem 0;
+      margin: 30px 0 50px;
       padding:0;
       display: flex;
       width:100%;
@@ -104,7 +109,7 @@
   }
   &__view-all {
     text-align: center;
-    padding:4rem 0;
+    padding:4rem 0 0;
 
     & .alt-btn {
       font-size: 15px;
@@ -114,7 +119,6 @@
     position: absolute;
     left:-300vw;
     opacity: 0;
-    overflow: hidden;
     transition: all 0.5s linear;
     transform: scale(1.1);
 
