@@ -696,6 +696,7 @@ pre {
     padding:0;
     justify-content: space-between;
     position: relative;
+    flex-wrap: wrap;
 
     &:before {
       content: " ";
@@ -709,7 +710,7 @@ pre {
     }
   }
   &__kol-item:first-child {
-    width:40%;
+    width:100%;
     position: relative;
     border-radius: 7px;
     background-color: #F4F4F4;
@@ -717,7 +718,7 @@ pre {
     max-height:30px;
   }
   &__kol-item:last-child {
-    width:58%;
+    width:100%;
     position: relative;
     border-radius: 7px;
     background-color: #F4F4F4;

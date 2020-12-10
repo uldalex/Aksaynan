@@ -83,7 +83,7 @@ $(document).mouseup(function (e){ // событие клика по веб-до�
 
 
     $( ".some-ves-input" ).blur(function() {
-      if($(this). val() == ''){
+      if($(this). val() < '2'){
         $(this).removeClass('some-ves-input--open');
       }
      });
