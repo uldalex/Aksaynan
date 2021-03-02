@@ -9,7 +9,7 @@
 [Корзина](https://uldalex.github.io/Aksaynan/build/cart.html)<br>
 [Оформление заказа](https://uldalex.github.io/Aksaynan/build/order.html)<br>
 [Оформление заказа ассортиментный торт](https://uldalex.github.io/Aksaynan/build/order-ass.html)<br>
-[Натяжка на битрикс интернет-магазин+СРМ (временный сервер)](http://enotyp5u.beget.tech/)<br>
+[Натяжка на битрикс интернет-магазин+СРМ (временный сервер)](https://torty.aksaynan.kz/)<br>
 ## Парадигма
 
 - Именование классов по БЭМ, разметка в [pug](https://pugjs.org/), стилизация [Sass](http://sass-lang.com/). См. [как работать с CSS-препроцессорами и БЭМ](http://nicothin.github.io/idiomatic-pre-CSS/)
